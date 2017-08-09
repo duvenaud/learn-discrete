@@ -1,108 +1,144 @@
-# STA414 / STA2104 Winter 2017
-## Statistical Methods for Machine Learning and Data Mining
+ STA XXXX / CSC 2547 Spring 2018:
+# Learning Discrete Latent Structure
 
-<img src="https://raw.githubusercontent.com/jamesrobertlloyd/gpss-research/master/logo.png" width="500">
 
-This course introduces machine learning to students with a statistical background.  Besides teaching standard methods such as logistic and ridge regression, kernel density estimation, and random forests, this course course will try to offer a broader view of model-building and optimization using probabilistic building blocks.
+## Overview
 
-### What you will learn:
+In the last few years, new inference methods have allowed big advances in generative latent-variable models.  These models let us generate novel images and text, find meaningful latent representations of data, take advantage of large unlabeled datasets, and even let us do analogical reasoning automatically.  
 
- * Standard statistical learning algorithms, when to use them, and their limitations.
- * The main elements of probabilistic models (distributions, expectations, latent variables, neural networks) and how to combine them.
- * Standard computational tools (Monte Carlo, Stochastic optimization, regularization, automatic differentiation). 
+However, most generative models such as GANs and variational autoencoders currently have pre-specified model structure, and represent data using fixed-dimensional continuous vectors.  This seminar course will develop extensions to these approaches to learn model structure, or represent data using mixed discrete and continuous data structures such as lists of vectors, graphs, or even programs.
 
-### Instructors:
+The class will have a major project component.
 
-* [David Duvenaud](http://www.cs.toronto.edu/~duvenaud), Office: 384 Pratt
-   - Email: <duvenaud@cs.toronto.edu> (put "STA414" in the subject)
-   - Lectures: Mondays 2-5pm, EM 119
-   - Office hours: Mondays 11-12 noon in Pratt Building, Room 384
+### Prerequisites
 
-* [Mark Ebden](http://www.mebden.com/), Office: SS6026C and PT371
-   - Email: mark [dot] ebden [at] utoronto [dot] ca
-   - Lectures: Tuesdays 7-10 pm, SS1071
-   - Office Hours:  Thursdays 3-4 pm in SS6026C, and after each lecture just outside the classroom itself
+This course is designed to bring students to the current frontier of knowledge on these methods, so that ideally, their course projects can make a novel contribution.
+A previous course in machine learning such as CSC321, CSC411, CSC412, STA414, or ECE521 is strongly recommended.
+However, the only real requirements are linear algebra, basic multivariate calculus, basics of working with probability, and basic programming skills.
+
+### Where and When
+
+* Spring term 2018, ??
+* Room: ??
+* Instructor: [David Duvenaud](http://www.cs.toronto.edu/~duvenaud)
+* Email: <duvenaud@cs.toronto.edu> (put "CSC2547" in the subject)
+* Office hours: ?? Room 384 Pratt
+* Teaching assistants: ??
+
+## What are generative models?
+
+Generative modeling loosely refers to building a model of data, for instance p(image), that we can sample from.  This is in contrast to discriminative modeling, such as regression or classification, which tries to estimate conditional distributions such as p(class | image).
+
+### Why generative models?
+
+Even when we're only interested in making predictions, there are  practical reasons to build generative models:
+
+* **Data efficiency and semi-supervised learning** - Generative models can reduce the amount of data required.  As a simple example, building an image classifier p(class | image) requires estimating a very high-dimenisonal function, possibly requiring a lot of data, or clever assumptions.  In contrast, we could model the data as being generated from some low-dimensional or sparse latent variables z, as in $p(image) = \int p(image | z) p(z) dz$. Then, to do classification, we only need to learn p( class | z), which will usually be a much simpler function.  This approach also lets us take advantage of unlabeled data - also known as semi-supervised learning.
+* **Model checking by sampling** - Understanding complex regression and classification models is hard - it's often not clear what these models have learned from the data and what they missed.  There is a simple way to sanity-check and inspect generative models - simply sample from them, and compare the sampled data to the real data to see if anything is missing.
+* **Understanding** - Generative models usually assume that each datapoint is generated from a (usually low-dimensional) latent variable.  These latent variables are often interpretable, and sometimes can tell us about the hidden causes of a phenomenon.  These latent variables can also sometimes let us do interesting things such as [interpolating between examples](https://www.flickr.com/photos/dribnet/sets/72157670872636082)
  
-* The two instructors won't stick strictly to lecturing in their own sections. For example, on 16/17 January David Duvenaud will teach both sections (0101 and 0501), and in future sometimes Mark Ebden will teach both. This will occur regularly.
+
+## Differentiable inference
+
+We already know how to specify some expressive and flexible generative models, including [entire languages of models that can express arbitarily complicated structure](http://www.cs.toronto.edu/~rgrosse/uai2012-matrix.pdf).  However, until recently such models were hard to apply to real datasets, because inference methods (such as Markov chain Monte Carlo methods) were not usually fast or scalable enough to run on large models or even medium-sized datasets.
+
+The past few years have seen major progress in methods to train and do inference in generative models, loosely following four strands:
+
+* **Variational autoencoders** - Latent-variable models that use a neural network to do approximate inference.  The *recognition network* looks at each datapoint x and outputs an approximate posterior on the latents q(z | x) for that datapoint.
+* **Generative adversarial networks** - A way to train generative models by optimizing them to fool a classifier, the *discriminator network*, that tries to distinguish between real data and data generated by the model. 
+* **Invertible density estimation** - A way to specify complex generative models by transforming a simple latent distribution with a series of invertible functions.  These approaches are restricted to a more limited set of possible operations, but sidestep the difficult integrals required to train standard latent variable models.
+* **Autoregressive models** - Another way to model p(x) is to break the model into a series of conditional distributions: $p(x) = p(x_1) p(x_2|x_1) p(x_3 | x_2, x_1) \dots$ This is the approach used, for example, by recurrent neural networks.  These models are also realitvely easy to train, but the downside is that they don't support all of the same queries we can make of latent-variable models. 
+
+The common thread among these approaches that lets them scale to high-dimensional models is that their loss functions are *end-to-end differentiable*.  This is in contrast to previous inference strategies such as MCMC or early variational inference strategies, which required alternating inference and optimization steps and didn't allow gradient-based tuning of the inference procedure.
+
+These new inference schemes are allowing great progress in generative models of [images](https://arxiv.org/pdf/1606.03498v1.pdf) and [text](https://arxiv.org/abs/1511.06349).
 
 
-### Teaching Assistants:
+## Why Discrete Latent Struture?
 
-* Amanjit Kainth
-* Chris Cremer
-* Luhui Gan
-* Yang Guan Jian Guo (Tommy)
+ * Computational efficency (hard attention vs soft attention)
+ * Interpretability
+ * Model search
+ * Communication
+ * Matches reality (alphabets)
 
-[Syllabus and Course Information](syllabus.pdf)
 
-[Piazza](https://piazza.com/class/ivcpw2h2fq775m)
+## Course Structure
 
-## Tentative Schedule
+After the first two lectures, each week a different student, or pair of students, will present on an aspect of these methods, using a couple of papers as reference.  I'll provide guidance about the content of these presentations.
 
-* **January 9 and 10:** Introduction.
-   - [Intro + Background slides](lectures/lec1.pdf)
-   - [Basic supervised learning and probability slides](lectures/lec1-part2-edited.pdf)
-   - [Background quiz](lectures/skill-quiz.pdf)
-   
-   Readings: [Chapter 2 of David Mackay's textbook](http://www.inference.phy.cam.ac.uk/mackay/itprnn/ps/22.40.pdf)
+In-class discussion will center around:
 
-* **January 16 and 17:** 
-   - [The Exponential Family and beyond; Maximum Likelihood](lectures/Lecture2.pdf)
-   - [Optimization](lectures/optimization.pdf)
-   
-   Readings:
-   
-   - [Chapter 3 of David Mackay's textbook](http://www.inference.phy.cam.ac.uk/mackay/itprnn/ps/47.59.pdf)
-   - [Animations of different optimization algorithms](http://www.denizyuret.com/2015/03/alec-radfords-animations-for.html)
-   
-   Example code:
-   
-   - [Logistic regression autograd example](https://github.com/HIPS/autograd/blob/master/examples/logistic_regression.py)
-   - [Neural net regression example](https://github.com/HIPS/autograd/blob/master/examples/neural_net_regression.py)
-   - [Mixture of Gaussians example](https://github.com/HIPS/autograd/blob/master/examples/gmm.py)
+ * Understanding the strengths and weaknesses of these methods.
+ * Understanding the relationships between these methods, and with previous approaches.
+ * Extensions or applications of these methods.
+ * Experiments that might better illuminate their properties.
 
-* **January 23 and 24:** [Linear basis function models, decision theory, classification](lectures/Lecture3.pdf)
+The hope is that these discussions will lead to actual research papers, or resources that will help others understand these approaches.
 
-* **January 30 and 31:** [Bayesian inference, and kNN](lectures/Lecture4.pdf)
+Grades will be based on:
 
-* **February 5:** [Assignment 1](assignments/HW1.pdf) due.
+  * Class presentations - 20%
+  * Project proposal - 20% - Due Oct 14th
+  * Project presentation - 20% - Nov 18th and 25th
+  * Project report and code - 40% - Dec 10th
 
-* **February 6 and 7:** [Classification](lectures/Lecture5.pdf)
-   - [Classifier neural network demo](http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.15656&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false)
+### Project
+Students can work on projects individually,in pairs, or even in triplets. The grade will depend on the ideas, how well you present them in the report, how clearly you position your work relative to existing literature, how illuminating your experiments are, and well-supported your conclusions are.
 
-* **February 13:** Midterm exam for both sections. (No class on Feb 14.) [Grade distribution](midtermMarksSTA414.png)
+Each group of students will write a short (around 2 pages) research project proposal, which ideally will be structured similarly to a standard paper.
+It should include a description of a minimum viable project, some nice-to-haves if time allows, and a short review of related work.
+You don't have to do what your project proposal says - the point of the proposal is mainly to have _a_ plan and to make it easy for me to give you feedback.
 
-* **February 17 to 26:** Reading week
+Towards the end of the course everyone will present their project in a short, roughly 5 minute, presentation.
 
-* **February 27 and 28:** [Mixture models](lectures/Lecture6-mixtures.pdf)
+At the end of the class you'll hand in a project report (around 4 to 8 pages), ideally in the format of a machine learning conference paper such as [NIPS](https://nips.cc/Conferences/2016/PaperInformation/StyleFiles).
 
-* **March 6 and 7:** [Continuous Latent variable models, and neural networks](lectures/Lecture7.pdf) Note: PPCA is now bonus material.
+[Project report grading rubric](project-report-guidelines.html)
 
-* **March 12:**  [Assignment 2](assignments/assignment2.pdf) due.
-   
-   - Helper code in [R](assignments/loadMNIST.R)
-   - Helper code in [Python](assignments/data.py)
-   - [Binary Logistic regression example](https://github.com/HIPS/autograd/blob/master/examples/logistic_regression.py)
-   - Some Python and Numpy resources, copied from [Roger Grosse's neural networks course](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2017/):
-     - [Anaconda](https://store.continuum.io/cshop/anaconda/) provides an installer for Python and Numpy for Windows, Linux, and Mac.
-     - [Numpy tutorial](http://www.engr.ucsb.edu/~shell/che210d/numpy.pdf)
-     - [Learn X in Y minutes](http://learnxinyminutes.com/docs/python/) can get you up to speed in Python if you already know other languages.
-     - [Lectures 2, 3, 4, and 6 for MIT's intro programming course](https://courses.edx.org/courses/MITx/6.00.1_4x/3T2014/courseware/Week_0/) Can help you get started if you don't have much programming background.
-     
-* **March 13 and 14:** [Sampling and Monte Carlo methods](lectures/lecture8-sampling.pdf)
 
-    - Readings: [Chapter 29 of David Mackay's textbook](http://www.inference.phy.cam.ac.uk/itprnn/book.pdf)
-    - Demos: [Interactive MCMC demos](https://chi-feng.github.io/mcmc-demo/)
 
-* **March 20 and 21:** [Graphical models, and modelling sequential data](lectures/Lecture9_2017.pdf)
+## Schedule
 
-* **March 27 and 28:** [Stochastic Variational Inference and Variational autoencoders](lectures/09-svi.pdf)
 
-  - Optional Reading: [Variational Inference: A Review for Statisticians](https://arxiv.org/pdf/1601.00670.pdf)
+- **Structured encoder/decoders** [Slides](slides/structured-encoders-decoders.pdf)
 
-* **April 1:** Assignment 3 due at 1 pm. Questions are [here](assignments/assignment3.pdf)
+	We have complete freedom in how we compute q(x | z).  There is also currently a lot of exploration going on of different types of generative models, p(x, z).
+ 
+   - [Importance-Weighted Autoencoders](http://arxiv.org/abs/1509.00519) - The recognition network can return multiple weighted samples.
+   - [Auxiliary Deep Generative Models](https://arxiv.org/pdf/1602.05473.pdf) - The model can be augmented with extra random variables that are then integrated out.
 
-* **April 3 and 4:** [Gaussian processes](lectures/Lecture11_GPs_2.pdf)
+    
+-  **Structured latent variables** [3D Latent rep Slides](slides/unsupervised-3d.pdf) [AIR Slides](slides/attend-infer-repeat.pdf) [SVAE Slides](slides/svae-slides.pdf)
+	
+	At first, variational autoencoders had only vector-valued latent variables z, in which the different dimensions had no special meaning.  People are starting to explore ways to put more meaningful structure on the latent description of data.
 
-* **April 21:** Exam. Some warm-up problems are [here](assignments/practiceQs.pdf), and the first page of the exam will be posted soon.
+    - [Unsupervised Learning of 3D Structure from Images](http://arxiv.org/abs/1607.00662) - The latent variables can specify a 3D shape, letting us take advantage of existing renderers.
+    - [Attend, Infer, Repeat: Fast Scene Understanding with Generative Models](http://arxiv.org/abs/1603.08575) - The latent variables can be a list or set of vectors.
 
+   - [Composing graphical models with neural networks for structured representations and fast inference](http://arxiv.org/abs/1603.06277) - the prior on latent variables can be any tractable graphical model, and we can use this inference as part of the recognition step.
+
+
+- **Dealing with non-differentiability**
+    
+    - [Gradient Estimation Using Stochastic Computation Graphs](https://arxiv.org/abs/1506.05254) Latent variables can be discrete, but this makes gradient estimation harder.  Also see the original [REINFORCE](http://incompleteideas.net/sutton/williams-92.pdf) paper.
+
+
+- **Discrete Optimization Strategies**
+
+   - Variatoinal Optimization
+
+- **Latent-variable language models**
+
+	- [Breaking Sticks and Ambiguities with Adaptive Skip-gram](http://arxiv.org/abs/1502.07257) - word2vec with multiple meanings for each word.
+    - [Program Synthesis for Character-Level Language Modeling](http://openreview.net/pdf?id=ry_sjFqgx)
+  - Part 1: Building open-ended languages of models [slides](slides/roger-part-1.pdf)
+  - Part 2: Evaluating generative models [slides](slides/roger-part-2.pdf)
+
+- **Program Induction**
+   - [Sampling for Bayesian Program Learning](http://web.mit.edu/ellisk/www/programSample.pdf)
+
+
+- **Projects due**
+  
+  
