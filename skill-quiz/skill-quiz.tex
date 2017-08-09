@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{fancyhdr}
+\usepackage[margin=1.9cm]{geometry}
+\usepackage{parskip}
+\usepackage{times} 
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{nicefrac}
+\usepackage{amssymb, amsmath}
+\usepackage{graphicx,xcolor}
+\definecolor{mydarkblue}{rgb}{0,0.08,0.45}
+\usepackage{hyperref}
+\usepackage{acronym}
+
+\newcommand{\acro}[1]{\textsc{#1}}
+\hypersetup{ %
+    colorlinks=true,
+    citecolor=mydarkblue,
+    urlcolor=mydarkblue,
+    filecolor=mydarkblue,
+    linkcolor=mydarkblue}
+
+\newcommand{\vx}{{\mathbf{x}}}
+\newcommand{\vy}{{\mathbf{y}}}
+
+\title{\vspace{-4ex}Background Knowledge Quiz - STA414}
+
+\date{\vspace{-4ex}}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\maketitle
+
+\begin{enumerate}
+%\item Your name:
+\item What year and program are you in?
+\item Are you taking this course for credit, auditing, or something else?
+\subsubsection*{Gaussians}
+\item If $p(x) = \mathcal{N}(x | \mu, \sigma^2)$,
+\begin{enumerate}
+\item For some $x \in \mathbb{R}, \mu \in \mathbb{R}, \sigma \in \mathbb{R}^+$, can $p(x) < 0$?
+\item For some $x \in \mathbb{R}, \mu \in \mathbb{R}, \sigma \in \mathbb{R}^+$, can $p(x) > 1$?
+\end{enumerate}
+\item If $p(x) = \mathcal{N}(x | \mu, \Sigma)$ with $x \in \mathbb{R}^D, \mu \in \mathbb{R}^D, \Sigma \in \mathbb{R}^{D\times D}$, (a multivariate Gaussian),
+\begin{enumerate}
+\item What is the computational complexity (the asymptotic time cost) of evaluating $p(x)$?
+\item What restrictions are there on $\Sigma$ in order for it to be a valid covariance matrix?
+\end{enumerate}
+\subsubsection*{Derivatives}
+\item If $A$ is a fixed matrix and $\vx$ is a vector, what is $\frac{\partial A \vx}{\partial \vx}$?
+\item Given a composition of functions $f(x) = a(b(c(x)))$, we can evaluate its derivative using the chain rule - just multiply together the Jacobian of each function.
+What is the fastest order to multiply this product of Jacobians $J_a \times J_b \times J_c$, if $f(x)$ is a vector-input, scalar-output function?\vspace{0.5cm}
+\item How could one form an unbiased estimate of $\nabla_x \int f(x, \theta) p(\theta) d\theta$ given samples from $p(\theta)$, and derivatives of $f$?
+%\item Write a function from $\mathbb{R} \rightarrow (0,1)$ that is monotonic and differentiable everywhere.
+\subsubsection*{Distributions}
+\item In the natural exponential family of distributions, $p(x|\theta) = f(x)g(\theta)\exp\{x\theta\}$.
+What must $g(\theta)$ be in order for $p(x | \theta)$ to be a valid probability distribution?\vspace{0.5cm}
+\item One way to specify a Categorical (discrete) distribution using an unconstrained vector $\vx \in \mathbb{R}^D$ is with the softmax function: $p(y = c | \vx) = \frac{\exp\{x_c\}}{\sum_{c'=1}^D \exp\{x_{c'}\}}$:
+\begin{enumerate}
+\item What could go wrong numerically in evaluating $p(y = c | \vx)$ if some elements of $\vx$ are large?\vspace{0.5cm}
+\item How to fix this?
+\end{enumerate}
+\end{enumerate}
+\end{document}
