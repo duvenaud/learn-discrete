@@ -1,29 +1,25 @@
- STA XXXX / CSC 2547 Spring 2018:
+ STA 4001 / CSC 2547 Spring 2018:
 # Learning Discrete Latent Structure
 
 
 ## Overview
-
-In the last few years, new inference methods have allowed big advances in generative latent-variable models.  These models let us generate novel images and text, find meaningful latent representations of data, take advantage of large unlabeled datasets, and even let us do analogical reasoning automatically.  
-
-However, most generative models such as GANs and variational autoencoders currently have pre-specified model structure, and represent data using fixed-dimensional continuous vectors.  This seminar course will develop extensions to these approaches to learn model structure, or represent data using mixed discrete and continuous data structures such as lists of vectors, graphs, or even programs.
-
+New inference methods allow us to train learn generative latent-variable models.
+These models can generate novel images and text, find meaningful latent representations of data, take advantage of large unlabeled datasets, and even let us do analogical reasoning automatically.
+However, most generative models such as GANs and variational autoencoders currently have pre-specified model structure, and represent data using fixed-dimensional continuous vectors.
+This seminar course will develop extensions to these approaches to learn model structure, and represent data using mixed discrete and continuous data structures such as lists of vectors, graphs, or even programs.
 The class will have a major project component.
 
-### Prerequisites
-
-This course is designed to bring students to the current frontier of knowledge on these methods, so that ideally, their course projects can make a novel contribution.
-A previous course in machine learning such as CSC321, CSC411, CSC412, STA414, or ECE521 is strongly recommended.
-However, the only real requirements are linear algebra, basic multivariate calculus, basics of working with probability, and basic programming skills.
+## Prerequisites:
+This course is designed to bring students to the current state of the art, so that ideally, their course projects can make a novel contribution. A previous course in machine learning such as CSC321, CSC411, CSC412, STA414, or ECE521 is strongly recommended. However, the only hard requirements are linear algebra, basic multivariate calculus, basics of working with probability, and basic programming skills.
 
 ### Where and When
 
-* Spring term 2018, ??
-* Room: ??
+* Spring term, 2018
+* Room: TBD
 * Instructor: [David Duvenaud](http://www.cs.toronto.edu/~duvenaud)
-* Email: <duvenaud@cs.toronto.edu> (put "CSC2547" in the subject)
-* Office hours: ?? Room 384 Pratt
-* Teaching assistants: ??
+* Email: <duvenaud@cs.toronto.edu> (put "STA4001" in the subject)
+* Office hours: TBD in Room 384 Pratt
+* Teaching assistants: TBD
 
 ## What are generative models?
 
