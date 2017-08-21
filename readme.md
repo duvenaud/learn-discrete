@@ -12,6 +12,8 @@ The class will have a major project component, and will be run in a similar mann
 ## Prerequisites:
 This course is designed to bring students to the current state of the art, so that ideally, their course projects can make a novel contribution. A previous course in machine learning such as CSC321, CSC411, CSC412, STA414, or ECE521 is strongly recommended. However, the only hard requirements are linear algebra, basic multivariate calculus, basics of working with probability, and basic programming skills.
 
+To check if you have the background for this course, try taking this [Quiz](skill-quiz/skill-quiz.pdf).  If more than half the questions are too difficult, you might want to put some extra work into preparation.
+
 ### Where and When
 
 * Spring term, 2018
@@ -41,19 +43,14 @@ Concretely, in this course we'll consider using gradient-based stochastic optimi
 
 Aside from the first two and last two lectures, each week a different group of students will present on a set of related papers covering an aspect of these methods.  I'll provide guidance to each group about the content of these presentations.
 
-In-class discussion will center around:
-
- * Understanding the strengths and weaknesses of these methods.
- * Understanding the relationships between these methods and previous approaches.
- * Extensions or applications of these methods.
- * Experiments that might better illuminate their properties.
+In-class discussion will center around understanding the strengths and weaknesses of these methods, their relationships, possible extensions, and experiments that might better illuminate their properties.
 
 The hope is that these discussions will lead to actual research papers, or resources that will help others understand these approaches.
 
 Grades will be based on:
 
-  * Class presentations
   * One assignment, designed to help you become familiar with different gradient estimators.
+  * Class presentations
   * Project proposal
   * Project presentation
   * Project report and code
