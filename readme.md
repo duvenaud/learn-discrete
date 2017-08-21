@@ -1,13 +1,14 @@
- STA 4001 / CSC 2547 Spring 2018:
+STA 4273 / CSC 2547 Spring 2018:
 # Learning Discrete Latent Structure
 
+![A warped mixture model](http://www.cs.toronto.edu/~duvenaud/pictures/svae/spiral-small.png)
 
 ## Overview
 New inference methods allow us to train learn generative latent-variable models.
 These models can generate novel images and text, find meaningful latent representations of data, take advantage of large unlabeled datasets, and even let us do analogical reasoning automatically.
 However, most generative models such as GANs and variational autoencoders currently have pre-specified model structure, and represent data using fixed-dimensional continuous vectors.
 This seminar course will develop extensions to these approaches to learn model structure, and represent data using mixed discrete and continuous data structures such as lists of vectors, graphs, or even programs.
-The class will have a major project component.
+The class will have a major project component, and will be run in a similar manner to [Differentiable Inference and Generative Models](https://www.cs.toronto.edu/~duvenaud/courses/csc2541/index.html)
 
 ## Prerequisites:
 This course is designed to bring students to the current state of the art, so that ideally, their course projects can make a novel contribution. A previous course in machine learning such as CSC321, CSC411, CSC412, STA414, or ECE521 is strongly recommended. However, the only hard requirements are linear algebra, basic multivariate calculus, basics of working with probability, and basic programming skills.
@@ -17,46 +18,21 @@ This course is designed to bring students to the current state of the art, so th
 * Spring term, 2018
 * Room: TBD
 * Instructor: [David Duvenaud](http://www.cs.toronto.edu/~duvenaud)
-* Email: <duvenaud@cs.toronto.edu> (put "STA4001" in the subject)
+* Email: <duvenaud@cs.toronto.edu> (put "STA4273" in the subject)
 * Office hours: TBD in Room 384 Pratt
 * Teaching assistants: TBD
 
-## What are generative models?
-
-Generative modeling loosely refers to building a model of data, for instance p(image), that we can sample from.  This is in contrast to discriminative modeling, such as regression or classification, which tries to estimate conditional distributions such as p(class | image).
-
-### Why generative models?
-
-Even when we're only interested in making predictions, there are  practical reasons to build generative models:
-
-* **Data efficiency and semi-supervised learning** - Generative models can reduce the amount of data required.  As a simple example, building an image classifier p(class | image) requires estimating a very high-dimenisonal function, possibly requiring a lot of data, or clever assumptions.  In contrast, we could model the data as being generated from some low-dimensional or sparse latent variables z, as in $p(image) = \int p(image | z) p(z) dz$. Then, to do classification, we only need to learn p( class | z), which will usually be a much simpler function.  This approach also lets us take advantage of unlabeled data - also known as semi-supervised learning.
-* **Model checking by sampling** - Understanding complex regression and classification models is hard - it's often not clear what these models have learned from the data and what they missed.  There is a simple way to sanity-check and inspect generative models - simply sample from them, and compare the sampled data to the real data to see if anything is missing.
-* **Understanding** - Generative models usually assume that each datapoint is generated from a (usually low-dimensional) latent variable.  These latent variables are often interpretable, and sometimes can tell us about the hidden causes of a phenomenon.  These latent variables can also sometimes let us do interesting things such as [interpolating between examples](https://www.flickr.com/photos/dribnet/sets/72157670872636082)
- 
-
-## Differentiable inference
-
-We already know how to specify some expressive and flexible generative models, including [entire languages of models that can express arbitarily complicated structure](http://www.cs.toronto.edu/~rgrosse/uai2012-matrix.pdf).  However, until recently such models were hard to apply to real datasets, because inference methods (such as Markov chain Monte Carlo methods) were not usually fast or scalable enough to run on large models or even medium-sized datasets.
-
-The past few years have seen major progress in methods to train and do inference in generative models, loosely following four strands:
-
-* **Variational autoencoders** - Latent-variable models that use a neural network to do approximate inference.  The *recognition network* looks at each datapoint x and outputs an approximate posterior on the latents q(z | x) for that datapoint.
-* **Generative adversarial networks** - A way to train generative models by optimizing them to fool a classifier, the *discriminator network*, that tries to distinguish between real data and data generated by the model. 
-* **Invertible density estimation** - A way to specify complex generative models by transforming a simple latent distribution with a series of invertible functions.  These approaches are restricted to a more limited set of possible operations, but sidestep the difficult integrals required to train standard latent variable models.
-* **Autoregressive models** - Another way to model p(x) is to break the model into a series of conditional distributions: $p(x) = p(x_1) p(x_2|x_1) p(x_3 | x_2, x_1) \dots$ This is the approach used, for example, by recurrent neural networks.  These models are also realitvely easy to train, but the downside is that they don't support all of the same queries we can make of latent-variable models. 
-
-The common thread among these approaches that lets them scale to high-dimensional models is that their loss functions are *end-to-end differentiable*.  This is in contrast to previous inference strategies such as MCMC or early variational inference strategies, which required alternating inference and optimization steps and didn't allow gradient-based tuning of the inference procedure.
-
-These new inference schemes are allowing great progress in generative models of [images](https://arxiv.org/pdf/1606.03498v1.pdf) and [text](https://arxiv.org/abs/1511.06349).
+## What is discete latent structure?
+Loosely, this refers to generative models with discrete latent variables.
 
 
-## Why Discrete Latent Struture?
+## Why discrete latent struture?
 
- * Computational efficency (hard attention vs soft attention)
- * Interpretability
- * Model search
- * Communication
- * Matches reality (alphabets)
+ * **Interpretability** 
+ * **Computational efficency** - Making models fully differentiable sometimes requires us to sum over all possiblities to compute gradients, for instance in soft attention models.  Making hard choices about which computation to perform breaks differentiability, but is faster and requires less memory.
+ * **Model search**
+ * **Communication**
+ * **Matches reality** (alphabets)
 
 
 ## Course Structure
