@@ -1,7 +1,6 @@
 STA 4273 / CSC 2547 Spring 2018:
 # Learning Discrete Latent Structure
-
-![A warped mixture model](http://www.cs.toronto.edu/~duvenaud/pictures/svae/spiral-small.png)
+![A warped mixture model](http://www.cs.toronto.edu/~duvenaud/pictures/svae/spiral-small.png) ![Some molecules](http://www.cs.toronto.edu/~duvenaud/pictures/autochem-icon.png) ![Graph neural nets](http://www.cs.toronto.edu/~duvenaud/pictures/neuralfp-icon.png)
 
 ## Overview
 New inference methods allow us to train learn generative latent-variable models.
@@ -21,9 +20,12 @@ This course is designed to bring students to the current state of the art, so th
 * Location, office hours, teaching assistants: TBD
 
 ## What is discete latent structure?
-Loosely, this refers to any model of an discrete unknown quantity that we wish to estimate or optimize.  Concretely, in this course we'll consider using gradient-based stochastic optimization to train models like:
-	* Variational autoencoders with 
-
+Loosely speaking, it referes to any discrete quantity that we wish to estimate or optimize.
+Concretely, in this course we'll consider using gradient-based stochastic optimization to train models like:
+	* Variational autoencoders with latent binary vectors, mixture models, or lists of vectors
+	* Differentiable versions of stacks, deques, and Turing machines
+	* Generative models of text, graphs, and programs
+	* Tree-structured recursive neural networks
 
 ## Why discrete latent struture?
 
