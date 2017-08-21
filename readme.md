@@ -16,33 +16,33 @@ This course is designed to bring students to the current state of the art, so th
 ### Where and When
 
 * Spring term, 2018
-* Room: TBD
 * Instructor: [David Duvenaud](http://www.cs.toronto.edu/~duvenaud)
 * Email: <duvenaud@cs.toronto.edu> (put "STA4273" in the subject)
-* Office hours: TBD in Room 384 Pratt
-* Teaching assistants: TBD
+* Location, office hours, teaching assistants: TBD
 
 ## What is discete latent structure?
-Loosely, this refers to generative models with discrete latent variables.
+Loosely, this refers to any model of an discrete unknown quantity that we wish to estimate or optimize.  Concretely, in this course we'll consider using gradient-based stochastic optimization to train models like:
+	* Variational autoencoders with 
 
 
 ## Why discrete latent struture?
 
- * **Interpretability** 
  * **Computational efficency** - Making models fully differentiable sometimes requires us to sum over all possiblities to compute gradients, for instance in soft attention models.  Making hard choices about which computation to perform breaks differentiability, but is faster and requires less memory.
- * **Model search**
- * **Communication**
- * **Matches reality** (alphabets)
+ * **Reinforcement learning** - In many domains, the set of possible actions is discrete.  Planning and learning in these domains requires integrating over possible future actions.
+ * **Interpretability and Communication** - Models with millions of continuous parameters, or vector-valued latent states, are usually hard to interpret.  
+ 
+## Why not discrete latent struture?
 
+ - **It's hard to compute gradients** - It's hard to estimate gradients through functions of discrete random variables.  It is so difficult that much of this course will be dedicated to investigating different techniques for doing so.  Developing these techniques are an active research area, with several large developments in the last few years.
 
 ## Course Structure
 
-After the first two lectures, each week a different student, or pair of students, will present on an aspect of these methods, using a couple of papers as reference.  I'll provide guidance about the content of these presentations.
+Aside from the first two and last two lectures, each week a different group of students will present on a set of related papers covering an aspect of these methods.  I'll provide guidance to each group about the content of these presentations.
 
 In-class discussion will center around:
 
  * Understanding the strengths and weaknesses of these methods.
- * Understanding the relationships between these methods, and with previous approaches.
+ * Understanding the relationships between these methods and previous approaches.
  * Extensions or applications of these methods.
  * Experiments that might better illuminate their properties.
 
@@ -50,13 +50,15 @@ The hope is that these discussions will lead to actual research papers, or resou
 
 Grades will be based on:
 
-  * Class presentations - 20%
-  * Project proposal - 20% - Due Oct 14th
-  * Project presentation - 20% - Nov 18th and 25th
-  * Project report and code - 40% - Dec 10th
+  * Class presentations
+  * One assignment, designed to help you become familiar with different gradient estimators.
+  * Project proposal
+  * Project presentation
+  * Project report and code
 
 ### Project
 Students can work on projects individually,in pairs, or even in triplets. The grade will depend on the ideas, how well you present them in the report, how clearly you position your work relative to existing literature, how illuminating your experiments are, and well-supported your conclusions are.
+Full marks will require a novel contribution.
 
 Each group of students will write a short (around 2 pages) research project proposal, which ideally will be structured similarly to a standard paper.
 It should include a description of a minimum viable project, some nice-to-haves if time allows, and a short review of related work.
@@ -66,12 +68,11 @@ Towards the end of the course everyone will present their project in a short, ro
 
 At the end of the class you'll hand in a project report (around 4 to 8 pages), ideally in the format of a machine learning conference paper such as [NIPS](https://nips.cc/Conferences/2016/PaperInformation/StyleFiles).
 
-[Project report grading rubric](project-report-guidelines.html)
+Projects will be graded according to an updated version of [Last year's project report grading rubric](project-report-guidelines.html)
 
 
 
 ## Schedule
-
 
 - **Structured encoder/decoders** [Slides](slides/structured-encoders-decoders.pdf)
 
@@ -100,6 +101,9 @@ At the end of the class you'll hand in a project report (around 4 to 8 pages), i
 
    - Variatoinal Optimization
 
+- **Reinforcement learning**
+
+
 - **Latent-variable language models**
 
 	- [Breaking Sticks and Ambiguities with Adaptive Skip-gram](http://arxiv.org/abs/1502.07257) - word2vec with multiple meanings for each word.
@@ -110,6 +114,9 @@ At the end of the class you'll hand in a project report (around 4 to 8 pages), i
 - **Program Induction**
    - [Sampling for Bayesian Program Learning](http://web.mit.edu/ellisk/www/programSample.pdf)
 
+- **Project Presentations I**
+
+- **Project Presentations II**
 
 - **Projects due**
   
