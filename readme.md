@@ -1,6 +1,8 @@
 STA 4273 / CSC 2547 Spring 2018:
 # Learning Discrete Latent Structure
-![A warped mixture model](http://www.cs.toronto.edu/~duvenaud/pictures/svae/spiral-small.png) ![Some molecules](http://www.cs.toronto.edu/~duvenaud/pictures/autochem-icon.png) ![Graph neural nets](http://www.cs.toronto.edu/~duvenaud/pictures/neuralfp-icon.png)
+<img src="http://www.cs.toronto.edu/~duvenaud/pictures/svae/spiral-small.png" width="200">
+<img src="http://www.cs.toronto.edu/~duvenaud/pictures/autochem-icon.png" width="200">
+<img src="http://www.cs.toronto.edu/~duvenaud/pictures/neuralfp-icon.png" width="200">
 
 ## Overview
 New inference methods allow us to train learn generative latent-variable models.
