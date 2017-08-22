@@ -33,7 +33,7 @@ Concretely, in this course we'll consider using gradient-based stochastic optimi
 
  * **Computational efficency** - Making models fully differentiable sometimes requires us to sum over all possiblities to compute gradients, for instance in soft attention models.  Making hard choices about which computation to perform breaks differentiability, but is faster and requires less memory.
  * **Reinforcement learning** - In many domains, the set of possible actions is discrete.  Planning and learning in these domains requires integrating over possible future actions.
- * **Interpretability and Communication** - Models with millions of continuous parameters, or vector-valued latent states, are usually hard to interpret.  
+ * **Interpretability and Communication** - Models with millions of continuous parameters, or vector-valued latent states, are usually hard to interpret.  Discrete structure is easier to communicate using language.  Conversely, communicating using words is an example of learning and planning in a discrete domain. 
  
 ## Why not discrete latent struture?
 
@@ -49,7 +49,7 @@ The hope is that these discussions will lead to actual research papers, or resou
 
 Grades will be based on:
 
-  * One assignment, designed to help you become familiar with different gradient estimators, such as REINFORCE, REBAR, MuProp, 
+  * One assignment, designed to help you become familiar with unbiased gradient estimators, such as [REINFORCE](http://incompleteideas.net/sutton/williams-92.pdf) (also known as the score-function estimator) and [REBAR](https://arxiv.org/abs/1703.07370)
   * Class presentations
   * Project proposal
   * Project presentation
@@ -81,7 +81,7 @@ Projects will be graded according to an updated version of [Last year's project 
     
 - **Differentiable Data Structures**
     - [Neural Turing Machines](https://arxiv.org/abs/1410.5401)
-    - [Reinforcement Learning Neural Turing Machines](https://arxiv.org/abs/1505.00521
+    - [Reinforcement Learning Neural Turing Machines](https://arxiv.org/abs/1505.00521)
     - [Neural Networks, Types, and Functional Programming](http://colah.github.io/posts/2015-09-NN-Types-FP/)
     - [Pointer Networks](https://arxiv.org/abs/1506.03134)
     
