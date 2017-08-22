@@ -24,10 +24,11 @@ To check if you have the background for this course, try taking this [Quiz](skil
 ## What is discete latent structure?
 Loosely speaking, it referes to any discrete quantity that we wish to estimate or optimize.
 Concretely, in this course we'll consider using gradient-based stochastic optimization to train models like:
-	* Variational autoencoders with latent binary vectors, mixture models, or lists of vectors
-	* Differentiable versions of stacks, deques, and Turing machines
-	* Generative models of text, graphs, and programs
-	* Tree-structured recursive neural networks
+	
+* Variational autoencoders with latent binary vectors, mixture models, or lists of vectors
+* Differentiable versions of stacks, deques, and Turing machines
+* Generative models of text, graphs, and programs
+* Tree-structured recursive neural networks
 
 ## Why discrete latent struture?
 
