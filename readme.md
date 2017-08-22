@@ -71,41 +71,42 @@ Projects will be graded according to an updated version of [Last year's project 
 
 
 
-## Schedule
+## Tentative Schedule
 
 - **Dealing with non-differentiability** - Discrete variables makes gradient estimation harder.
-    
     - The original [REINFORCE](http://incompleteideas.net/sutton/williams-92.pdf) paper.
     - [Gradient Estimation Using Stochastic Computation Graphs](https://arxiv.org/abs/1506.05254)
+    - [REBAR: Low-variance, unbiased gradient estimates for discrete latent variable models](https://arxiv.org/abs/1703.07370)
+    - [https://arxiv.org/abs/1308.3432](Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation)
     
 - **Differentiable Data Structures**
-
     - [Neural Turing Machines](https://arxiv.org/abs/1410.5401)
-    - [Reinforcement Learning Neural Turing Machines](https://arxiv.org/abs/1505.00521)
+    - [Reinforcement Learning Neural Turing Machines](https://arxiv.org/abs/1505.00521
+    - [Neural Networks, Types, and Functional Programming](http://colah.github.io/posts/2015-09-NN-Types-FP/)
+    - [Pointer Networks](https://arxiv.org/abs/1506.03134)
     
-    
--  **Discrete latent structures** - Variational autoencoders and GANs typically contain only latent
-    
+-  **Discrete latent structures** - Variational autoencoders and GANs typically use continuous latent variables.
     - [The Helmholtz Machine](http://www.gatsby.ucl.ac.uk/~dayan/papers/hm95.pdf) - The forerunner of VAEs used binary latent variables.
     - [Attend, Infer, Repeat: Fast Scene Understanding with Generative Models](http://arxiv.org/abs/1603.08575) - The latent variables can be a list or set of vectors.
    - [Composing graphical models with neural networks for structured representations and fast inference](http://arxiv.org/abs/1603.06277) - the prior on latent variables can be any tractable graphical model, and we can use this inference as part of the recognition step.
 
-
 - **Reinforcement learning**
     - [Connecting Generative Adversarial Networks and Actor-Critic Methods](https://arxiv.org/abs/1610.01945)
 
-- **Latent-variable language models**
+- **Adversarial training**
+    - [Adversarially Regularized Autoencoders for Generating Discrete Structures)(https://arxiv.org/abs/1706.04223)
 
+- **Latent-variable language models**
     - [Breaking Sticks and Ambiguities with Adaptive Skip-gram](http://arxiv.org/abs/1502.07257) - word2vec with multiple meanings for each word.
     - [Program Synthesis for Character-Level Language Modeling](http://openreview.net/pdf?id=ry_sjFqgx)
 
 - **Program Induction**
    - [Sampling for Bayesian Program Learning](http://web.mit.edu/ellisk/www/programSample.pdf)
+   - [Programming with a Differentiable Forth Interpreter](https://arxiv.org/abs/1605.06640)
 
 - **Project Presentations I**
 
 - **Project Presentations II**
 
-- **Projects due**
   
   
