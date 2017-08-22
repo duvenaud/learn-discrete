@@ -73,11 +73,15 @@ Projects will be graded according to an updated version of [Last year's project 
 
 ## Tentative Schedule
 
+- **The reparameterization trick** - As a warm-up, we'll understand why and how people abandoned the REINFORCE estimator.
+    - [Stochastic Backpropagation and Approximate Inference in Deep Generative Models](https://arxiv.org/abs/1401.4082)
+
 - **Dealing with non-differentiability** - Discrete variables makes gradient estimation harder.
     - The original [REINFORCE](http://incompleteideas.net/sutton/williams-92.pdf) paper.
     - [Gradient Estimation Using Stochastic Computation Graphs](https://arxiv.org/abs/1506.05254)
     - [REBAR: Low-variance, unbiased gradient estimates for discrete latent variable models](https://arxiv.org/abs/1703.07370)
-    - [https://arxiv.org/abs/1308.3432](Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation)
+    - [Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation](https://arxiv.org/abs/1308.3432)
+    - [MuProp: Unbiased Backpropagation for Stochastic Neural Networks](https://arxiv.org/abs/1511.05176)
     
 - **Differentiable Data Structures**
     - [Neural Turing Machines](https://arxiv.org/abs/1410.5401)
@@ -92,9 +96,16 @@ Projects will be graded according to an updated version of [Last year's project 
 
 - **Reinforcement learning**
     - [Connecting Generative Adversarial Networks and Actor-Critic Methods](https://arxiv.org/abs/1610.01945)
-
+    - [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864)
+    
 - **Adversarial training**
-    - [Adversarially Regularized Autoencoders for Generating Discrete Structures)(https://arxiv.org/abs/1706.04223)
+    - [https://arxiv.org/abs/1511.05644](https://arxiv.org/abs/1511.05644) - One surprisingly effective hack for training discrete random variables is to let them be continuous, and have a discriminator check if they're discrete.
+    - [Adversarially Regularized Autoencoders for Generating Discrete Structures](https://arxiv.org/abs/1706.04223)
+
+- **Bayesian nonparametrics** - models of infinitely-large discrete objects.
+    - [Slides on Bayesian nonparametrics](http://stat.columbia.edu/~porbanz/talks/nipstutorial.pdf)
+    - [Lecture notes on Bayesian nonparametrics](http://stat.columbia.edu/~porbanz/papers/porbanz_BNP_draft.pdf)
+    - [Warped Mixtures for Nonparametric Cluster Shapes](https://arxiv.org/abs/1206.1846)
 
 - **Latent-variable language models**
     - [Breaking Sticks and Ambiguities with Adaptive Skip-gram](http://arxiv.org/abs/1502.07257) - word2vec with multiple meanings for each word.
