@@ -49,7 +49,7 @@ The hope is that these discussions will lead to actual research papers, or resou
 
 Grades will be based on:
 
-  * One assignment, designed to help you become familiar with different gradient estimators.
+  * One assignment, designed to help you become familiar with different gradient estimators, such as REINFORCE, REBAR, MuProp, 
   * Class presentations
   * Project proposal
   * Project presentation
@@ -73,42 +73,31 @@ Projects will be graded according to an updated version of [Last year's project 
 
 ## Schedule
 
-- **Structured encoder/decoders** [Slides](slides/structured-encoders-decoders.pdf)
-
-	We have complete freedom in how we compute q(x | z).  There is also currently a lot of exploration going on of different types of generative models, p(x, z).
- 
-   - [Importance-Weighted Autoencoders](http://arxiv.org/abs/1509.00519) - The recognition network can return multiple weighted samples.
-   - [Auxiliary Deep Generative Models](https://arxiv.org/pdf/1602.05473.pdf) - The model can be augmented with extra random variables that are then integrated out.
-
+- **Dealing with non-differentiability** - Discrete variables makes gradient estimation harder.
     
--  **Structured latent variables** [3D Latent rep Slides](slides/unsupervised-3d.pdf) [AIR Slides](slides/attend-infer-repeat.pdf) [SVAE Slides](slides/svae-slides.pdf)
-	
-	At first, variational autoencoders had only vector-valued latent variables z, in which the different dimensions had no special meaning.  People are starting to explore ways to put more meaningful structure on the latent description of data.
+    - The original [REINFORCE](http://incompleteideas.net/sutton/williams-92.pdf) paper.
+    - [Gradient Estimation Using Stochastic Computation Graphs](https://arxiv.org/abs/1506.05254)
+    
+- **Differentiable Data Structures**
 
-    - [Unsupervised Learning of 3D Structure from Images](http://arxiv.org/abs/1607.00662) - The latent variables can specify a 3D shape, letting us take advantage of existing renderers.
+    - [Neural Turing Machines](https://arxiv.org/abs/1410.5401)
+    - [Reinforcement Learning Neural Turing Machines](https://arxiv.org/abs/1505.00521)
+    
+    
+-  **Discrete latent structures** - Variational autoencoders and GANs typically contain only latent
+    
+    - [The Helmholtz Machine](http://www.gatsby.ucl.ac.uk/~dayan/papers/hm95.pdf) - The forerunner of VAEs used binary latent variables.
     - [Attend, Infer, Repeat: Fast Scene Understanding with Generative Models](http://arxiv.org/abs/1603.08575) - The latent variables can be a list or set of vectors.
-
    - [Composing graphical models with neural networks for structured representations and fast inference](http://arxiv.org/abs/1603.06277) - the prior on latent variables can be any tractable graphical model, and we can use this inference as part of the recognition step.
 
 
-- **Dealing with non-differentiability**
-    
-    - [Gradient Estimation Using Stochastic Computation Graphs](https://arxiv.org/abs/1506.05254) Latent variables can be discrete, but this makes gradient estimation harder.  Also see the original [REINFORCE](http://incompleteideas.net/sutton/williams-92.pdf) paper.
-
-
-- **Discrete Optimization Strategies**
-
-   - Variatoinal Optimization
-
 - **Reinforcement learning**
-
+    - [Connecting Generative Adversarial Networks and Actor-Critic Methods](https://arxiv.org/abs/1610.01945)
 
 - **Latent-variable language models**
 
-	- [Breaking Sticks and Ambiguities with Adaptive Skip-gram](http://arxiv.org/abs/1502.07257) - word2vec with multiple meanings for each word.
+    - [Breaking Sticks and Ambiguities with Adaptive Skip-gram](http://arxiv.org/abs/1502.07257) - word2vec with multiple meanings for each word.
     - [Program Synthesis for Character-Level Language Modeling](http://openreview.net/pdf?id=ry_sjFqgx)
-  - Part 1: Building open-ended languages of models [slides](slides/roger-part-1.pdf)
-  - Part 2: Evaluating generative models [slides](slides/roger-part-2.pdf)
 
 - **Program Induction**
    - [Sampling for Bayesian Program Learning](http://web.mit.edu/ellisk/www/programSample.pdf)
