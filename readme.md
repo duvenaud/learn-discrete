@@ -71,7 +71,7 @@ Projects will be graded according to an updated version of [Last year's project 
 
 
 
-## Tentative Schedule
+## Tentative Schedule (Work in progress)
 
 - **The reparameterization trick** - As a warm-up, we'll understand why and how people abandoned the REINFORCE estimator.
     - [Stochastic Backpropagation and Approximate Inference in Deep Generative Models](https://arxiv.org/abs/1401.4082)
@@ -99,7 +99,7 @@ Projects will be graded according to an updated version of [Last year's project 
     - [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864)
     
 - **Adversarial training**
-    - [https://arxiv.org/abs/1511.05644](https://arxiv.org/abs/1511.05644) - One surprisingly effective hack for training discrete random variables is to let them be continuous, and have a discriminator check if they're discrete.
+    - [Adversarial Autoencoders](https://arxiv.org/abs/1511.05644) - One surprisingly effective hack for training discrete random variables is to let them be continuous, and have a discriminator check if they're discrete.
     - [Adversarially Regularized Autoencoders for Generating Discrete Structures](https://arxiv.org/abs/1706.04223)
 
 - **Bayesian nonparametrics** - models of infinitely-large discrete objects.
