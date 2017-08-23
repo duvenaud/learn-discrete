@@ -127,7 +127,7 @@ Projects will be graded according to an updated version of [Last year's project 
     - [Program Synthesis for Character-Level Language Modeling](http://openreview.net/pdf?id=ry_sjFqgx)
     - [Hierarchical Multiscale Recurrent Neural Networks](https://arxiv.org/abs/1609.01704)
 
-- **Program Induction**
+- **Program induction**
    - Solomonoff Induction
    - [Probabilistic programming](https://probmods.org/) - Automatic inference in arbitary models specified by a program.
    - [Sampling for Bayesian Program Learning](http://web.mit.edu/ellisk/www/programSample.pdf)
