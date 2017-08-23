@@ -2,19 +2,30 @@
 <html>
   <head>
     
-    <style type="text/css" media="all">
-body {font-family: 'Droid Sans', helvetica,Arial,sans-serif;}
-a:link, a:visited, a:active {text-decoration:none}
-div.container{width:80%; margin:2%; line-height:140%;}
-div.right{float:right;width:200px; margin:1em; padding:1em;}
-div.content{margin-left:4%; padding:1em;}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="github-markdown.css">
+<style>
+	.markdown-body {
+		box-sizing: border-box;
+		min-width: 200px;
+		max-width: 980px;
+		margin: 0 auto;
+		padding: 45px;
+	}
+
+	@media (max-width: 767px) {
+		.markdown-body {
+			padding: 15px;
+		}
+	}
 </style>
+
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Learning Discrete Latent Structure</title>
 
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/github-markdown.css' | append: relative_url }}">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
