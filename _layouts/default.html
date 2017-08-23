@@ -3,7 +3,7 @@
   <head>
     
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="github-markdown.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
 <style>
 	.markdown-body {
 		box-sizing: border-box;
@@ -13,11 +13,7 @@
 		padding: 45px;
 	}
 
-	@media (max-width: 767px) {
-		.markdown-body {
-			padding: 15px;
-		}
-	}
+
 </style>
 
     
@@ -32,11 +28,10 @@
     <![endif]-->
   </head>
   <body>
-  <div>
+<article class="markdown-body">
 
       {{ content }}
 
-    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
-  </div>
+</article>
   </body>
 </html>
