@@ -133,9 +133,9 @@ Projects will be graded according to an updated version of [Last year's project 
    - [Sampling for Bayesian Program Learning](http://web.mit.edu/ellisk/www/programSample.pdf)
    - [Programming with a Differentiable Forth Interpreter](https://arxiv.org/abs/1605.06640)
 
-- **Project Presentations I**
+- **Project presentations I**
 
-- **Project Presentations II**
+- **Project presentations II**
 
   
   
