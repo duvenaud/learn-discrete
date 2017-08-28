@@ -95,10 +95,11 @@ Projects will be graded according to an updated version of [Last year's project 
     - [Neural Networks, Types, and Functional Programming](http://colah.github.io/posts/2015-09-NN-Types-FP/)
     - [Pointer Networks](https://arxiv.org/abs/1506.03134)
     
--  **Discrete latent structures** - Variational autoencoders and GANs typically use continuous latent variables.
+-  **Discrete latent structures** - Variational autoencoders and GANs typically use continuous latent variables, but there is recent work on getting them to use discrete random variables.
     - [The Helmholtz Machine](http://www.gatsby.ucl.ac.uk/~dayan/papers/hm95.pdf) - The forerunner of VAEs used binary latent variables.
     - [Attend, Infer, Repeat: Fast Scene Understanding with Generative Models](http://arxiv.org/abs/1603.08575) - The latent variables can be a list or set of vectors.
    - [Composing graphical models with neural networks for structured representations and fast inference](http://arxiv.org/abs/1603.06277) - the prior on latent variables can be any tractable graphical model, and we can use this inference as part of the recognition step.
+    - [Learning Hard Alignments with Variational Inference](https://arxiv.org/pdf/1705.05524.pdf)
 
 - **Reinforcement learning**
     - [Connecting Generative Adversarial Networks and Actor-Critic Methods](https://arxiv.org/abs/1610.01945)
