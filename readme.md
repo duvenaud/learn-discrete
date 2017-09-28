@@ -21,7 +21,7 @@ To check if you have the background for this course, try taking this [Quiz](skil
 * Email: <duvenaud@cs.toronto.edu> (put "STA4273" in the subject)
 * Location, office hours, teaching assistants: TBD
 
-## What is discete latent structure?
+## What is discrete latent structure?
 Loosely speaking, it referes to any discrete quantity that we wish to estimate or optimize.
 Concretely, in this course we'll consider using gradient-based stochastic optimization to train models like:
 	
