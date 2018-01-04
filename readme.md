@@ -74,7 +74,7 @@ Projects will be graded according to an updated version of [Last year's project 
 
 ## Tentative Schedule (Work in progress)
 
-- **The reparameterization trick** - As a warm-up, we'll understand why and how people are moving away from the REINFORCE estimator.
+- **Jan 12th: The reparameterization trick** - As a warm-up, we'll understand why and how people are moving away from the REINFORCE estimator.
     - [Stochastic Backpropagation and Approximate Inference in Deep Generative Models](https://arxiv.org/abs/1401.4082)
     - [The Generalized Reparameterization Gradient](https://arxiv.org/abs/1610.02287)
 
