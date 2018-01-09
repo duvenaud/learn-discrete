@@ -72,29 +72,41 @@ Projects will be graded according to an updated version of [Last year's project 
 
 
 
-## Tentative Schedule (Work in progress)
+## Tentative Schedule
+---
+## Week 1 - Jan 12th
 
-- **Jan 12th: The reparameterization trick** - As a warm-up, we'll understand why and how people are moving away from the REINFORCE estimator.
-    - [Stochastic Backpropagation and Approximate Inference in Deep Generative Models](https://arxiv.org/abs/1401.4082)
-    - [The Generalized Reparameterization Gradient](https://arxiv.org/abs/1610.02287)
+**The reparameterization trick** - As a warm-up, we'll understand why and how people are moving away from the REINFORCE estimator.
+  - [Stochastic Backpropagation and Approximate Inference in Deep Generative Models](https://arxiv.org/abs/1401.4082)
+  - [The Generalized Reparameterization Gradient](https://arxiv.org/abs/1610.02287)
 
-- **Dealing with non-differentiability** - Discrete variables makes gradient estimation hard, but there has been a lot of recent progress on developing unbiased gradient estimators.
-    - The original [REINFORCE](http://incompleteideas.net/sutton/williams-92.pdf) paper.
-    - [Gradient Estimation Using Stochastic Computation Graphs](https://arxiv.org/abs/1506.05254)
-    - [REBAR: Low-variance, unbiased gradient estimates for discrete latent variable models](https://arxiv.org/abs/1703.07370)
-    - [Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation](https://arxiv.org/abs/1308.3432)
-    - [MuProp: Unbiased Backpropagation for Stochastic Neural Networks](https://arxiv.org/abs/1511.05176)
-    - [Neural Variational Inference and Learning in Belief Networks](https://arxiv.org/abs/1402.0030)
-    - [Variational inference for Monte Carlo objectives](https://arxiv.org/abs/1602.06725)
-    - [Categorical Reparameterization with Gumbel-Softmax](https://arxiv.org/abs/1611.01144)
-    - [The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables](https://arxiv.org/abs/1611.00712)
+
+***
+## Week 2 - Jan 19th
+
+**Dealing with non-differentiability** - Discrete variables makes gradient estimation hard, but there has been a lot of recent progress on developing unbiased gradient estimators.
+  - The original [REINFORCE](http://incompleteideas.net/sutton/williams-92.pdf) paper.
+  - [Gradient Estimation Using Stochastic Computation Graphs](https://arxiv.org/abs/1506.05254)
+  - [REBAR: Low-variance, unbiased gradient estimates for discrete latent variable models](https://arxiv.org/abs/1703.07370)
+  - [Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation](https://arxiv.org/abs/1308.3432)
+  - [MuProp: Unbiased Backpropagation for Stochastic Neural Networks](https://arxiv.org/abs/1511.05176)
+  - [Neural Variational Inference and Learning in Belief Networks](https://arxiv.org/abs/1402.0030)
+  - [Variational inference for Monte Carlo objectives](https://arxiv.org/abs/1602.06725)
+  - [Categorical Reparameterization with Gumbel-Softmax](https://arxiv.org/abs/1611.01144)
+  - [The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables](https://arxiv.org/abs/1611.00712)
     
-- **Differentiable Data Structures**
-    - [Neural Turing Machines](https://arxiv.org/abs/1410.5401)
-    - [Reinforcement Learning Neural Turing Machines](https://arxiv.org/abs/1505.00521)
-    - [Neural Networks, Types, and Functional Programming](http://colah.github.io/posts/2015-09-NN-Types-FP/)
-    - [Pointer Networks](https://arxiv.org/abs/1506.03134)
-    
+***
+## Week 2 - Jan 19th
+
+**Differentiable Data Structures**
+  - [Neural Turing Machines](https://arxiv.org/abs/1410.5401)
+  - [Reinforcement Learning Neural Turing Machines](https://arxiv.org/abs/1505.00521)
+  - [Neural Networks, Types, and Functional Programming](http://colah.github.io/posts/2015-09-NN-Types-FP/)
+  - [Pointer Networks](https://arxiv.org/abs/1506.03134)
+   
+***
+## Week 3 - Jan 26th
+
 -  **Discrete latent structures** - Variational autoencoders and GANs typically use continuous latent variables, but there is recent work on getting them to use discrete random variables.
     - [The Helmholtz Machine](http://www.gatsby.ucl.ac.uk/~dayan/papers/hm95.pdf) - The forerunner of VAEs used binary latent variables.
     - [Attend, Infer, Repeat: Fast Scene Understanding with Generative Models](http://arxiv.org/abs/1603.08575) - The latent variables can be a list or set of vectors.
