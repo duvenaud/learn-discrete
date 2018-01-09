@@ -96,7 +96,7 @@ Projects will be graded according to an updated version of [Last year's project 
   - [The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables](https://arxiv.org/abs/1611.00712)
     
 ***
-## Week 2 - Jan 19th
+## Week 3 - Jan 19th
 
 **Differentiable Data Structures**
   - [Neural Turing Machines](https://arxiv.org/abs/1410.5401)
@@ -105,7 +105,7 @@ Projects will be graded according to an updated version of [Last year's project 
   - [Pointer Networks](https://arxiv.org/abs/1506.03134)
    
 ***
-## Week 3 - Jan 26th
+## Week 4 - Jan 26th
 
 -  **Discrete latent structures** - Variational autoencoders and GANs typically use continuous latent variables, but there is recent work on getting them to use discrete random variables.
     - [The Helmholtz Machine](http://www.gatsby.ucl.ac.uk/~dayan/papers/hm95.pdf) - The forerunner of VAEs used binary latent variables.
