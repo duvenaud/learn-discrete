@@ -76,7 +76,7 @@ Projects will be graded according to an updated version of [Last year's project 
 
 ## Tentative Schedule
 ---
-## Week 1 - Jan 12th - Optimization, integration, and the reparameterization trick
+### Week 1 - Jan 12th - Optimization, integration, and the reparameterization trick
 
 This lecture will set the scope of the course, the different settings where discrete structure must be estimated or chosen, and the main existing approaches.  As a warm-up, we'll understand why and how people are moving away from the REINFORCE estimator.
   - [Stochastic Backpropagation and Approximate Inference in Deep Generative Models](https://arxiv.org/abs/1401.4082)
@@ -84,7 +84,7 @@ This lecture will set the scope of the course, the different settings where disc
 
 
 ***
-## Week 2 - Jan 19th - Gradient estimators for non-differentiable computation graphs
+### Week 2 - Jan 19th - Gradient estimators for non-differentiable computation graphs
 
 Discrete variables makes gradient estimation hard, but there has been a lot of recent progress on developing unbiased gradient estimators.
   - The original [REINFORCE](http://incompleteideas.net/sutton/williams-92.pdf) paper.
@@ -98,17 +98,20 @@ Discrete variables makes gradient estimation hard, but there has been a lot of r
   - [The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables](https://arxiv.org/abs/1611.00712)
     
 ***
-## Week 3 - Jan 19th - Differentiable Data Structures
+### Week 3 - Jan 19th - Differentiable Data Structures
 
-Attempts learn programs using gradient-based methods.
-
-  - [Neural Turing Machines](https://arxiv.org/abs/1410.5401)
-  - [Reinforcement Learning Neural Turing Machines](https://arxiv.org/abs/1505.00521)
-  - [Neural Networks, Types, and Functional Programming](http://colah.github.io/posts/2015-09-NN-Types-FP/)
-  - [Pointer Networks](https://arxiv.org/abs/1506.03134)
+Attempts learn programs using gradient-based methods, and program induction in general.
+ - [Neural Turing Machines](https://arxiv.org/abs/1410.5401)
+ - [Reinforcement Learning Neural Turing Machines](https://arxiv.org/abs/1505.00521)
+ - [Neural Networks, Types, and Functional Programming](http://colah.github.io/posts/2015-09-NN-Types-FP/)
+ - [Pointer Networks](https://arxiv.org/abs/1506.03134)
+ - Solomonoff Induction
+ - [Probabilistic programming](https://probmods.org/) - Automatic inference in arbitary models specified by a program.
+ - [Sampling for Bayesian Program Learning](http://web.mit.edu/ellisk/www/programSample.pdf)
+ - [Programming with a Differentiable Forth Interpreter](https://arxiv.org/abs/1605.06640)
 
 ***
-## Week 4 - Jan 26th - Discrete latent structures
+### Week 4 - Jan 26th - Discrete latent structures
 
 Variational autoencoders and GANs typically use continuous latent variables, but there is recent work on getting them to use discrete random variables.
     - [The Helmholtz Machine](http://www.gatsby.ucl.ac.uk/~dayan/papers/hm95.pdf) - The forerunner of VAEs used binary latent variables.
@@ -117,14 +120,14 @@ Variational autoencoders and GANs typically use continuous latent variables, but
     - [Learning Hard Alignments with Variational Inference](https://arxiv.org/pdf/1705.05524.pdf)
 
 ***
-## Week 5 - Reinforcement learning
+### Week 5 - Reinforcement learning
   - [Connecting Generative Adversarial Networks and Actor-Critic Methods](https://arxiv.org/abs/1610.01945)
   - [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864)
   - [Emergence of Grounded Compositional Language in Multi-Agent Populations](https://arxiv.org/abs/1703.04908)
   - [Model-Based Planning in Discrete Action Spaces](https://arxiv.org/abs/1705.07177) - "it is in fact possible to effectively perform planning via backprop in discrete action spaces"
 
 ***
-## Week 6 - Adversarial training
+### Week 6 - Adversarial training
 
 It's not obvious how to train GANs to produce discrete structures, because this cuts off the gradient to the discriminator.
   - [Adversarial Autoencoders](https://arxiv.org/abs/1511.05644) - One surprisingly effective hack for training discrete random variables is to let them be continuous, and have a discriminator check if they're discrete.
@@ -132,7 +135,7 @@ It's not obvious how to train GANs to produce discrete structures, because this 
   - [GANS for Sequences of Discrete Elements with the Gumbel-softmax Distribution](https://arxiv.org/abs/1611.04051)
 
 ***
-## Week 7 - Bayesian nonparametrics
+### Week 7 - Bayesian nonparametrics
 
 Models of infinitely-large discrete objects.
   - [Slides on Bayesian nonparametrics](http://stat.columbia.edu/~porbanz/talks/nipstutorial.pdf)
@@ -141,26 +144,24 @@ Models of infinitely-large discrete objects.
   - [Structure Discovery in Nonparametric Regression through Compositional Kernel Search](https://arxiv.org/abs/1302.4922)
 
 ***
-## Week 8 - Learning model structure
+### Week 8 - Learning model structure
   - [The discovery of structural form](http://www.pnas.org/content/105/31/10687.full) - put a grammar on model structures and built a different model for each dataset automatically.
   - [Exploiting compositionality to explore a large space of model structures](https://arxiv.org/abs/1210.4856) - another systematic search through model structure using a grammar.
   - [Bayesian Compression for Deep Learning](https://arxiv.org/abs/1705.08665) - putting a sparse prior on a neural network's weights is a principled way to learn its structure.
 
 ***
-## Week 9 - Latent-variable language models
+### Week 9 - Latent-variable language models
   - [Breaking Sticks and Ambiguities with Adaptive Skip-gram](http://arxiv.org/abs/1502.07257) - word2vec with multiple meanings for each word.
   - [Program Synthesis for Character-Level Language Modeling](http://openreview.net/pdf?id=ry_sjFqgx)
   - [Hierarchical Multiscale Recurrent Neural Networks](https://arxiv.org/abs/1609.01704)
 
 ***
-## Week 10 - Program induction
- - Solomonoff Induction
- - [Probabilistic programming](https://probmods.org/) - Automatic inference in arbitary models specified by a program.
- - [Sampling for Bayesian Program Learning](http://web.mit.edu/ellisk/www/programSample.pdf)
- - [Programming with a Differentiable Forth Interpreter](https://arxiv.org/abs/1605.06640)
+### Week 10 - Variational Optimization
+  - Evolution strategies
+  - Natural variational optimization
 
 ***
-## Week 11 - Project presentations I
+### Week 11 - Project presentations I
 
 ***
-## Week 12 - Project presentations II
+### Week 12 - Project presentations II
