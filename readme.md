@@ -52,11 +52,11 @@ The hope is that these discussions will lead to actual research papers, or resou
 
 Grades will be based on:
 
-  * One assignment, designed to help you become familiar with unbiased gradient estimators, such as [REINFORCE](http://incompleteideas.net/sutton/williams-92.pdf) (also known as the score-function estimator) and [REBAR](https://arxiv.org/abs/1703.07370)
-  * Class presentations
-  * Project proposal
-  * Project presentation
-  * Project report and code
+  * [15%] One assignment, designed to help you become familiar with unbiased gradient estimators, such as [REINFORCE](http://incompleteideas.net/sutton/williams-92.pdf) (also known as the score-function estimator) and [REBAR](https://arxiv.org/abs/1703.07370)
+  * [15%] Class presentations
+  * [15%] Project proposal
+  * [15%] Project presentation
+  * [40%] Project report and code
 
 ### Project
 Students can work on projects individually,in pairs, or even in triplets. The grade will depend on the ideas, how well you present them in the report, how clearly you position your work relative to existing literature, how illuminating your experiments are, and well-supported your conclusions are.
@@ -98,7 +98,7 @@ Discrete variables makes gradient estimation hard, but there has been a lot of r
   - [The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables](https://arxiv.org/abs/1611.00712)
     
 ***
-### Week 3 - Jan 19th - Differentiable Data Structures
+### Week 3 - Jan 26th - Differentiable Data Structures
 
 Attempts learn programs using gradient-based methods, and program induction in general.
  - [Neural Turing Machines](https://arxiv.org/abs/1410.5401)
@@ -111,7 +111,7 @@ Attempts learn programs using gradient-based methods, and program induction in g
  - [Programming with a Differentiable Forth Interpreter](https://arxiv.org/abs/1605.06640)
 
 ***
-### Week 4 - Jan 26th - Discrete latent structures
+### Week 4 - Feb 2nd - Discrete latent structures
 
 Variational autoencoders and GANs typically use continuous latent variables, but there is recent work on getting them to use discrete random variables.
     - [The Helmholtz Machine](http://www.gatsby.ucl.ac.uk/~dayan/papers/hm95.pdf) - The forerunner of VAEs used binary latent variables.
@@ -120,14 +120,14 @@ Variational autoencoders and GANs typically use continuous latent variables, but
     - [Learning Hard Alignments with Variational Inference](https://arxiv.org/pdf/1705.05524.pdf)
 
 ***
-### Week 5 - Reinforcement learning
+### Week 5 - Feb 9th - Reinforcement learning
   - [Connecting Generative Adversarial Networks and Actor-Critic Methods](https://arxiv.org/abs/1610.01945)
   - [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864)
   - [Emergence of Grounded Compositional Language in Multi-Agent Populations](https://arxiv.org/abs/1703.04908)
   - [Model-Based Planning in Discrete Action Spaces](https://arxiv.org/abs/1705.07177) - "it is in fact possible to effectively perform planning via backprop in discrete action spaces"
 
 ***
-### Week 6 - Adversarial training
+### Week 6 - Feb 16th - Adversarial training
 
 It's not obvious how to train GANs to produce discrete structures, because this cuts off the gradient to the discriminator.
   - [Adversarial Autoencoders](https://arxiv.org/abs/1511.05644) - One surprisingly effective hack for training discrete random variables is to let them be continuous, and have a discriminator check if they're discrete.
@@ -135,7 +135,7 @@ It's not obvious how to train GANs to produce discrete structures, because this 
   - [GANS for Sequences of Discrete Elements with the Gumbel-softmax Distribution](https://arxiv.org/abs/1611.04051)
 
 ***
-### Week 7 - Bayesian nonparametrics
+### Week 7 - Feb 23rd - Bayesian nonparametrics
 
 Models of infinitely-large discrete objects.
   - [Slides on Bayesian nonparametrics](http://stat.columbia.edu/~porbanz/talks/nipstutorial.pdf)
@@ -144,24 +144,23 @@ Models of infinitely-large discrete objects.
   - [Structure Discovery in Nonparametric Regression through Compositional Kernel Search](https://arxiv.org/abs/1302.4922)
 
 ***
-### Week 8 - Learning model structure
+### Week 8 - March 2nd - Learning model structure
   - [The discovery of structural form](http://www.pnas.org/content/105/31/10687.full) - put a grammar on model structures and built a different model for each dataset automatically.
   - [Exploiting compositionality to explore a large space of model structures](https://arxiv.org/abs/1210.4856) - another systematic search through model structure using a grammar.
   - [Bayesian Compression for Deep Learning](https://arxiv.org/abs/1705.08665) - putting a sparse prior on a neural network's weights is a principled way to learn its structure.
 
 ***
-### Week 9 - Latent-variable language models
+### Week 9 - March 9th - Latent-variable language models
   - [Breaking Sticks and Ambiguities with Adaptive Skip-gram](http://arxiv.org/abs/1502.07257) - word2vec with multiple meanings for each word.
   - [Program Synthesis for Character-Level Language Modeling](http://openreview.net/pdf?id=ry_sjFqgx)
   - [Hierarchical Multiscale Recurrent Neural Networks](https://arxiv.org/abs/1609.01704)
 
 ***
-### Week 10 - Variational Optimization
-  - Evolution strategies
-  - Natural variational optimization
+### Week 10 - March 16th - Project presentations I
 
 ***
-### Week 11 - Project presentations I
+### Week 11 - March 23rd - Project presentations II
 
 ***
-### Week 12 - Project presentations II
+### Week 12 - March 30th - Good Friday Holiday
+
