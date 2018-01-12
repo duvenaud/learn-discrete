@@ -1,0 +1,310 @@
+% No 'submit' option for the problems by themselves.
+%\documentclass{harvardml}
+% Use the 'submit' option when you submit your solutions.
+\documentclass{harvardml}
+
+% Put in your full name and email address.
+\name{Your Name}
+\email{email@fas.harvard.edu}
+
+% You don't need to change these.
+\assignment{Discrete Variables and Gradient Estimators}
+\duedate{TBD}
+
+\usepackage{url, enumitem}
+\usepackage{amsfonts, amsmath}
+\usepackage{listings}
+
+% Some useful macros.
+\newcommand{\given}{\,|\,}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\cov}{\text{Cov}}
+\newcommand{\trans}{\mathsf{T}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\distNorm}{\mathcal{N}}
+\newcommand{\bzero}{\mathbf{0}}
+\newcommand{\ident}{\mathbb{I}}
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\Dir}{\text{Dirichlet}}
+
+\newcommand{\vtheta}{\mathbf{\theta}}
+\newcommand{\relaxed}{r}
+\newcommand{\controlf}{c}  % Control variate for functions
+\newcommand{\controlg}{\hat g}  % Control variate for gradients
+\newcommand{\discreteDist}{p(b|\theta)}
+\newcommand{\loss}{f(b)}
+\newcommand{\lossGrad}{\loss{} \frac{\partial}{\partial \theta }\log \discreteDist{}}
+\newcommand{\mcGrad}{\hat{g}}
+\newcommand{\expectedLoss}{\mathbb{E}_{\discreteDist{}} \! \left[ \, \loss{} \right]}
+\newcommand{\expectedLossLogTrick}{\mathbb{E}_{\discreteDist{}} \! \left[ \, \lossGrad{} \right]}
+\newcommand{\var}{\mathbb{V}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\LL}[1]{\frac{\partial \log \pi(a_{#1}| s_{#1}, \theta)}{\partial \theta}}
+\newcommand{\PT}{\frac{\partial}{\partial \theta}}
+\newcommand{\PP}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\PPH}{\frac{\partial}{\partial \phi}}
+\newcommand{\LP}[1]{\PT \log p(#1)}
+\newcommand{\LZ}[1]{\frac{\log \pi(z_{#1}| s_{#1}, \theta)}{\partial \theta}}
+
+\newcommand{\LAX}{{\textnormal{LAX}}}
+\newcommand{\DLAX}{{\textnormal{DLAX}}}
+\newcommand{\RL}{{\textnormal{RL}}}
+\newcommand{\RELAX}{{\textnormal{RELAX}}}
+\newcommand{\BAR}{{\textnormal{BAR}}}
+\newcommand{\REBAR}{{\textnormal{REBAR}}}
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}
+
+
+\begin{document}
+
+This assignment is designed to get you comfortable deriving gradient estimators, and optimizing distributions over discrete random variables.
+
+For all questions, the answers should be a few lines of derivations.
+
+
+\begin{problem}[Unbiasedness of the score-function estimator, 10 points]
+
+Gradient estimators are simply functions that take a parameter vector $\theta$ and a (possibly stochastic) function $L(\theta)$, and return another vector $\hat g$ of the same size as $\theta$.
+Gradient estimators are generally more useful the closer their estimate is to the true gradient, i.e.\ when $\hat g$ is close to $\PT L(\theta)$.
+
+All else being equal, it's useful for a gradient estimator to be unbiased.
+The unbiasedness of a gradient estimator guarantees that, if we decay the step size and run stochastic gradient descent for long enough (see Robbins \& Monroe), it will converge to a local optimum.
+
+The standard REINFORCE, or score-function estimator is defined as:
+%
+\begin{align}
+\hat g_\textnormal{SF}[f] = f \left( b \right) \PT \log p(b | \theta), \qquad b \sim p(b | \theta)
+\end{align}
+%
+%This estimator is unbiased, but in general has high variance.
+%Intuitively, this estimator is limited by the fact that it doesn't use any information about how $f$ depends on $b$, only on the final outcome $f(b)$.
+\begin{enumerate}[label=(\alph*)]
+\item First, let's warm up with the score function.  Prove that the score function has zero expectation, i.e.\ $\E_{p(x|\theta)} \left[ \nabla_\theta \log p(x|\theta) \right] = 0$.
+Hint: Under some conditions, one can swap the derivative and integral operators.
+\item Show that $\E_{p(b|\theta)} \left[ f(b) \PT \log p(b | \theta) \right] = \PT \E_{p(b|\theta)}$.
+\item Show that $\E_{p(b|\theta)} \left[ [f(b) - c] \PT \log p(b | \theta) \right] = \PT \E_{p(b|\theta)}$ for any fixed $c$.
+\item If the baseline depends on $b$, then REINFORCE will in general give biased gradient estimates.
+Give an example where $\E_{p(b|\theta)} \left[ [f(b) - c(b)] \PT \log p(b | \theta) \right] \neq \PT \E_{p(b|\theta)}$ for some function $c(b)$.
+\end{enumerate}
+
+The takeaway is that you can use a baseline to reduce the variance of REINFORCE, but not one that depends on the current action.
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% You can write your solution here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+\begin{problem}[Comparing variances, 10 points]
+
+If we restrict ourselves to consider only unbiased gradient estimators, then the main (and perhaps only) property we need to worry about is the variance of our estimators.
+In general, optimizing with a lower-variance unbiased estimator will converge faster than a high-variance unbiased estimator.
+However, which estimator has the lowest variance can depend on the function being optimized.
+
+In this question, we'll look at which gradient estimators scale to large numbers of parameters, by computing their variance as a function of dimension.
+
+For simplicity, we'll consider a toy problem.
+The goal will be to estimate gradients of a sum of one-dimensional Gaussians with means given by a $D$-dimensional parameter vector $\theta$ and unit variance:
+%
+\begin{align}
+L(\theta) = \E_{\distNorm(\theta, 1)} \left[ \sum_{d=1}^D X_d \right]
+\end{align}
+
+
+
+\begin{enumerate}[label=(\alph*)]
+\item As a warm-up, let's compute the variance of a Monte Carlo estimator of the objective $L(\theta)$:
+%
+\begin{align}
+\hat L_{MC} = \sum_{d=1}^D x_d, \qquad \textnormal{where each } x_d \sim \distNorm(\theta_d, 1)
+\end{align}
+%
+That is, compute $\var \left[ \hat L_{MC} \right]$ as a function of $D$.
+
+\item Next, we'll look at the variance of gradient estimators.
+
+Recall the definition of the score-function, or REINFORCE estimator:
+%
+\begin{align}
+\hat g_\textnormal{SF}[f] = f \left( b \right) \PT \log p(b | \theta), \qquad b \sim p(b | \theta)
+\end{align}
+%
+
+Because gradients are $D$-dimensional vectors, they actually have a $D \times D$ covariance matrix.
+For this question, we'll consider the variance of a gradient estimator to mean the sum of the diagonal of the covariance matrix.
+
+Derive $\sum_{d=1}^D \cov \left[ \hat g_\textnormal{SF} \right]_{dd}$ as a function of $D$.
+\item Next, let's look at the gold standard of gradient estimators, the reparameterization gradient estimator, where we reparameterize $x = T(\theta, \epsilon)$:
+%
+\begin{align}
+\hat g_\textnormal{REPARAM}[f] = \frac{\partial f}{\partial x} \frac{\partial x}{\partial \theta}, \qquad \epsilon \sim p(\epsilon)
+\end{align}
+%
+In this case, we can use the reparameterization $x = \theta + \epsilon$, with $\epsilon \sim \distNorm(0, 1)$.
+
+Derive $\sum_{d=1}^D \cov \left[ \hat g_\textnormal{REPARAM} \right]_{dd}$ as a function of $D$.
+
+\item Finally, let's consider a more exotic gradient estimator, a variant of Evolution Strategies:
+%
+\begin{align}
+\hat g_\textnormal{ES}[f] = \frac{1}{N} \sum_{i=1}^N \left( \bar f - f(\theta_i) \right)\frac{\partial f}{\partial x} \frac{\partial x}{\partial \theta}, \qquad x \sim p(x|\theta)
+\end{align}
+%
+
+Compute $\var \left[ \hat g_\textnormal{ES} \right]$ as a function of $D$.
+\end{enumerate}
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% You can write your solution here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\begin{problem}[The pointlessness of stochastic policies, 10 points]
+
+In reinforcement learning and hard attention models, we often parameterize a policy to stochastically choose actions according to the current state.
+However, in many situations, every stochastic policy is dominated by a non-stochastic policy.
+
+Given the objective
+%
+\begin{align}
+L(\theta) = \E_p(b|\theta) \left[ f(b) \right]
+\end{align}
+%
+where $b$ is a Bernoulli random variable,
+
+\begin{enumerate}[label=(\alph*)]
+\item Show that $L(\theta)$ has local optima only for deterministic policies, i.e.\ values of $\theta = 0$ or $\theta = 1$.
+\item Show that if $L(\theta) = \E_p(b|\theta) \left[ f(b, \theta) \right]$, then a non-deterministic policy can be optimal.
+\end{enumerate}
+
+The takeaway is that, for a fully-observed state in a non-adversarial setting, the only reason to use a stochastic policy is to make optimization easier.
+\end{problem}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% You can write your solution here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+\begin{problem}[Representing discrete variables, 10 points]
+
+A Categorical distribution can be represented by a point in the simplex.
+
+\begin{enumerate}[label=(\alph*)]
+\item If we parameterize a $D$-dimensional categorial distribution as
+%
+\begin{align}
+p(b | \theta) = \theta_b
+\end{align}
+%
+what is the allowable range of $\theta$?
+
+\item One problem with this parameterization is that it is hard to represent very small probabilities.  If we parameterize a $D$-dimensional categorial distribution as
+%
+\begin{align}
+\log p(b | \theta) = \theta_b
+\end{align}
+%
+what is the allowable range of $\theta$?
+
+\item Another problem is that optimizing a point in the simplex requires using a constrained optimization routine.
+
+If we parameterize a $D$-dimensional categorial distribution as
+%
+\begin{align}
+\log p(b | \theta) = \theta_b - \log \sum_{b' = 1}^D \exp \theta_{b'}
+\end{align}
+%
+what is the allowable range of $\theta$?
+
+\item Now let's consider the analogous problem of parameterizing a Bernoulli random variable.
+Give a paramaterization for $log p(b | \theta)$ such that all $\theta \in \mathbb{R}$ give valid probabilities, and there is a one-to-one correspondence between $\theta$ and $p(b)$.
+\end{enumerate}
+
+\end{problem}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% You can write your solution here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+\begin{problem}[Bonus: Optimal surrogates. 10 points]
+
+Given the objective
+%
+\begin{align}
+L(\theta) = \E_p(b|\theta) \left[ (b - t)^2 \right]
+\end{align}
+%
+it would be informative to know the optimal surrogate.
+
+\begin{enumerate}[label=(\alph*)]
+\item (Medium) Find the optimal temperature for REBAR as a function of $t$ and $\theta$.
+This requires only calculus.
+\item (Hard) Find the optimal control variate for LAX as a function of $t$ and $\theta$.
+This will require variational calculus, or solving a PDE.
+\item (Harder) Find the optimal control variate for RELAX as a function of $t$ and $\theta$.
+\end{enumerate}
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% You can write your solution here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{problem}[Bonus: Optimal Gaussian reparameterization, 10 points]
+
+If $$X \sim \distNorm(\mu, \Sigma)$$, we can draw samples in a reparameterizable way by $$x = \mu + L \epsilon$$ where $\epsilon \sim \distNorm(0, I)$, and $L^T L = \Sigma$.
+
+\begin{enumerate}[label=(\alph*)]
+\item Given $\mu$ and $\Sigma$, what $L$ minimizes the trace of the variance of $\nabla_L X$?
+\end{enumerate}
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% You can write your solution here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\end{document}
