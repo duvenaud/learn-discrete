@@ -80,6 +80,8 @@ Projects will be graded according to an updated version of [Last year's project 
 
 This lecture will set the scope of the course, the different settings where discrete structure must be estimated or chosen, and the main existing approaches.  As a warm-up, we'll understand why and how people are moving away from the REINFORCE estimator.
 
+[Lecture 1 slides](slides/lec1-intro.pdf)
+
 ***
 ### Week 2 - Jan 19th - Gradient estimators for non-differentiable computation graphs
 
