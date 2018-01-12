@@ -136,6 +136,8 @@ It's not obvious how to train GANs to produce discrete structures, because this 
   - [Breaking Sticks and Ambiguities with Adaptive Skip-gram](http://arxiv.org/abs/1502.07257) - word2vec with multiple meanings for each word.
   - [Program Synthesis for Character-Level Language Modeling](http://openreview.net/pdf?id=ry_sjFqgx)
   - [Hierarchical Multiscale Recurrent Neural Networks](https://arxiv.org/abs/1609.01704)
+  - [Generating and designing DNA with deep generative models](https://arxiv.org/abs/1712.06148)
+  - [Learning to Compose Words into Sentences with Reinforcement Learning](https://arxiv.org/abs/1611.09100)
 
 
 ***
