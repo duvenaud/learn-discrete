@@ -79,16 +79,13 @@ Projects will be graded according to an updated version of [Last year's project 
 ### Week 1 - Jan 12th - Optimization, integration, and the reparameterization trick
 
 This lecture will set the scope of the course, the different settings where discrete structure must be estimated or chosen, and the main existing approaches.  As a warm-up, we'll understand why and how people are moving away from the REINFORCE estimator.
-  - [Stochastic Backpropagation and Approximate Inference in Deep Generative Models](https://arxiv.org/abs/1401.4082)
-  - [The Generalized Reparameterization Gradient](https://arxiv.org/abs/1610.02287)
-
 
 ***
 ### Week 2 - Jan 19th - Gradient estimators for non-differentiable computation graphs
 
 Discrete variables makes gradient estimation hard, but there has been a lot of recent progress on developing unbiased gradient estimators.
   - The original [REINFORCE](http://incompleteideas.net/sutton/williams-92.pdf) paper.
-  - [Gradient Estimation Using Stochastic Computation Graphs](https://arxiv.org/abs/1506.05254)
+  - **[Gradient Estimation Using Stochastic Computation Graphs](https://arxiv.org/abs/1506.05254)**
   - [REBAR: Low-variance, unbiased gradient estimates for discrete latent variable models](https://arxiv.org/abs/1703.07370)
   - [Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation](https://arxiv.org/abs/1308.3432)
   - [MuProp: Unbiased Backpropagation for Stochastic Neural Networks](https://arxiv.org/abs/1511.05176)
@@ -96,19 +93,21 @@ Discrete variables makes gradient estimation hard, but there has been a lot of r
   - [Variational inference for Monte Carlo objectives](https://arxiv.org/abs/1602.06725)
   - [Categorical Reparameterization with Gumbel-Softmax](https://arxiv.org/abs/1611.01144)
   - [The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables](https://arxiv.org/abs/1611.00712)
+  - [Stochastic Backpropagation and Approximate Inference in Deep Generative Models](https://arxiv.org/abs/1401.4082)
+  - [The Generalized Reparameterization Gradient](https://arxiv.org/abs/1610.02287)
     
 ***
 ### Week 3 - Jan 26th - Differentiable Data Structures
 
 Attempts learn programs using gradient-based methods, and program induction in general.
  - [Neural Turing Machines](https://arxiv.org/abs/1410.5401)
- - [Reinforcement Learning Neural Turing Machines](https://arxiv.org/abs/1505.00521)
  - [Neural Networks, Types, and Functional Programming](http://colah.github.io/posts/2015-09-NN-Types-FP/)
  - [Pointer Networks](https://arxiv.org/abs/1506.03134)
  - Solomonoff Induction
  - [Probabilistic programming](https://probmods.org/) - Automatic inference in arbitary models specified by a program.
  - [Sampling for Bayesian Program Learning](http://web.mit.edu/ellisk/www/programSample.pdf)
  - [Programming with a Differentiable Forth Interpreter](https://arxiv.org/abs/1605.06640)
+ - [Neural Sketch Learning for Conditional Program Generation](https://openreview.net/pdf?id=HkfXMz-Ab)
 
 ***
 ### Week 4 - Feb 2nd - Discrete latent structures
@@ -122,17 +121,22 @@ Variational autoencoders and GANs typically use continuous latent variables, but
 ***
 ### Week 5 - Feb 9th - Reinforcement learning
   - [Connecting Generative Adversarial Networks and Actor-Critic Methods](https://arxiv.org/abs/1610.01945)
-  - [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864)
   - [Emergence of Grounded Compositional Language in Multi-Agent Populations](https://arxiv.org/abs/1703.04908)
   - [Model-Based Planning in Discrete Action Spaces](https://arxiv.org/abs/1705.07177) - "it is in fact possible to effectively perform planning via backprop in discrete action spaces"
+  - [Reinforcement Learning Neural Turing Machines](https://arxiv.org/abs/1505.00521)
+  - Qprop
 
 ***
-### Week 6 - Feb 16th - Adversarial training
+### Week 6 - Feb 16th - Adversarial training and text models
 
 It's not obvious how to train GANs to produce discrete structures, because this cuts off the gradient to the discriminator.
   - [Adversarial Autoencoders](https://arxiv.org/abs/1511.05644) - One surprisingly effective hack for training discrete random variables is to let them be continuous, and have a discriminator check if they're discrete.
   - [Adversarially Regularized Autoencoders for Generating Discrete Structures](https://arxiv.org/abs/1706.04223)
   - [GANS for Sequences of Discrete Elements with the Gumbel-softmax Distribution](https://arxiv.org/abs/1611.04051)
+  - [Breaking Sticks and Ambiguities with Adaptive Skip-gram](http://arxiv.org/abs/1502.07257) - word2vec with multiple meanings for each word.
+  - [Program Synthesis for Character-Level Language Modeling](http://openreview.net/pdf?id=ry_sjFqgx)
+  - [Hierarchical Multiscale Recurrent Neural Networks](https://arxiv.org/abs/1609.01704)
+
 
 ***
 ### Week 7 - Feb 23rd - Bayesian nonparametrics
@@ -150,10 +154,11 @@ Models of infinitely-large discrete objects.
   - [Bayesian Compression for Deep Learning](https://arxiv.org/abs/1705.08665) - putting a sparse prior on a neural network's weights is a principled way to learn its structure.
 
 ***
-### Week 9 - March 9th - Latent-variable language models
-  - [Breaking Sticks and Ambiguities with Adaptive Skip-gram](http://arxiv.org/abs/1502.07257) - word2vec with multiple meanings for each word.
-  - [Program Synthesis for Character-Level Language Modeling](http://openreview.net/pdf?id=ry_sjFqgx)
-  - [Hierarchical Multiscale Recurrent Neural Networks](https://arxiv.org/abs/1609.01704)
+### Week 9 - March 9th - Variational optimization and evolutionary strategies
+  - [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864)
+  - [Optimization by Variational Bounding](https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2013-65.pdf)
+  - [Natural Evolution Strategies](http://www.jmlr.org/papers/volume15/wierstra14a/wierstra14a.pdf)
+  - [Parallel Gaussian Perturbation](https://arxiv.org/abs/1703.03864)
 
 ***
 ### Week 10 - March 16th - Project presentations I
@@ -162,5 +167,5 @@ Models of infinitely-large discrete objects.
 ### Week 11 - March 23rd - Project presentations II
 
 ***
-### Week 12 - March 30th - Good Friday Holiday
+### Week 12 - March 30th - Good Friday (Holiday)
 
