@@ -148,6 +148,7 @@ Models of infinitely-large discrete objects.
   - [Lecture notes on Bayesian nonparametrics](http://stat.columbia.edu/~porbanz/papers/porbanz_BNP_draft.pdf)
   - [Warped Mixtures for Nonparametric Cluster Shapes](https://arxiv.org/abs/1206.1846)
   - [Structure Discovery in Nonparametric Regression through Compositional Kernel Search](https://arxiv.org/abs/1302.4922)
+  - [Learning the Structure of Deep Sparse Graphical Models](https://arxiv.org/abs/1001.0160)
 
 ***
 ### Week 8 - March 2nd - Learning model structure
