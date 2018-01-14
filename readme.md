@@ -78,7 +78,7 @@ Projects will be graded according to an updated version of [Last year's project 
 ---
 ### Week 1 - Jan 12th - Optimization, integration, and the reparameterization trick
 
-This lecture will set the scope of the course, the different settings where discrete structure must be estimated or chosen, and the main existing approaches.  As a warm-up, we'll understand why and how people are moving away from the REINFORCE estimator.
+This lecture will set the scope of the course, the different settings where discrete structure must be estimated or chosen, and the main existing approaches.  As a warm-up, we'll look at the REINFORCE and reparameterization gradient estimators.
 
 [Lecture 1 slides](slides/lec1-intro.pdf)
 
@@ -86,8 +86,13 @@ This lecture will set the scope of the course, the different settings where disc
 ### Week 2 - Jan 19th - Gradient estimators for non-differentiable computation graphs
 
 Discrete variables makes gradient estimation hard, but there has been a lot of recent progress on developing unbiased gradient estimators.
-  - The original [REINFORCE](http://incompleteideas.net/sutton/williams-92.pdf) paper.
-  - **[Gradient Estimation Using Stochastic Computation Graphs](https://arxiv.org/abs/1506.05254)**
+  
+Recommended reading:
+  - [Gradient Estimation Using Stochastic Computation Graphs](https://arxiv.org/abs/1506.05254)
+  - [Backpropagation through the Void: Optimizing control variates for black-box gradient estimation](https://arxiv.org/abs/1711.00123)
+  
+Material that will be covered:
+  - The original [REINFORCE](http://www-anw.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf) paper.
   - [REBAR: Low-variance, unbiased gradient estimates for discrete latent variable models](https://arxiv.org/abs/1703.07370)
   - [Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation](https://arxiv.org/abs/1308.3432)
   - [MuProp: Unbiased Backpropagation for Stochastic Neural Networks](https://arxiv.org/abs/1511.05176)
