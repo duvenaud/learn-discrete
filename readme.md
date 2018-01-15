@@ -21,7 +21,7 @@ To check if you have the background for this course, try taking this [Quiz](skil
 * Email: <duvenaud@cs.toronto.edu> (put "STA4273" in the subject)
 * Location: Galbraith 119
 * Time: Fridays, 2-4pm
-* Office hours: Mondays, 3-4pm, in 384 Pratt
+* Office hours: Mondays, 3:30-4:30pm, in 384 Pratt
 
 ## What is discrete latent structure?
 Loosely speaking, it referes to any discrete quantity that we wish to estimate or optimize.
