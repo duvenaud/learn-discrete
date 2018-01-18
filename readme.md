@@ -93,52 +93,59 @@ Recommended reading:
   
 Material that will be covered:
   - The original [REINFORCE](http://www-anw.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf) paper.
-  - [REBAR: Low-variance, unbiased gradient estimates for discrete latent variable models](https://arxiv.org/abs/1703.07370)
-  - [Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation](https://arxiv.org/abs/1308.3432)
-  - [MuProp: Unbiased Backpropagation for Stochastic Neural Networks](https://arxiv.org/abs/1511.05176)
-  - [Neural Variational Inference and Learning in Belief Networks](https://arxiv.org/abs/1402.0030)
-  - [Variational inference for Monte Carlo objectives](https://arxiv.org/abs/1602.06725)
-  - [Categorical Reparameterization with Gumbel-Softmax](https://arxiv.org/abs/1611.01144)
   - [The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables](https://arxiv.org/abs/1611.00712)
+  - [Categorical Reparameterization with Gumbel-Softmax](https://arxiv.org/abs/1611.01144)
+  - [REBAR: Low-variance, unbiased gradient estimates for discrete latent variable models](https://arxiv.org/abs/1703.07370)
   - [Stochastic Backpropagation and Approximate Inference in Deep Generative Models](https://arxiv.org/abs/1401.4082)
+  - [Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation](https://arxiv.org/abs/1308.3432)
+
+Related work:
+  - [MuProp: Unbiased Backpropagation for Stochastic Neural Networks](https://arxiv.org/abs/1511.05176)
   - [The Generalized Reparameterization Gradient](https://arxiv.org/abs/1610.02287)
     
 ***
-### Week 3 - Jan 26th - Differentiable Data Structures
+### Week 3 - Jan 26th - Deep Reinforcement learning and Evolution Strategies
+
+  - [Emergence of Grounded Compositional Language in Multi-Agent Populations](https://arxiv.org/abs/1703.04908)
+  - [Model-Based Planning in Discrete Action Spaces](https://arxiv.org/abs/1705.07177) - "it is in fact possible to effectively perform planning via backprop in discrete action spaces"
+  - [Q-Prop: Sample-Efficient Policy Gradient with An Off-Policy Critic](https://arxiv.org/abs/1611.02247) - learns a linear surrogate function.
+  
+***
+### Week 4 - Feb 2nd - Differentiable Data Structures and Adaptive Computation
 
 Attempts learn programs using gradient-based methods, and program induction in general.
- - [Neural Turing Machines](https://arxiv.org/abs/1410.5401)
- - [Neural Networks, Types, and Functional Programming](http://colah.github.io/posts/2015-09-NN-Types-FP/)
  - [Pointer Networks](https://arxiv.org/abs/1506.03134)
- - Solomonoff Induction
- - [Probabilistic programming](https://probmods.org/) - Automatic inference in arbitary models specified by a program.
- - [Sampling for Bayesian Program Learning](http://web.mit.edu/ellisk/www/programSample.pdf)
+ - [Neural Turing Machines](https://arxiv.org/abs/1410.5401)
+ - [Reinforcement Learning Neural Turing Machines](https://arxiv.org/abs/1505.00521)
+ - [Recurrent Models of Visual Attention](https://arxiv.org/pdf/1406.6247.pdf) - Training a hard attention model inside an RNN.
  - [Programming with a Differentiable Forth Interpreter](https://arxiv.org/abs/1605.06640)
+ - [Sampling for Bayesian Program Learning](http://web.mit.edu/ellisk/www/programSample.pdf)
  - [Neural Sketch Learning for Conditional Program Generation](https://openreview.net/pdf?id=HkfXMz-Ab)
  - [Adaptive Computation Time for Recurrent Neural Networks](https://arxiv.org/abs/1603.08983)
 
+ 
+
 ***
-### Week 4 - Feb 2nd - Discrete latent structures
+### Week 5 - Feb 9th - Discrete latent structure
 
 Variational autoencoders and GANs typically use continuous latent variables, but there is recent work on getting them to use discrete random variables.
   - [The Helmholtz Machine](http://www.gatsby.ucl.ac.uk/~dayan/papers/hm95.pdf) - The forerunner of VAEs used binary latent variables.
   - [Attend, Infer, Repeat: Fast Scene Understanding with Generative Models](http://arxiv.org/abs/1603.08575) - The latent variables can be a list or set of vectors.
- - [Composing graphical models with neural networks for structured representations and fast inference](http://arxiv.org/abs/1603.06277) - the prior on latent variables can be any tractable graphical model, and we can use this inference as part of the recognition step.
-  - [Learning Hard Alignments with Variational Inference](https://arxiv.org/pdf/1705.05524.pdf)
-  - [Neural Discrete Representation Learning](https://arxiv.org/abs/1711.00937)
+  - [Composing graphical models with neural networks for structured representations and fast inference](http://arxiv.org/abs/1603.06277)
+- the prior on latent variables can be any tractable graphical model, and we can use this inference as part of the recognition step.
+  - [Learning Hard Alignments with Variational Inference](https://arxiv.org/pdf/1705.05524.pdf) - in machine translation, the alignment between input and output words can be treated as a discrete latent variable.
+  - [Neural Discrete Representation Learning](https://arxiv.org/abs/1711.00937) - trains an RNN with discrete hidden units, using the straigh-through estimator.
 
-***
-### Week 5 - Feb 9th - Reinforcement learning
-  - [Connecting Generative Adversarial Networks and Actor-Critic Methods](https://arxiv.org/abs/1610.01945)
-  - [Emergence of Grounded Compositional Language in Multi-Agent Populations](https://arxiv.org/abs/1703.04908)
-  - [Model-Based Planning in Discrete Action Spaces](https://arxiv.org/abs/1705.07177) - "it is in fact possible to effectively perform planning via backprop in discrete action spaces"
-  - [Reinforcement Learning Neural Turing Machines](https://arxiv.org/abs/1505.00521)
-  - Qprop
+Related work:
+  - [Neural Variational Inference and Learning in Belief Networks](https://arxiv.org/abs/1402.0030)
+  - [Variational inference for Monte Carlo objectives](https://arxiv.org/abs/1602.06725)
+
 
 ***
 ### Week 6 - Feb 16th - Adversarial training and text models
 
 It's not obvious how to train GANs to produce discrete structures, because this cuts off the gradient to the discriminator.
+  - [Connecting Generative Adversarial Networks and Actor-Critic Methods](https://arxiv.org/abs/1610.01945)
   - [Adversarial Autoencoders](https://arxiv.org/abs/1511.05644) - One surprisingly effective hack for training discrete random variables is to let them be continuous, and have a discriminator check if they're discrete.
   - [Adversarially Regularized Autoencoders for Generating Discrete Structures](https://arxiv.org/abs/1706.04223)
   - [GANS for Sequences of Discrete Elements with the Gumbel-softmax Distribution](https://arxiv.org/abs/1611.04051)
@@ -158,7 +165,8 @@ Models of infinitely-large discrete objects.
   - [Warped Mixtures for Nonparametric Cluster Shapes](https://arxiv.org/abs/1206.1846)
   - [Structure Discovery in Nonparametric Regression through Compositional Kernel Search](https://arxiv.org/abs/1302.4922)
   - [Learning the Structure of Deep Sparse Graphical Models](https://arxiv.org/abs/1001.0160)
-
+  - [Probabilistic programming](https://probmods.org/) - Automatic inference in arbitary models specified by a program.
+ 
 ***
 ### Week 8 - March 2nd - Learning model structure
   - [The discovery of structural form](http://www.pnas.org/content/105/31/10687.full) - put a grammar on model structures and built a different model for each dataset automatically.
@@ -171,6 +179,7 @@ Models of infinitely-large discrete objects.
   - [Optimization by Variational Bounding](https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2013-65.pdf)
   - [Natural Evolution Strategies](http://www.jmlr.org/papers/volume15/wierstra14a/wierstra14a.pdf)
   - [Parallel Gaussian Perturbation](https://arxiv.org/abs/1703.03864)
+  - [A Visual Guide to Evolution Strategies](http://blog.otoro.net/2017/10/29/visual-evolution-strategies/)
 
 ***
 ### Week 10 - March 16th - Project presentations I
