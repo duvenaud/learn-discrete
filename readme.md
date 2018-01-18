@@ -105,7 +105,11 @@ Related work:
     
 ***
 ### Week 3 - Jan 26th - Deep Reinforcement learning and Evolution Strategies
-
+  - [A Visual Guide to Evolution Strategies](http://blog.otoro.net/2017/10/29/visual-evolution-strategies/)
+  - [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864)
+  - [Optimization by Variational Bounding](https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2013-65.pdf)
+  - [Natural Evolution Strategies](http://www.jmlr.org/papers/volume15/wierstra14a/wierstra14a.pdf)
+  - [Parallel Gaussian Perturbation](https://arxiv.org/abs/1703.03864)
   - [Emergence of Grounded Compositional Language in Multi-Agent Populations](https://arxiv.org/abs/1703.04908)
   - [Model-Based Planning in Discrete Action Spaces](https://arxiv.org/abs/1705.07177) - "it is in fact possible to effectively perform planning via backprop in discrete action spaces"
   - [Q-Prop: Sample-Efficient Policy Gradient with An Off-Policy Critic](https://arxiv.org/abs/1611.02247) - learns a linear surrogate function.
@@ -122,7 +126,7 @@ Attempts learn programs using gradient-based methods, and program induction in g
  - [Sampling for Bayesian Program Learning](http://web.mit.edu/ellisk/www/programSample.pdf)
  - [Neural Sketch Learning for Conditional Program Generation](https://openreview.net/pdf?id=HkfXMz-Ab)
  - [Adaptive Computation Time for Recurrent Neural Networks](https://arxiv.org/abs/1603.08983)
-
+ - [The Case for Learned Index Structures](https://arxiv.org/abs/1712.01208)
  
 
 ***
@@ -166,20 +170,19 @@ Models of infinitely-large discrete objects.
   - [Structure Discovery in Nonparametric Regression through Compositional Kernel Search](https://arxiv.org/abs/1302.4922)
   - [Learning the Structure of Deep Sparse Graphical Models](https://arxiv.org/abs/1001.0160)
   - [Probabilistic programming](https://probmods.org/) - Automatic inference in arbitary models specified by a program.
+  - [Learning Latent Permutations with Gumbel-Sinkhorn Networks](https://openreview.net/forum?id=Byt3oJ-0W)
  
 ***
 ### Week 8 - March 2nd - Learning model structure
   - [The discovery of structural form](http://www.pnas.org/content/105/31/10687.full) - put a grammar on model structures and built a different model for each dataset automatically.
   - [Exploiting compositionality to explore a large space of model structures](https://arxiv.org/abs/1210.4856) - another systematic search through model structure using a grammar.
   - [Bayesian Compression for Deep Learning](https://arxiv.org/abs/1705.08665) - putting a sparse prior on a neural network's weights is a principled way to learn its structure.
+  - [SMASH: One-Shot Model Architecture Search through HyperNetworks](https://arxiv.org/pdf/1708.05344.pdf)
 
 ***
 ### Week 9 - March 9th - Variational optimization and evolutionary strategies
-  - [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864)
-  - [Optimization by Variational Bounding](https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2013-65.pdf)
-  - [Natural Evolution Strategies](http://www.jmlr.org/papers/volume15/wierstra14a/wierstra14a.pdf)
-  - [Parallel Gaussian Perturbation](https://arxiv.org/abs/1703.03864)
-  - [A Visual Guide to Evolution Strategies](http://blog.otoro.net/2017/10/29/visual-evolution-strategies/)
+
+
 
 ***
 ### Week 10 - March 16th - Project presentations I
