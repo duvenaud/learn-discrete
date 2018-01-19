@@ -135,8 +135,7 @@ Attempts learn programs using gradient-based methods, and program induction in g
 Variational autoencoders and GANs typically use continuous latent variables, but there is recent work on getting them to use discrete random variables.
   - [The Helmholtz Machine](http://www.gatsby.ucl.ac.uk/~dayan/papers/hm95.pdf) - The forerunner of VAEs used binary latent variables.
   - [Attend, Infer, Repeat: Fast Scene Understanding with Generative Models](http://arxiv.org/abs/1603.08575) - The latent variables can be a list or set of vectors.
-  - [Composing graphical models with neural networks for structured representations and fast inference](http://arxiv.org/abs/1603.06277)
-- the prior on latent variables can be any tractable graphical model, and we can use this inference as part of the recognition step.
+  - [Composing graphical models with neural networks for structured representations and fast inference](http://arxiv.org/abs/1603.06277)  the prior on latent variables can be any tractable graphical model, and we can use this inference as part of the recognition step.
   - [Learning Hard Alignments with Variational Inference](https://arxiv.org/pdf/1705.05524.pdf) - in machine translation, the alignment between input and output words can be treated as a discrete latent variable.
   - [Neural Discrete Representation Learning](https://arxiv.org/abs/1711.00937) - trains an RNN with discrete hidden units, using the straigh-through estimator.
 
