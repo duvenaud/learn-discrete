@@ -152,12 +152,10 @@ It's not obvious how to train GANs to produce discrete structures, because this 
   - [Adversarial Autoencoders](https://arxiv.org/abs/1511.05644) - One surprisingly effective hack for training discrete random variables is to let them be continuous, and have a discriminator check if they're discrete.
   - [Adversarially Regularized Autoencoders for Generating Discrete Structures](https://arxiv.org/abs/1706.04223)
   - [GANS for Sequences of Discrete Elements with the Gumbel-softmax Distribution](https://arxiv.org/abs/1611.04051)
-  - [Breaking Sticks and Ambiguities with Adaptive Skip-gram](http://arxiv.org/abs/1502.07257) - word2vec with multiple meanings for each word.
   - [Program Synthesis for Character-Level Language Modeling](http://openreview.net/pdf?id=ry_sjFqgx)
   - [Hierarchical Multiscale Recurrent Neural Networks](https://arxiv.org/abs/1609.01704)
   - [Generating and designing DNA with deep generative models](https://arxiv.org/abs/1712.06148)
-  - [Learning to Compose Words into Sentences with Reinforcement Learning](https://arxiv.org/abs/1611.09100)
-
+  
 
 ***
 ### Week 7 - Feb 23rd - Bayesian nonparametrics
@@ -169,7 +167,7 @@ Models of infinitely-large discrete objects.
   - [Structure Discovery in Nonparametric Regression through Compositional Kernel Search](https://arxiv.org/abs/1302.4922)
   - [Learning the Structure of Deep Sparse Graphical Models](https://arxiv.org/abs/1001.0160)
   - [Probabilistic programming](https://probmods.org/) - Automatic inference in arbitary models specified by a program.
-  - [Learning Latent Permutations with Gumbel-Sinkhorn Networks](https://openreview.net/forum?id=Byt3oJ-0W)
+  - [Breaking Sticks and Ambiguities with Adaptive Skip-gram](http://arxiv.org/abs/1502.07257) - word2vec with multiple meanings for each word. 
  
 ***
 ### Week 8 - March 2nd - Learning model structure
@@ -179,8 +177,12 @@ Models of infinitely-large discrete objects.
   - [SMASH: One-Shot Model Architecture Search through HyperNetworks](https://arxiv.org/pdf/1708.05344.pdf)
 
 ***
-### Week 9 - March 9th - Variational optimization and evolutionary strategies
-
+### Week 9 - March 9th - Graphs, permutations and parse trees
+  - [Learning Latent Permutations with Gumbel-Sinkhorn Networks](https://openreview.net/forum?id=Byt3oJ-0W)
+  - [Reparameterizing the Birkhoff Polytope for Variational Permutation Inference](https://arxiv.org/abs/1710.09508)
+  - [Grammar Variational Autoencoder](https://arxiv.org/pdf/1703.01925.pdf)
+  - [Automatic chemical design using a data-driven continuous representation of molecules](https://arxiv.org/abs/1610.02415)
+  - [Learning to Compose Words into Sentences with Reinforcement Learning](https://arxiv.org/abs/1611.09100)
 
 
 ***
