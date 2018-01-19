@@ -8,7 +8,7 @@
 \email{email@fas.harvard.edu}
 
 % You don't need to change these.
-\assignment{Discrete Variables and Gradient Estimators}
+\assignment{\hspace{-3cm} DRAFT: Discrete Variables and Gradient Estimators}
 \duedate{TBD}
 
 \usepackage{url, enumitem}
@@ -65,7 +65,8 @@
 
 This assignment is designed to get you comfortable deriving gradient estimators, and optimizing distributions over discrete random variables.
 
-For all questions, the answers should be a few lines of derivations.
+For most questions, the answers should be a few lines of derivations.
+Throughout, you can assume that $p(b|\theta)$ is differentiable w.r.t. $\theta$.
 
 
 \begin{problem}[Unbiasedness of the score-function estimator, 10 points]
@@ -84,13 +85,19 @@ The standard REINFORCE, or score-function estimator is defined as:
 %
 %This estimator is unbiased, but in general has high variance.
 %Intuitively, this estimator is limited by the fact that it doesn't use any information about how $f$ depends on $b$, only on the final outcome $f(b)$.
+%
 \begin{enumerate}[label=(\alph*)]
 \item First, let's warm up with the score function.  Prove that the score function has zero expectation, i.e.\ $\E_{p(x|\theta)} \left[ \nabla_\theta \log p(x|\theta) \right] = 0$.
 Hint: Under some conditions, one can swap the derivative and integral operators.
-\item Show that $\E_{p(b|\theta)} \left[ f(b) \PT \log p(b | \theta) \right] = \PT \E_{p(b|\theta)}$.
-\item Show that $\E_{p(b|\theta)} \left[ [f(b) - c] \PT \log p(b | \theta) \right] = \PT \E_{p(b|\theta)}$ for any fixed $c$.
+
+\item Show that $\E_{p(b|\theta)} \left[ f(b) \PT \log p(b | \theta) \right] = \PT \E_{p(b|\theta)} \left[ f(b) \right]$.
+
+\item Show that $\E_{p(b|\theta)} \left[ [f(b) - c] \PT \log p(b | \theta) \right] = \PT \E_{p(b|\theta)} \left[ f(b) \right]$ for any fixed $c$.
+
+\item What is the variance-minimizing value of $c$?
+
 \item If the baseline depends on $b$, then REINFORCE will in general give biased gradient estimates.
-Give an example where $\E_{p(b|\theta)} \left[ [f(b) - c(b)] \PT \log p(b | \theta) \right] \neq \PT \E_{p(b|\theta)}$ for some function $c(b)$.
+Give an example where $\E_{p(b|\theta)} \left[ [f(b) - c(b)] \PT \log p(b | \theta) \right] \neq \PT \E_{p(b|\theta)}\left[ f(b) \right]$ for some function $c(b)$, and show that it is biased.
 \end{enumerate}
 
 The takeaway is that you can use a baseline to reduce the variance of REINFORCE, but not one that depends on the current action.
@@ -108,7 +115,7 @@ The takeaway is that you can use a baseline to reduce the variance of REINFORCE,
 
 
 
-\begin{problem}[Comparing variances, 10 points]
+\begin{problem}[Comparing variances of gradient estimators, 10 points]
 
 If we restrict ourselves to consider only unbiased gradient estimators, then the main (and perhaps only) property we need to worry about is the variance of our estimators.
 In general, optimizing with a lower-variance unbiased estimator will converge faster than a high-variance unbiased estimator.
@@ -120,51 +127,64 @@ For simplicity, we'll consider a toy problem.
 The goal will be to estimate gradients of a sum of one-dimensional Gaussians with means given by a $D$-dimensional parameter vector $\theta$ and unit variance:
 %
 \begin{align}
-L(\theta) = \E_{\distNorm(\theta, 1)} \left[ \sum_{d=1}^D X_d \right]
+L(\theta) 
+= \E_{\bx \sim \distNorm(\theta, I)} \left[ f(\bx) \right]
+= \E_{\bx \sim \distNorm(\theta, I)} \left[ \sum_{d=1}^D x_d \right]
 \end{align}
 
 
 
 \begin{enumerate}[label=(\alph*)]
-\item As a warm-up, let's compute the variance of a Monte Carlo estimator of the objective $L(\theta)$:
+\item As a warm-up, let's compute the variance of a single-sample simple Monte Carlo estimator of the objective $L(\theta)$:
 %
 \begin{align}
-\hat L_{MC} = \sum_{d=1}^D x_d, \qquad \textnormal{where each } x_d \sim \distNorm(\theta_d, 1)
+\hat L_{MC} 
+= \sum_{d=1}^D x_d, \qquad \textnormal{where each } x_d \sim \distNorm(\theta_d, 1)
 \end{align}
 %
 That is, compute $\var \left[ \hat L_{MC} \right]$ as a function of $D$.
 
-\item Next, we'll look at the variance of gradient estimators.
+\item Next, we'll compare the variance of different gradient estimators.
 
 Recall the definition of the score-function, or REINFORCE estimator:
 %
 \begin{align}
-\hat g_\textnormal{SF}[f] = f \left( b \right) \PT \log p(b | \theta), \qquad b \sim p(b | \theta)
+\hat g^\textnormal{SF}[f] = f(x) \PT \log p(x | \theta), \qquad x \sim p(x | \theta)
 \end{align}
 %
 
 Because gradients are $D$-dimensional vectors, they actually have a $D \times D$ covariance matrix.
-For this question, we'll consider the variance of a gradient estimator to mean the sum of the diagonal of the covariance matrix.
+For this question, we'll consider the variance of the gradient with respect to the first element of the parameter vector, $\theta_1$.
+%
+That is, derive $\var \left[ \hat g^\textnormal{SF}_1 \right]$ as a function of $D$.
 
-Derive $\sum_{d=1}^D \cov \left[ \hat g_\textnormal{SF} \right]_{dd}$ as a function of $D$.
 \item Next, let's look at the gold standard of gradient estimators, the reparameterization gradient estimator, where we reparameterize $x = T(\theta, \epsilon)$:
 %
 \begin{align}
-\hat g_\textnormal{REPARAM}[f] = \frac{\partial f}{\partial x} \frac{\partial x}{\partial \theta}, \qquad \epsilon \sim p(\epsilon)
+\hat g^\textnormal{REPARAM}[f] = \frac{\partial f}{\partial x} \frac{\partial x}{\partial \theta}, \qquad \epsilon \sim p(\epsilon)
 \end{align}
 %
 In this case, we can use the reparameterization $x = \theta + \epsilon$, with $\epsilon \sim \distNorm(0, 1)$.
 
-Derive $\sum_{d=1}^D \cov \left[ \hat g_\textnormal{REPARAM} \right]_{dd}$ as a function of $D$.
+Derive $\var \left[ \hat g^\textnormal{REPARAM}_1 \right]$ as a function of $D$.
 
-\item Finally, let's consider a more exotic gradient estimator, a variant of Evolution Strategies:
+\item Finally, let's consider a more exotic gradient estimator, Evolution Strategies.
+Following [Salimans et. al., 2016], we'll choose a meta-policy $p(\hat \theta | \psi) = \distNorm(\hat \theta |  \theta, \sigma I)$
 %
 \begin{align}
-\hat g_\textnormal{ES}[f] = \frac{1}{N} \sum_{i=1}^N \left( \bar f - f(\theta_i) \right)\frac{\partial f}{\partial x} \frac{\partial x}{\partial \theta}, \qquad x \sim p(x|\theta)
+\hat g^\textnormal{ES}[f]
+& = f(x) \PT \log p(\hat \theta | \psi), 
+& \qquad x \sim p(x | \hat \theta),\quad \hat \theta \sim p(\hat \theta | \psi) \\
+& = f(x) \PT \log \distNorm(\hat \theta | \theta, \sigma I)
+& \qquad x \sim \distNorm(x | \hat \theta, I), \quad \hat \theta \sim \distNorm(\hat \theta | \theta, \sigma I)
+%& = f(\theta +  \epsilon_\theta \sigma + \epsilon_x) \PT \log \distNorm(\theta + \epsilon_\theta \sigma | \theta, I),
+%& \qquad \epsilon_x \sim \distNorm(0, I), \quad \epsilon_\theta \sim \distNorm(0, I) \\
+%& = f(\theta + \sigma_\theta \epsilon_\theta + \sigma_x) \frac{\epsilon_\theta}{\sigma_\theta},
+%& \qquad \epsilon_x \sim \distNorm(0, I), \quad \hat \epsilon_\theta \sim \distNorm(0, I)
 \end{align}
 %
 
-Compute $\var \left[ \hat g_\textnormal{ES} \right]$ as a function of $D$.
+Compute $\var \left[ \hat g^\textnormal{ES}_1 \right]$ as a function of both $D$ and $\sigma$.  Hint: First reparameterize all variables to be deterministic functions of standard normal distributions.
 \end{enumerate}
 \end{problem}
 
@@ -181,19 +201,20 @@ Compute $\var \left[ \hat g_\textnormal{ES} \right]$ as a function of $D$.
 \begin{problem}[The pointlessness of stochastic policies, 10 points]
 
 In reinforcement learning and hard attention models, we often parameterize a policy to stochastically choose actions according to the current state.
-However, in many situations, every stochastic policy is dominated by a non-stochastic policy.
+However, in many situations, the best policy is necessarily deterministic.
 
 Given the objective
 %
 \begin{align}
-L(\theta) = \E_p(b|\theta) \left[ f(b) \right]
+L(\theta) = \E_{p(b|\theta)} \left[ f(b) \right]
 \end{align}
 %
 where $b$ is a Bernoulli random variable,
 
 \begin{enumerate}[label=(\alph*)]
 \item Show that $L(\theta)$ has local optima only for deterministic policies, i.e.\ values of $\theta = 0$ or $\theta = 1$.
-\item Show that if $L(\theta) = \E_p(b|\theta) \left[ f(b, \theta) \right]$, then a non-deterministic policy can be optimal.
+
+\item Show that if $L(\theta) = \E_{p(b|\theta)} \left[ f(b, \theta) \right]$, give an example where a non-deterministic policy is optimal.
 \end{enumerate}
 
 The takeaway is that, for a fully-observed state in a non-adversarial setting, the only reason to use a stochastic policy is to make optimization easier.
@@ -211,7 +232,7 @@ The takeaway is that, for a fully-observed state in a non-adversarial setting, t
 
 
 
-\begin{problem}[Representing discrete variables, 10 points]
+\begin{problem}[Representing and computing Categorical distributions, 10 points]
 
 A Categorical distribution can be represented by a point in the simplex.
 
@@ -219,31 +240,44 @@ A Categorical distribution can be represented by a point in the simplex.
 \item If we parameterize a $D$-dimensional categorial distribution as
 %
 \begin{align}
-p(b | \theta) = \theta_b
+p(c | \theta) = \theta_c
 \end{align}
 %
-what is the allowable range of $\theta$?
+what is the allowable range of the vector $\theta$?
 
-\item One problem with this parameterization is that it is hard to represent very small probabilities.  If we parameterize a $D$-dimensional categorial distribution as
+\item One problem with this parameterization is that it is hard to represent very small probabilities.
+If we parameterize a $D$-dimensional categorial distribution as
 %
 \begin{align}
-\log p(b | \theta) = \theta_b
+\log p(c | \theta) = \theta_c
 \end{align}
 %
-what is the allowable range of $\theta$?
+what is the allowable range of the vector $\theta$?
+What is the computational cost of evaluating $\log p(c | \theta)$, for a particular value of $c$, as a function of $D$?
 
 \item Another problem is that optimizing a point in the simplex requires using a constrained optimization routine.
 
 If we parameterize a $D$-dimensional categorial distribution as
 %
 \begin{align}
-\log p(b | \theta) = \theta_b - \log \sum_{b' = 1}^D \exp \theta_{b'}
+\log p(c | \theta) = \theta_c - \log \sum_{c' = 1}^D \exp \theta_{c'}
 \end{align}
 %
-what is the allowable range of $\theta$?
+what is the allowable range of the vector $\theta$? 
+What is the computational cost of evaluating $\log p(c | \theta)$, for a particular value of $c$, as a function of $D$?
+
+\item Using the parameterization 
+%
+\begin{align}
+\log p(c | \theta) = \theta_c - \log \sum_{c' = 1}^D \exp \theta_{c'}
+\end{align}
+%
+build constant-time, unbiased estimator of $\log p(c | \theta)$.
+You can assume that sampling from a uniform distribution over $D$ elements can be done in constant time.
+Hint: Use importance sampling.
 
 \item Now let's consider the analogous problem of parameterizing a Bernoulli random variable.
-Give a paramaterization for $log p(b | \theta)$ such that all $\theta \in \mathbb{R}$ give valid probabilities, and there is a one-to-one correspondence between $\theta$ and $p(b)$.
+Give a numerically stable paramaterization for $\log p(b | \theta)$ such that all $\theta \in \mathbb{R}$ give valid probabilities, and there is a one-to-one correspondence between $\theta$ and $p(b)$.
 \end{enumerate}
 
 \end{problem}
@@ -263,20 +297,44 @@ Give a paramaterization for $log p(b | \theta)$ such that all $\theta \in \mathb
 
 \begin{problem}[Bonus: Optimal surrogates. 10 points]
 
-Given the objective
+Consider the objective
 %
 \begin{align}
-L(\theta) = \E_p(b|\theta) \left[ (b - t)^2 \right]
+L(\theta) 
+= \E_{p(b|\theta)} \left[ f(b) \right]
+= \E_{p(b|\theta)} \left[ (b - t)^2 \right]
 \end{align}
 %
-it would be informative to know the optimal surrogate.
+where $b$ is a single Bernoulli random variabe.
+
 
 \begin{enumerate}[label=(\alph*)]
-\item (Medium) Find the optimal temperature for REBAR as a function of $t$ and $\theta$.
-This requires only calculus.
-\item (Hard) Find the optimal control variate for LAX as a function of $t$ and $\theta$.
-This will require variational calculus, or solving a PDE.
-\item (Harder) Find the optimal control variate for RELAX as a function of $t$ and $\theta$.
+\item (Medium) The REBAR estimator is given by:
+\begin{align}
+\hat g_\textnormal{REBAR} = \left[ f(b) - \eta f(\sigma_\lambda(\tilde{z})) \right] \PT \log p(b|\theta) + \PT \eta f(\sigma_\lambda(z)) - \PT \eta f(\sigma_\lambda(\tilde{z})) \\
+\qquad b = H(z), z \sim p(z|\theta), \tilde{z} \sim p(z|b, \theta) \nonumber
+\end{align}
+%
+For this objective, find the optimal temperature $\lambda$ and scale $\eta$ for REBAR as a function of $t$ and $\theta$.
+%This requires only calculus.
+\item (Hard) The discrete version of the \LAX{} estimator is given by:
+%
+\begin{align}
+\label{eq:discrete lax}
+\hat g_\DLAX = f(b) \PT \log p(b|\theta) - c_\phi(z) \PT \log p(z|\theta) + \PT c_\phi(z), \qquad b = H(z), z \sim p(z|\theta).
+\end{align}
+%
+Find the optimal surrogate $c_\phi(z)$ for DLAX as a function of $t$ and $\theta$.
+Compute the variance of this estimator as a function of $t$ and $\theta$.
+%This will require variational calculus, or solving a PDE.
+\item (Harder) %
+\begin{align}
+\hat g_\textnormal{RELAX} = \left[ f(b) - c_\phi(\tilde{z}) \right] \PT \log p(b|\theta) + \PT c_\phi(z) - \PT c_\phi (\tilde{z}) \\
+\qquad b = H(z), z \sim p(z|\theta), \tilde{z} \sim p(z|b, \theta) \nonumber
+\end{align}
+%
+Find the optimal surrogate $c_\phi(z)$ for RELAX as a function of $t$ and $\theta$.
+Compute the variance of this estimator as a function of $t$ and $\theta$.
 \end{enumerate}
 \end{problem}
 
@@ -289,14 +347,14 @@ This will require variational calculus, or solving a PDE.
 
 
 
-\begin{problem}[Bonus: Optimal Gaussian reparameterization, 10 points]
+%\begin{problem}[Bonus: Optimal Gaussian reparameterization, 10 points]
 
-If $$X \sim \distNorm(\mu, \Sigma)$$, we can draw samples in a reparameterizable way by $$x = \mu + L \epsilon$$ where $\epsilon \sim \distNorm(0, I)$, and $L^T L = \Sigma$.
+%If $$X \sim \distNorm(\mu, \Sigma)$$, we can draw samples in a reparameterizable way by $$x = \mu + L \epsilon$$ where $\epsilon \sim \distNorm(0, I)$, and $L^T L = \Sigma$.
 
-\begin{enumerate}[label=(\alph*)]
-\item Given $\mu$ and $\Sigma$, what $L$ minimizes the trace of the variance of $\nabla_L X$?
-\end{enumerate}
-\end{problem}
+%\begin{enumerate}[label=(\alph*)]
+%\item Given $\mu$ and $\Sigma$, what $L$ minimizes the trace of the variance of $\nabla_L X$?
+%\end{enumerate}
+%\end{problem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
