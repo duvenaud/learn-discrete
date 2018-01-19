@@ -22,6 +22,7 @@ To check if you have the background for this course, try taking this [Quiz](skil
 * Location: Galbraith 119
 * Time: Fridays, 2-4pm
 * Office hours: Mondays, 3:30-4:30pm, in 384 Pratt
+* Piazza: [https://piazza.com/utoronto.ca/winter2018/csc2547/](https://piazza.com/utoronto.ca/winter2018/csc2547/)
 
 ## What is discrete latent structure?
 Loosely speaking, it referes to any discrete quantity that we wish to estimate or optimize.
