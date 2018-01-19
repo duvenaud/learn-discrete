@@ -127,6 +127,8 @@ Attempts learn programs using gradient-based methods, and program induction in g
  - [Neural Sketch Learning for Conditional Program Generation](https://openreview.net/pdf?id=HkfXMz-Ab)
  - [Adaptive Computation Time for Recurrent Neural Networks](https://arxiv.org/abs/1603.08983)
  - [The Case for Learned Index Structures](https://arxiv.org/abs/1712.01208)
+ - [Reparameterization Gradients through Acceptance-Rejection
+Sampling Algorithms](http://proceedings.mlr.press/v54/naesseth17a/naesseth17a.pdf)
  
 
 ***
