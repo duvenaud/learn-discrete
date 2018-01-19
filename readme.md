@@ -105,6 +105,7 @@ Material that will be covered:
 Related work:
   - [MuProp: Unbiased Backpropagation for Stochastic Neural Networks](https://arxiv.org/abs/1511.05176)
   - [The Generalized Reparameterization Gradient](https://arxiv.org/abs/1610.02287)
+  - [Developing Bug-Free Machine Learning Systems With Formal Mathematics](https://arxiv.org/pdf/1706.08605.pdf) - One can use formal tools to verify that a gradient estimator is unbiased.
     
 ***
 ### Week 3 - Jan 26th - Deep Reinforcement learning and Evolution Strategies
