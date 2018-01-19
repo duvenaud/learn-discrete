@@ -53,7 +53,7 @@ The hope is that these discussions will lead to actual research papers, or resou
 
 Grades will be based on:
 
-  * [15%] One assignment, designed to help you become familiar with unbiased gradient estimators, such as [REINFORCE](http://incompleteideas.net/sutton/williams-92.pdf) (also known as the score-function estimator) and [REBAR](https://arxiv.org/abs/1703.07370)
+  * [15%] One [assignment](assignments/assignment.pdf), designed to help you become familiar with unbiased gradient estimators, such as [REINFORCE](http://incompleteideas.net/sutton/williams-92.pdf) (also known as the score-function estimator) and [REBAR](https://arxiv.org/abs/1703.07370)
   * [15%] Class presentations
   * [15%] Project proposal
   * [15%] Project presentation
