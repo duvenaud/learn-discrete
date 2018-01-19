@@ -86,6 +86,8 @@ This lecture will set the scope of the course, the different settings where disc
 ***
 ### Week 2 - Jan 19th - Gradient estimators for non-differentiable computation graphs
 
+[Lecture 2 slides](slides/lec2-gradient-estimators.pdf)
+
 Discrete variables makes gradient estimation hard, but there has been a lot of recent progress on developing unbiased gradient estimators.
   
 Recommended reading:
