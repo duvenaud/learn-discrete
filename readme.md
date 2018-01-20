@@ -133,7 +133,7 @@ Attempts learn programs using gradient-based methods, and program induction in g
  - [The Case for Learned Index Structures](https://arxiv.org/abs/1712.01208)
  - [Reparameterization Gradients through Acceptance-Rejection
 Sampling Algorithms](http://proceedings.mlr.press/v54/naesseth17a/naesseth17a.pdf)
- 
+ - [Divide and Conquer Networks](https://arxiv.org/abs/1611.02401)
 
 ***
 ### Week 5 - Feb 9th - Discrete latent structure
