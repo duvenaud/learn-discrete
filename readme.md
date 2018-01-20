@@ -187,6 +187,7 @@ Models of infinitely-large discrete objects.
   - [Learning Latent Permutations with Gumbel-Sinkhorn Networks](https://openreview.net/forum?id=Byt3oJ-0W)
   - [Reparameterizing the Birkhoff Polytope for Variational Permutation Inference](https://arxiv.org/abs/1710.09508)
   - [Grammar Variational Autoencoder](https://arxiv.org/pdf/1703.01925.pdf)
+  - [Syntax-Directed Variational Autoencoder for Structured Data](https://openreview.net/forum?id=SyqShMZRb) - a followup to the Grammar VAE
   - [Automatic chemical design using a data-driven continuous representation of molecules](https://arxiv.org/abs/1610.02415)
   - [Learning to Compose Words into Sentences with Reinforcement Learning](https://arxiv.org/abs/1611.09100)
   - [Learning to Represent Programs with Graphs](https://arxiv.org/abs/1711.00740)
