@@ -189,6 +189,7 @@ Models of infinitely-large discrete objects.
   - [Grammar Variational Autoencoder](https://arxiv.org/pdf/1703.01925.pdf)
   - [Automatic chemical design using a data-driven continuous representation of molecules](https://arxiv.org/abs/1610.02415)
   - [Learning to Compose Words into Sentences with Reinforcement Learning](https://arxiv.org/abs/1611.09100)
+  - [Learning to Represent Programs with Graphs](https://arxiv.org/abs/1711.00740)
 
 
 ***
