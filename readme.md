@@ -113,7 +113,8 @@ Related work:
   - [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864)
   - [Optimization by Variational Bounding](https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2013-65.pdf)
   - [Natural Evolution Strategies](http://www.jmlr.org/papers/volume15/wierstra14a/wierstra14a.pdf)
-  - [Parallel Gaussian Perturbation](https://arxiv.org/abs/1703.03864)
+  - [On the Relationship Between the OpenAI Evolution
+Strategy and Stochastic Gradient Descent](https://arxiv.org/pdf/1712.06564.pdf)
   - [Emergence of Grounded Compositional Language in Multi-Agent Populations](https://arxiv.org/abs/1703.04908)
   - [Model-Based Planning in Discrete Action Spaces](https://arxiv.org/abs/1705.07177) - "it is in fact possible to effectively perform planning via backprop in discrete action spaces"
   - [Q-Prop: Sample-Efficient Policy Gradient with An Off-Policy Critic](https://arxiv.org/abs/1611.02247) - learns a linear surrogate function.
