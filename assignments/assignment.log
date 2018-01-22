@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  19 JAN 2018 12:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  22 JAN 2018 15:14
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -563,7 +563,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 64.
 
-Overfull \hbox (92.35893pt too wide) in paragraph at lines 64--64
+Overfull \hbox (37.14983pt too wide) in paragraph at lines 64--64
  [] 
  []
 
@@ -583,16 +583,15 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 118.
  [1
 
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 201.
- [2]
+(mdframed)              on input line 203.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 235.
+(mdframed)              on input line 237.
 
-Overfull \hbox (6.02661pt too wide) in paragraph at lines 253--257
+Overfull \hbox (6.02661pt too wide) in paragraph at lines 255--259
 \OT1/ppl/m/n/10 what is the al-low-able range of the vec-tor $\OML/zplm/m/it/10
  ^^R$\OT1/ppl/m/n/10 ? What is the com-pu-ta-tional cost of eval-u-at-ing $[] \
 OML/zplm/m/it/10 p\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 c\OMS/zplm/m/n/10 j\OML/z
@@ -600,7 +599,7 @@ plm/m/it/10 ^^R\OT1/zplm/m/n/10 )$\OT1/ppl/m/n/10 ,
  []
 
 
-Overfull \hbox (6.02661pt too wide) in paragraph at lines 264--268
+Overfull \hbox (6.02661pt too wide) in paragraph at lines 266--270
 \OT1/ppl/m/n/10 what is the al-low-able range of the vec-tor $\OML/zplm/m/it/10
  ^^R$\OT1/ppl/m/n/10 ? What is the com-pu-ta-tional cost of eval-u-at-ing $[] \
 OML/zplm/m/it/10 p\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 c\OMS/zplm/m/n/10 j\OML/z
@@ -610,12 +609,12 @@ plm/m/it/10 ^^R\OT1/zplm/m/n/10 )$\OT1/ppl/m/n/10 ,
 [3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 298.
+(mdframed)              on input line 299.
  [4] [5] (./assignment.aux) ) 
 Here is how much of TeX's memory you used:
  10668 strings out of 493117
  189514 string characters out of 6135433
- 258116 words of memory out of 5000000
+ 258103 words of memory out of 5000000
  13994 multiletter control sequences out of 15000+600000
  23195 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -630,7 +629,7 @@ b.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb
 sr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/loca
 l/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on assignment.pdf (5 pages, 95508 bytes).
+Output written on assignment.pdf (5 pages, 98166 bytes).
 PDF statistics:
  57 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream
