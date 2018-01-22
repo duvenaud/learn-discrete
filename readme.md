@@ -86,6 +86,8 @@ This lecture will set the scope of the course, the different settings where disc
 ***
 ### Week 2 - Jan 19th - Gradient estimators for non-differentiable computation graphs
 
+[Lecture 2 slides](slides/lec2-gradient-estimators.pdf)
+
 Discrete variables makes gradient estimation hard, but there has been a lot of recent progress on developing unbiased gradient estimators.
   
 Recommended reading:
@@ -103,6 +105,7 @@ Material that will be covered:
 Related work:
   - [MuProp: Unbiased Backpropagation for Stochastic Neural Networks](https://arxiv.org/abs/1511.05176)
   - [The Generalized Reparameterization Gradient](https://arxiv.org/abs/1610.02287)
+  - [Developing Bug-Free Machine Learning Systems With Formal Mathematics](https://arxiv.org/pdf/1706.08605.pdf) - One can use formal tools to verify that a gradient estimator is unbiased.
     
 ***
 ### Week 3 - Jan 26th - Deep Reinforcement learning and Evolution Strategies
@@ -130,7 +133,7 @@ Attempts learn programs using gradient-based methods, and program induction in g
  - [The Case for Learned Index Structures](https://arxiv.org/abs/1712.01208)
  - [Reparameterization Gradients through Acceptance-Rejection
 Sampling Algorithms](http://proceedings.mlr.press/v54/naesseth17a/naesseth17a.pdf)
- 
+ - [Divide and Conquer Networks](https://arxiv.org/abs/1611.02401)
 
 ***
 ### Week 5 - Feb 9th - Discrete latent structure
@@ -184,8 +187,10 @@ Models of infinitely-large discrete objects.
   - [Learning Latent Permutations with Gumbel-Sinkhorn Networks](https://openreview.net/forum?id=Byt3oJ-0W)
   - [Reparameterizing the Birkhoff Polytope for Variational Permutation Inference](https://arxiv.org/abs/1710.09508)
   - [Grammar Variational Autoencoder](https://arxiv.org/pdf/1703.01925.pdf)
+  - [Syntax-Directed Variational Autoencoder for Structured Data](https://openreview.net/forum?id=SyqShMZRb) - a followup to the Grammar VAE
   - [Automatic chemical design using a data-driven continuous representation of molecules](https://arxiv.org/abs/1610.02415)
   - [Learning to Compose Words into Sentences with Reinforcement Learning](https://arxiv.org/abs/1611.09100)
+  - [Learning to Represent Programs with Graphs](https://arxiv.org/abs/1711.00740)
 
 
 ***
