@@ -53,7 +53,7 @@ The hope is that these discussions will lead to actual research papers, or resou
 
 Grades will be based on:
 
-  * [15%] One [assignment](assignments/assignment.pdf)(https://arxiv.org/abs/1703.07370) due Feb 4th.
+  * [15%] One [assignment](assignments/assignment.pdf) due Feb 4th.
   * [15%] Class presentations
   * [15%] Project proposal, due Feb 13th.
   * [15%] Project presentations, March 16th and 23rd.
