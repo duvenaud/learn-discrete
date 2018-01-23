@@ -53,11 +53,11 @@ The hope is that these discussions will lead to actual research papers, or resou
 
 Grades will be based on:
 
-  * [15%] One [assignment](assignments/assignment.pdf), designed to help you become familiar with unbiased gradient estimators, such as [REINFORCE](http://incompleteideas.net/sutton/williams-92.pdf) (also known as the score-function estimator) and [REBAR](https://arxiv.org/abs/1703.07370)
+  * [15%] One [assignment](assignments/assignment.pdf)(https://arxiv.org/abs/1703.07370) due Feb 4th.
   * [15%] Class presentations
-  * [15%] Project proposal
-  * [15%] Project presentation
-  * [40%] Project report and code
+  * [15%] Project proposal, due Feb 13th.
+  * [15%] Project presentations, March 16th and 23rd.
+  * [40%] Project report and code, due April 10th.
 
 ### Project
 Students can work on projects individually,in pairs, or even in triplets. The grade will depend on the ideas, how well you present them in the report, how clearly you position your work relative to existing literature, how illuminating your experiments are, and well-supported your conclusions are.
