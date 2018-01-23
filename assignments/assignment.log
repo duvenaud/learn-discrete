@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  22 JAN 2018 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  22 JAN 2018 20:34
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -468,19 +468,19 @@ Package: listings 2014/03/04 1.5c (Carsten Heinz)
 (./assignment.aux)
 \openout1 = `assignment.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 69.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
@@ -527,71 +527,82 @@ e
 \makeMPintoPDFobject=\count154
 \everyMPtoPDFconversion=\toks29
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 64.
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 69.
 
  (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 64.
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 69.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 64.
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 69.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 64.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 69.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 64.
+(Font)              scaled to size 10.42007pt on input line 69.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 64.
+(Font)              scaled to size 7.91925pt on input line 69.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 64.
+(Font)              scaled to size 6.25204pt on input line 69.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 64.
+(Font)              scaled to size 10.42007pt on input line 69.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 64.
+(Font)              scaled to size 7.91925pt on input line 69.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 64.
+(Font)              scaled to size 6.25204pt on input line 69.
 
-Overfull \hbox (37.14983pt too wide) in paragraph at lines 64--64
+Overfull \hbox (37.14983pt too wide) in paragraph at lines 69--69
  [] 
  []
 
 \c@lstlisting=\count155
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 72.
+(mdframed)              on input line 78.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 72.
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 90.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 78.
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 93.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 118.
- [1
+(mdframed)              on input line 119.
 
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Overfull \hbox (10.5503pt too wide) in paragraph at lines 160--166
+[]\OT1/ppl/b/n/10 [4 points] \OT1/ppl/m/n/10 De-rive the vari-ance of the above
+ gra-di-ent es-ti-ma-tor. Be-cause gra-di-ents are $\OML/zplm/m/it/10 D$\OT1/pp
+l/m/n/10 -dimensional
+ []
+
+[1
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \vbox (58.8289pt too high) has occurred while \output is active []
+
+
+[2]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 203.
+(mdframed)              on input line 205.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 237.
+(mdframed)              on input line 239.
 
-Overfull \hbox (6.02661pt too wide) in paragraph at lines 255--259
+Overfull \hbox (6.02661pt too wide) in paragraph at lines 257--261
 \OT1/ppl/m/n/10 what is the al-low-able range of the vec-tor $\OML/zplm/m/it/10
  ^^R$\OT1/ppl/m/n/10 ? What is the com-pu-ta-tional cost of eval-u-at-ing $[] \
 OML/zplm/m/it/10 p\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 c\OMS/zplm/m/n/10 j\OML/z
@@ -599,7 +610,7 @@ plm/m/it/10 ^^R\OT1/zplm/m/n/10 )$\OT1/ppl/m/n/10 ,
  []
 
 
-Overfull \hbox (6.02661pt too wide) in paragraph at lines 266--270
+Overfull \hbox (6.02661pt too wide) in paragraph at lines 268--272
 \OT1/ppl/m/n/10 what is the al-low-able range of the vec-tor $\OML/zplm/m/it/10
  ^^R$\OT1/ppl/m/n/10 ? What is the com-pu-ta-tional cost of eval-u-at-ing $[] \
 OML/zplm/m/it/10 p\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 c\OMS/zplm/m/n/10 j\OML/z
@@ -609,16 +620,16 @@ plm/m/it/10 ^^R\OT1/zplm/m/n/10 )$\OT1/ppl/m/n/10 ,
 [3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 299.
+(mdframed)              on input line 301.
  [4] [5] (./assignment.aux) ) 
 Here is how much of TeX's memory you used:
- 10668 strings out of 493117
- 189514 string characters out of 6135433
- 258103 words of memory out of 5000000
- 13994 multiletter control sequences out of 15000+600000
- 23195 words of font info for 70 fonts, out of 8000000 for 9000
+ 10674 strings out of 493117
+ 189546 string characters out of 6135433
+ 259138 words of memory out of 5000000
+ 13999 multiletter control sequences out of 15000+600000
+ 24297 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,12n,39p,10400b,488s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,12n,39p,10400b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvip
 s/base/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
@@ -629,7 +640,7 @@ b.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb
 sr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/loca
 l/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on assignment.pdf (5 pages, 98166 bytes).
+Output written on assignment.pdf (5 pages, 98312 bytes).
 PDF statistics:
  57 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream

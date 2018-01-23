@@ -16,6 +16,11 @@
 \usepackage{listings}
 
 % Some useful macros.
+\def\ie{i.e.\ }
+\def\eg{e.g.\ }
+\def\iid{i.i.d.\ }
+\def\simiid{\sim_{\mbox{\tiny iid}}}
+
 \newcommand{\given}{\,|\,}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\cov}{\text{Cov}}
@@ -62,6 +67,7 @@
 
 
 \begin{document}
+\pagenumbering{gobble}
 
 This assignment is designed to get you comfortable deriving gradient estimators, and optimizing distributions over discrete random variables.
 
@@ -69,7 +75,7 @@ For most questions, the answers should be a few lines of derivations.
 Throughout, you can assume that $p(b|\theta)$ is differentiable w.r.t. $\theta$.
 
 
-\begin{problem}[Unbiasedness of the score-function estimator, 10 points]
+\begin{problem}[Unbiasedness of the score-function estimator, 8 points]
 
 Gradient estimators are simply functions that take a parameter vector $\theta$ and a (possibly stochastic) function $L(\theta)$, and return another vector $\hat g$ of the same size as $\theta$.
 Gradient estimators are generally more useful the closer their estimate is to the true gradient, i.e.\ when $\hat g$ is close to $\PT L(\theta)$.
@@ -82,19 +88,14 @@ The standard REINFORCE, or score-function estimator is defined as:
 \begin{align}
 \hat g_\textnormal{SF}[f] = f \left( b \right) \PT \log p(b | \theta), \qquad b \sim p(b | \theta)
 \end{align}
-%
-%This estimator is unbiased, but in general has high variance.
-%Intuitively, this estimator is limited by the fact that it doesn't use any information about how $f$ depends on $b$, only on the final outcome $f(b)$.
-%
+
 \begin{enumerate}[label=(\alph*)]
 \item {\bf [2 points]} First, let's warm up with the score function.  Prove that the score function has zero expectation, i.e.\ $\E_{p(x|\theta)} \left[ \nabla_\theta \log p(x|\theta) \right] = 0$.
-Hint: Under some conditions, one can swap the derivative and integral operators.
+Assume that you can swap the derivative and integral operators.
 
 \item {\bf [2 points]} Show that $\E_{p(b|\theta)} \left[ f(b) \PT \log p(b | \theta) \right] = \PT \E_{p(b|\theta)} \left[ f(b) \right]$.
 
 \item {\bf [2 points]} Show that $\E_{p(b|\theta)} \left[ [f(b) - c] \PT \log p(b | \theta) \right] = \PT \E_{p(b|\theta)} \left[ f(b) \right]$ for any fixed $c$.
-
-\item {\bf [2 points]} Derive the variance-minimizing value of $c$.
 
 \item {\bf [2 points]} If the baseline depends on $b$, then REINFORCE will in general give biased gradient estimates.
 Give an example where $\E_{p(b|\theta)} \left[ [f(b) - c(b)] \PT \log p(b | \theta) \right] \neq \PT \E_{p(b|\theta)}\left[ f(b) \right]$ for some function $c(b)$, and show that it is biased.
@@ -115,7 +116,7 @@ The takeaway is that you can use a baseline to reduce the variance of REINFORCE,
 
 
 
-\begin{problem}[Comparing variances of gradient estimators, 14 points]
+\begin{problem}[Comparing variances of gradient estimators, 16 points]
 
 If we restrict ourselves to consider only unbiased gradient estimators, then the main (and perhaps only) property we need to worry about is the variance of our estimators.
 In general, optimizing with a lower-variance unbiased estimator will converge faster than a high-variance unbiased estimator.
@@ -124,39 +125,44 @@ However, which estimator has the lowest variance can depend on the function bein
 In this question, we'll look at which gradient estimators scale to large numbers of parameters, by computing their variance as a function of dimension.
 
 For simplicity, we'll consider a toy problem.
-The goal will be to estimate gradients of a sum of one-dimensional Gaussians with means given by a $D$-dimensional parameter vector $\theta$ and unit variance:
+The goal will be to estimate gradients of the expectation of a sum of one-dimensional Gaussians.
+Each Gaussian has unit variance, and its mean is given by an element of the $D$-dimensional parameter vector $\theta$:
 %
 \begin{align}
 L(\theta) 
-= \E_{\bx \sim \distNorm(\theta, I)} \left[ f(\bx) \right]
-= \E_{\bx \sim \distNorm(\theta, I)} \left[ \sum_{d=1}^D x_d \right]
+= \E_{\bx \simiid \distNorm(\theta, I)} \left[ f(\bx) \right]
+= \E_{\bx \simiid \distNorm(\theta, I)} \left[ \sum_{d=1}^D x_d \right]
 \end{align}
 
 
 
 \begin{enumerate}[label=(\alph*)]
-\item {\bf [2 points]} As a warm-up, let's compute the variance of a single-sample simple Monte Carlo estimator of the objective $L(\theta)$:
+\item {\bf [2 points]} As a warm-up, compute the variance of a single-sample simple Monte Carlo estimator of the objective $L(\theta)$:
 %
 \begin{align}
 \hat L_{MC} 
-= \sum_{d=1}^D x_d, \qquad \textnormal{where each } x_d \sim \distNorm(\theta_d, 1)
+= \sum_{d=1}^D x_d, \qquad \textnormal{where each } x_d \simiid \distNorm(\theta_d, 1)
 \end{align}
 %
 That is, compute $\var \left[ \hat L_{MC} \right]$ as a function of $D$.
 
-\item {\bf [2 points]} Next, we'll compare the variance of different gradient estimators.
-
+\item {\bf [2 points]}
 Recall the definition of the score-function, or REINFORCE estimator:
 %
 \begin{align}
-\hat g^\textnormal{SF}[f] = f(x) \PT \log p(x | \theta), \qquad x \sim p(x | \theta)
+\hat g^\textnormal{SF}[f] = \left[f(x) - c\right] \PT \log p(x | \theta), \qquad x \sim p(x | \theta)
 \end{align}
 %
+Derive a closed form for this gradient estimator as a deterministic function of $\epsilon$, a $D$-dimensional vector of standard normals.
+Set the baseline to $c = \sum_{d=1}^D \theta_d$.
+As a sanity check, consider the case where $D = 1$.
 
-Because gradients are $D$-dimensional vectors, they actually have a $D \times D$ covariance matrix.
-For this question, we'll consider the variance of the gradient with respect to the first element of the parameter vector, $\theta_1$.
-%
-That is, derive $\var \left[ \hat g^\textnormal{SF}_1 \right]$ as a function of $D$.
+\item {\bf [4 points]} Derive the variance of the above gradient estimator.
+Because gradients are $D$-dimensional vectors, their covariance is a $D \times D$ matrix.
+To make things easier, we'll consider only the variance of the gradient with respect to the first element of the parameter vector, $\theta_1$.
+That is, derive the scalar value $\var \left[ \hat g^\textnormal{SF}_1 \right]$ as a function of $D$.
+%Hint 1: Separate the terms with $\epsilon_1$ in them.
+The third moment of a standard normal is 0, and the fourth moment is 3.
 
 \item {\bf [4 points]} Next, let's look at the gold standard of gradient estimators, the reparameterization gradient estimator, where we reparameterize $x = T(\theta, \epsilon)$:
 %
@@ -166,27 +172,23 @@ That is, derive $\var \left[ \hat g^\textnormal{SF}_1 \right]$ as a function of 
 %
 In this case, we can use the reparameterization $x = \theta + \epsilon$, with $\epsilon \sim \distNorm(0, 1)$.
 
-Derive $\var \left[ \hat g^\textnormal{REPARAM}_1 \right]$ as a function of $D$.
+Derive this gradient estimator, and give $\var \left[ \hat g^\textnormal{REPARAM}_1 \right]$ as a function of $D$.
 
-\item {\bf [6 points]} Finally, let's consider a more exotic gradient estimator, Evolution Strategies.
+\item {\bf [2 points]} Finally, let's consider a more exotic gradient estimator, Evolution Strategies.
 Following [Salimans et. al., 2016], we'll choose a meta-policy $p(\hat \theta | \psi) = \distNorm(\hat \theta |  \theta, \sigma I)$
 %
 \begin{align}
 \hat g^\textnormal{ES}[f]
-& = f(x) \PT \log p(\hat \theta | \psi), 
+& = \left[f(x) - c\right] \PT \log p(\hat \theta | \psi), 
 & \qquad x \sim p(x | \hat \theta),\quad \hat \theta \sim p(\hat \theta | \psi) \\
-& = f(x) \PT \log \distNorm(\hat \theta | \theta, \sigma I)
+& = \left[f(x) - c\right] \PT \log \distNorm(\hat \theta | \theta, \sigma I)
 & \qquad x \sim \distNorm(x | \hat \theta, I), \quad \hat \theta \sim \distNorm(\hat \theta | \theta, \sigma I)
-%& = f(\theta +  \epsilon_\theta \sigma + \epsilon_x) \PT \log \distNorm(\theta + \epsilon_\theta \sigma | \theta, I),
-%& \qquad \epsilon_x \sim \distNorm(0, I), \quad \epsilon_\theta \sim \distNorm(0, I) \\
-%& = f(\theta + \sigma_\theta \epsilon_\theta + \sigma_x) \frac{\epsilon_\theta}{\sigma_\theta},
-%& \qquad \epsilon_x \sim \distNorm(0, I), \quad \hat \epsilon_\theta \sim \distNorm(0, I)
 \end{align}
 %
-Compute $\var \left[ \hat g^\textnormal{ES}_1 \right]$.
-Hint 1: It is a function of both $\sum_{d=1}^D \theta_d$ and $\sigma$.
-Hint 2: First, write down the gradient estimator w.r.t.\ $\theta_1$, reparameterizing all variables to be deterministic functions of standard normal distributions.
-Hint 3: Check that its expectation is correct by comparing it against your answers above.
+Derive a closed form for this gradient estimator as a deterministic function of $\epsilon_x$ and $\epsilon_\theta$, two $D$-dimensional vectors of standard normals.
+Again, set the baseline to $c = \sum_{d=1}^D \theta_d$
+
+\item {\bf [2 points]} Compute $\var \left[ \hat g^\textnormal{ES}_1 \right]$ as a function of $D$ and $\sigma$.
 \end{enumerate}
 \end{problem}
 
@@ -200,7 +202,7 @@ Hint 3: Check that its expectation is correct by comparing it against your answe
 
 
 
-\begin{problem}[The pointlessness of stochastic policies, 8 points]
+\begin{problem}[Sometimes stochastic policies are necessarily suboptimal, 8 points]
 
 In reinforcement learning and hard attention models, we often parameterize a policy to stochastically choose actions according to the current state.
 However, in many situations, the best policy is necessarily deterministic.
@@ -317,7 +319,6 @@ where $b$ is a single Bernoulli random variable.
 \end{align}
 %
 For this objective, find the optimal temperature $\lambda$ and scale $\eta$ for REBAR as a function of $t$ and $\theta$.
-%This requires only calculus.
 \item {\bf [Harder, 5 points]} The discrete version of the \LAX{} estimator is given by:
 %
 \begin{align}
@@ -327,7 +328,6 @@ For this objective, find the optimal temperature $\lambda$ and scale $\eta$ for 
 %
 Find the optimal surrogate $c_\phi(z)$ for DLAX as a function of $t$ and $\theta$.
 Compute the variance of this estimator as a function of $t$ and $\theta$.
-%This will require variational calculus, or solving a PDE.
 \item {\bf [Hardest, 5 points]} %
 \begin{align}
 \hat g_\textnormal{RELAX} = \left[ f(b) - c_\phi(\tilde{z}) \right] \PT \log p(b|\theta) + \PT c_\phi(z) - \PT c_\phi (\tilde{z}) \\
@@ -346,22 +346,6 @@ Compute the variance of this estimator as a function of $t$ and $\theta$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-
-%\begin{problem}[Bonus: Optimal Gaussian reparameterization, 10 points]
-
-%If $$X \sim \distNorm(\mu, \Sigma)$$, we can draw samples in a reparameterizable way by $$x = \mu + L \epsilon$$ where $\epsilon \sim \distNorm(0, I)$, and $L^T L = \Sigma$.
-
-%\begin{enumerate}[label=(\alph*)]
-%\item Given $\mu$ and $\Sigma$, what $L$ minimizes the trace of the variance of $\nabla_L X$?
-%\end{enumerate}
-%\end{problem}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% You can write your solution here.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
