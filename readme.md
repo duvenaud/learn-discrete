@@ -109,13 +109,16 @@ Related work:
     
 ***
 ### Week 3 - Jan 26th - Deep Reinforcement learning and Evolution Strategies
+
+Recommended reading:
   - [A Visual Guide to Evolution Strategies](http://blog.otoro.net/2017/10/29/visual-evolution-strategies/)
   - [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864)
+
+Material that will be covered:
   - [Optimization by Variational Bounding](https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2013-65.pdf)
   - [Natural Evolution Strategies](http://www.jmlr.org/papers/volume15/wierstra14a/wierstra14a.pdf)
   - [On the Relationship Between the OpenAI Evolution
 Strategy and Stochastic Gradient Descent](https://arxiv.org/pdf/1712.06564.pdf)
-  - [Emergence of Grounded Compositional Language in Multi-Agent Populations](https://arxiv.org/abs/1703.04908)
   - [Model-Based Planning in Discrete Action Spaces](https://arxiv.org/abs/1705.07177) - "it is in fact possible to effectively perform planning via backprop in discrete action spaces"
   - [Q-Prop: Sample-Efficient Policy Gradient with An Off-Policy Critic](https://arxiv.org/abs/1611.02247) - learns a linear surrogate function.
   
@@ -162,6 +165,8 @@ It's not obvious how to train GANs to produce discrete structures, because this 
   - [Program Synthesis for Character-Level Language Modeling](http://openreview.net/pdf?id=ry_sjFqgx)
   - [Hierarchical Multiscale Recurrent Neural Networks](https://arxiv.org/abs/1609.01704)
   - [Generating and designing DNA with deep generative models](https://arxiv.org/abs/1712.06148)
+  - [Emergence of Grounded Compositional Language in Multi-Agent Populations](https://arxiv.org/abs/1703.04908)
+  
   
 
 ***
