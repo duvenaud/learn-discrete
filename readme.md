@@ -117,7 +117,6 @@ Slides:
   - [Variational Optimization and Natural Evolution Strategies](slides/evolution-strategies.pdf)
   - [Variational Optimization Examples](slides/Variational_Optimization_Landscapes.pdf)
   - [Evolution Strategies vs SGD](slides/Evolution_Strategies_and_Stochastic_Gradient_Descent.pdf)
-  - [Deep RL](slides/deeprl.pdf)
   
 Recommended reading:
   - [A Visual Guide to Evolution Strategies](http://blog.otoro.net/2017/10/29/visual-evolution-strategies/)
