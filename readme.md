@@ -98,16 +98,16 @@ Recommended reading:
   
 Material that will be covered:
   - The original [REINFORCE](http://www-anw.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf) paper.
-  - [The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables](https://arxiv.org/abs/1611.00712)
-  - [Categorical Reparameterization with Gumbel-Softmax](https://arxiv.org/abs/1611.01144)
-  - [REBAR: Low-variance, unbiased gradient estimates for discrete latent variable models](https://arxiv.org/abs/1703.07370)
-  - [Stochastic Backpropagation and Approximate Inference in Deep Generative Models](https://arxiv.org/abs/1401.4082)
+  - [The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables](https://arxiv.org/abs/1611.00712) - a simple trick: turn all the step functions into sigmoids, and use backprop to get a biased gradient estimate.
+  - [Categorical Reparameterization with Gumbel-Softmax](https://arxiv.org/abs/1611.01144) - the exact same idea as the Concrete distribution, published simultaneously.
+  - [REBAR: Low-variance, unbiased gradient estimates for discrete latent variable models](https://arxiv.org/abs/1703.07370) - fixes the concrete estimator to make it unbiased, and also gives a way to tune the temperature automatically.
+  - [Stochastic Backpropagation and Approximate Inference in Deep Generative Models](https://arxiv.org/abs/1401.4082) - one of the modern explanations of the reparameterization trick.
   - [Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation](https://arxiv.org/abs/1308.3432)
 
 Related work:
-  - [MuProp: Unbiased Backpropagation for Stochastic Neural Networks](https://arxiv.org/abs/1511.05176)
-  - [The Generalized Reparameterization Gradient](https://arxiv.org/abs/1610.02287)
-  - [Developing Bug-Free Machine Learning Systems With Formal Mathematics](https://arxiv.org/pdf/1706.08605.pdf) - One can use formal tools to verify that a gradient estimator is unbiased.
+  - [MuProp: Unbiased Backpropagation for Stochastic Neural Networks](https://arxiv.org/abs/1511.05176) - another unbiased gradient estimator based on a Taylor expansion.
+  - [The Generalized Reparameterization Gradient](https://arxiv.org/abs/1610.02287) - shows how to partially reparameterize some otherwise un-reparameterizable distributions.
+  - [Developing Bug-Free Machine Learning Systems With Formal Mathematics](https://arxiv.org/pdf/1706.08605.pdf) - shows how to use formal tools to verify that a gradient estimator is unbiased.
     
 ***
 ### Week 3 - Jan 26th - Deep Reinforcement learning and Evolution Strategies
@@ -120,15 +120,15 @@ Slides:
   
 Recommended reading:
   - [A Visual Guide to Evolution Strategies](http://blog.otoro.net/2017/10/29/visual-evolution-strategies/)
-  - [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864)
+  - [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864) - replaces the exact gradient inside of REINFORCE with another call to REINFORCE.
 
 Material that will be covered:
   - [Optimization by Variational Bounding](https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2013-65.pdf)
   - [Natural Evolution Strategies](http://www.jmlr.org/papers/volume15/wierstra14a/wierstra14a.pdf)
   - [On the Relationship Between the OpenAI Evolution
-Strategy and Stochastic Gradient Descent](https://arxiv.org/pdf/1712.06564.pdf)
+Strategy and Stochastic Gradient Descent](https://arxiv.org/pdf/1712.06564.pdf) - shows that ES might work in high dimensions because most of the dimensions don't usually matter.
   - [Model-Based Planning in Discrete Action Spaces](https://arxiv.org/abs/1705.07177) - "it is in fact possible to effectively perform planning via backprop in discrete action spaces"
-  - [Q-Prop: Sample-Efficient Policy Gradient with An Off-Policy Critic](https://arxiv.org/abs/1611.02247) - learns a linear surrogate function.
+  - [Q-Prop: Sample-Efficient Policy Gradient with An Off-Policy Critic](https://arxiv.org/abs/1611.02247) - learns a linear surrogate function off-policy.
   
 ***
 ### Week 4 - Feb 2nd - Differentiable Data Structures and Adaptive Computation
@@ -136,8 +136,8 @@ Strategy and Stochastic Gradient Descent](https://arxiv.org/pdf/1712.06564.pdf)
 Attempts learn programs using gradient-based methods, and program induction in general.
  - [Pointer Networks](https://arxiv.org/abs/1506.03134)
  - [Neural Turing Machines](https://arxiv.org/abs/1410.5401)
- - [Reinforcement Learning Neural Turing Machines](https://arxiv.org/abs/1505.00521)
- - [Recurrent Models of Visual Attention](https://arxiv.org/pdf/1406.6247.pdf) - Training a hard attention model inside an RNN.
+ - [Reinforcement Learning Neural Turing Machines](https://arxiv.org/abs/1505.00521) - attempts to train the NTM with REINFORCE.
+ - [Recurrent Models of Visual Attention](https://arxiv.org/pdf/1406.6247.pdf) - trains a hard attention model inside an RNN.
  - [Programming with a Differentiable Forth Interpreter](https://arxiv.org/abs/1605.06640)
  - [Sampling for Bayesian Program Learning](http://web.mit.edu/ellisk/www/programSample.pdf)
  - [Neural Sketch Learning for Conditional Program Generation](https://openreview.net/pdf?id=HkfXMz-Ab)
