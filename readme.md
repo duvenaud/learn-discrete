@@ -94,7 +94,7 @@ Discrete variables makes gradient estimation hard, but there has been a lot of r
   
 Recommended reading:
   - [Gradient Estimation Using Stochastic Computation Graphs](https://arxiv.org/abs/1506.05254)
-  - [Backpropagation through the Void: Optimizing control variates for black-box gradient estimation](https://arxiv.org/abs/1711.00123)
+  - [Backpropagation through the Void: Optimizing control variates for black-box gradient estimation](https://arxiv.org/abs/1711.00123) [code](https://github.com/duvenaud/relax)
   
 Material that will be covered:
   - The original [REINFORCE](http://www-anw.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf) paper.
@@ -111,6 +111,8 @@ Related work:
     
 ***
 ### Week 3 - Jan 26th - Deep Reinforcement learning and Evolution Strategies
+
+[Slides on variational optimization](slides/deeprl.pdf) [Slides on Variational Optimization](slides/Variational_Optimization_Landscapes.pdf) [Slides on Evolution Strategies](slides/Evolution_Strategies_and_Stochastic_Gradient_Descent.pdf)
 
 Recommended reading:
   - [A Visual Guide to Evolution Strategies](http://blog.otoro.net/2017/10/29/visual-evolution-strategies/)
