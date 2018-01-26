@@ -112,7 +112,9 @@ Related work:
 ***
 ### Week 3 - Jan 26th - Deep Reinforcement learning and Evolution Strategies
 
-[Slides on variational optimization](slides/deeprl.pdf) [Slides on Variational Optimization](slides/Variational_Optimization_Landscapes.pdf) [Slides on Evolution Strategies](slides/Evolution_Strategies_and_Stochastic_Gradient_Descent.pdf)
+  - [Slides on variational optimization](slides/deeprl.pdf)
+  - [Slides on Variational Optimization](slides/Variational_Optimization_Landscapes.pdf)
+  - [Slides on Evolution Strategies](slides/Evolution_Strategies_and_Stochastic_Gradient_Descent.pdf)
 
 Recommended reading:
   - [A Visual Guide to Evolution Strategies](http://blog.otoro.net/2017/10/29/visual-evolution-strategies/)
