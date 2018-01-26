@@ -59,6 +59,8 @@ Grades will be based on:
   * [15%] Project presentations, March 16th and 23rd.
   * [40%] Project report and code, due April 10th.
 
+Submit assignments through [Markus](https://markus.teach.cs.toronto.edu/csc2547-2018-01/).
+
 ### Project
 Students can work on projects individually,in pairs, or even in triplets. The grade will depend on the ideas, how well you present them in the report, how clearly you position your work relative to existing literature, how illuminating your experiments are, and well-supported your conclusions are.
 Full marks will require a novel contribution.
