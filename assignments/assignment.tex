@@ -129,8 +129,8 @@ The goal will be to estimate gradients of the expectation of a sum of one-dimens
 Each Gaussian has unit variance, and its mean is given by an element of the $D$-dimensional parameter vector $\theta$:
 %
 \begin{align}
-L(\theta) 
-= \E_{\bx \simiid \distNorm(\theta, I)} \left[ f(\bx) \right]
+f(\bx) & = \sum_{d=1}^D x_d \\
+L(\theta) & = \E_{\bx \simiid \distNorm(\theta, I)} \left[ f(\bx) \right]
 = \E_{\bx \simiid \distNorm(\theta, I)} \left[ \sum_{d=1}^D x_d \right]
 \end{align}
 
@@ -238,10 +238,10 @@ The takeaway is that, for a fully-observed state in a non-adversarial setting, t
 
 \begin{problem}[Representing and computing Categorical distributions, 8 points]
 
-A Categorical distribution can be represented by a point in the simplex.
+There are several ways to parameterization Categorical distributions.
 
 \begin{enumerate}[label=(\alph*)]
-\item {\bf [1 point]} If we parameterize a $D$-dimensional categorial distribution as
+\item {\bf [1 point]} If we parameterize a $D$-dimensional categorial distribution using a $D$-dimensional vector $\theta$ as
 %
 \begin{align}
 p(c | \theta) = \theta_c

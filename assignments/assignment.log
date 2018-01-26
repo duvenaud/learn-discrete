@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  22 JAN 2018 20:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  26 JAN 2018 18:02
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -591,7 +591,7 @@ l/m/n/10 -dimensional
 [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \vbox (58.8289pt too high) has occurred while \output is active []
+Overfull \vbox (91.95924pt too high) has occurred while \output is active []
 
 
 [2]
@@ -625,7 +625,7 @@ Package mdframed Info: mdframed detected package amsthm
 Here is how much of TeX's memory you used:
  10674 strings out of 493117
  189546 string characters out of 6135433
- 259138 words of memory out of 5000000
+ 260138 words of memory out of 5000000
  13999 multiletter control sequences out of 15000+600000
  24297 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -640,7 +640,7 @@ b.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb
 sr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/loca
 l/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on assignment.pdf (5 pages, 98312 bytes).
+Output written on assignment.pdf (5 pages, 98442 bytes).
 PDF statistics:
  57 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream
