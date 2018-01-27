@@ -121,7 +121,6 @@ The takeaway is that you can use a baseline to reduce the variance of REINFORCE,
 If we restrict ourselves to consider only unbiased gradient estimators, then the main (and perhaps only) property we need to worry about is the variance of our estimators.
 In general, optimizing with a lower-variance unbiased estimator will converge faster than a high-variance unbiased estimator.
 However, which estimator has the lowest variance can depend on the function being optimized.
-
 In this question, we'll look at which gradient estimators scale to large numbers of parameters, by computing their variance as a function of dimension.
 
 For simplicity, we'll consider a toy problem.
@@ -130,8 +129,8 @@ Each Gaussian has unit variance, and its mean is given by an element of the $D$-
 %
 \begin{align}
 f(\bx) & = \sum_{d=1}^D x_d \\
-L(\theta) & = \E_{\bx \simiid \distNorm(\theta, I)} \left[ f(\bx) \right]
-= \E_{\bx \simiid \distNorm(\theta, I)} \left[ \sum_{d=1}^D x_d \right]
+L(\theta) & = \E_{\bx \sim p(x|\theta)} \left[ f(\bx) \right]
+= \E_{\bx \sim \distNorm(\theta, I)} \left[ \sum_{d=1}^D x_d \right]
 \end{align}
 
 
@@ -150,19 +149,19 @@ That is, compute $\var \left[ \hat L_{MC} \right]$ as a function of $D$.
 Recall the definition of the score-function, or REINFORCE estimator:
 %
 \begin{align}
-\hat g^\textnormal{SF}[f] = \left[f(x) - c\right] \PT \log p(x | \theta), \qquad x \sim p(x | \theta)
+\hat g^\textnormal{SF}[f] = \left[f(x) - c(\theta) \right] \PT \log p(x | \theta), \qquad x \sim p(x | \theta)
 \end{align}
 %
 Derive a closed form for this gradient estimator as a deterministic function of $\epsilon$, a $D$-dimensional vector of standard normals.
-Set the baseline to $c = \sum_{d=1}^D \theta_d$.
-As a sanity check, consider the case where $D = 1$.
+Set the baseline to $c(\theta) = \sum_{d=1}^D \theta_d$.
 
 \item {\bf [4 points]} Derive the variance of the above gradient estimator.
 Because gradients are $D$-dimensional vectors, their covariance is a $D \times D$ matrix.
 To make things easier, we'll consider only the variance of the gradient with respect to the first element of the parameter vector, $\theta_1$.
 That is, derive the scalar value $\var \left[ \hat g^\textnormal{SF}_1 \right]$ as a function of $D$.
 %Hint 1: Separate the terms with $\epsilon_1$ in them.
-The third moment of a standard normal is 0, and the fourth moment is 3.
+Hint: The third moment of a standard normal is 0, and the fourth moment is 3.
+As a sanity check, consider the case where $D = 1$.
 
 \item {\bf [4 points]} Next, let's look at the gold standard of gradient estimators, the reparameterization gradient estimator, where we reparameterize $x = T(\theta, \epsilon)$:
 %
@@ -175,18 +174,19 @@ In this case, we can use the reparameterization $x = \theta + \epsilon$, with $\
 Derive this gradient estimator, and give $\var \left[ \hat g^\textnormal{REPARAM}_1 \right]$ as a function of $D$.
 
 \item {\bf [2 points]} Finally, let's consider a more exotic gradient estimator, Evolution Strategies.
-Following [Salimans et. al., 2016], we'll choose a meta-policy $p(\hat \theta | \psi) = \distNorm(\hat \theta |  \theta, \sigma I)$
+Following [Salimans et. al., 2016], we'll choose a meta-policy $p(\theta | \psi) = \distNorm(\theta | \psi, \sigma^2 I)$.
+In this case, $\hat g^\textnormal{ES}$ estimates $\frac{\partial}{\partial \psi}\E_{p(\theta|\psi, \sigma)}\left[ L(\theta) \right]$, where $\psi$ specifies the mean of the distribution over $\theta$.
 %
 \begin{align}
 \hat g^\textnormal{ES}[f]
-& = \left[f(x) - c\right] \PT \log p(\hat \theta | \psi), 
-& \qquad x \sim p(x | \hat \theta),\quad \hat \theta \sim p(\hat \theta | \psi) \\
-& = \left[f(x) - c\right] \PT \log \distNorm(\hat \theta | \theta, \sigma I)
-& \qquad x \sim \distNorm(x | \hat \theta, I), \quad \hat \theta \sim \distNorm(\hat \theta | \theta, \sigma I)
+& = \left[f(x) - c(\psi)\right] \PT \log p(\theta | \psi, \sigma), 
+& \qquad x \sim p(x | \theta),\quad \theta \sim p(\theta | \psi, \sigma) \\
+& = \left[f(x) - c(\psi)\right] \PT \log \distNorm(\theta | \psi, \sigma^2 I)
+& \qquad x \sim \distNorm(x | \theta, I), \quad \theta \sim \distNorm(\theta | \psi, \sigma^2 I)
 \end{align}
 %
-Derive a closed form for this gradient estimator as a deterministic function of $\epsilon_x$ and $\epsilon_\theta$, two $D$-dimensional vectors of standard normals.
-Again, set the baseline to $c = \sum_{d=1}^D \theta_d$
+Set the baseline to $c(\psi) = \sum_{d=1}^D \psi_d$.
+Derive a closed form for this gradient estimator as a deterministic function of $\psi$ and $\sigma$, and two $D$-dimensional vectors of standard normals, $\epsilon_x$ and $\epsilon_\theta$.
 
 \item {\bf [2 points]} Compute $\var \left[ \hat g^\textnormal{ES}_1 \right]$ as a function of $D$ and $\sigma$.
 \end{enumerate}

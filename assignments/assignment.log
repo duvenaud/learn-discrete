@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  26 JAN 2018 18:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  27 JAN 2018 18:52
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -582,7 +582,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 119.
 
-Overfull \hbox (10.5503pt too wide) in paragraph at lines 160--166
+Overfull \hbox (10.5503pt too wide) in paragraph at lines 158--165
 []\OT1/ppl/b/n/10 [4 points] \OT1/ppl/m/n/10 De-rive the vari-ance of the above
  gra-di-ent es-ti-ma-tor. Be-cause gra-di-ents are $\OML/zplm/m/it/10 D$\OT1/pp
 l/m/n/10 -dimensional
@@ -591,7 +591,7 @@ l/m/n/10 -dimensional
 [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \vbox (91.95924pt too high) has occurred while \output is active []
+Overfull \vbox (95.87024pt too high) has occurred while \output is active []
 
 
 [2]
@@ -629,7 +629,7 @@ Here is how much of TeX's memory you used:
  13999 multiletter control sequences out of 15000+600000
  24297 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,12n,39p,10400b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,12n,39p,10400b,518s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvip
 s/base/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
@@ -640,7 +640,7 @@ b.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb
 sr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/loca
 l/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on assignment.pdf (5 pages, 98442 bytes).
+Output written on assignment.pdf (5 pages, 98754 bytes).
 PDF statistics:
  57 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream
