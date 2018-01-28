@@ -114,8 +114,6 @@ The takeaway is that you can use a baseline to reduce the variance of REINFORCE,
 
 
 
-
-
 \begin{problem}[Comparing variances of gradient estimators, 16 points]
 
 If we restrict ourselves to consider only unbiased gradient estimators, then the main (and perhaps only) property we need to worry about is the variance of our estimators.
@@ -169,8 +167,8 @@ As a sanity check, consider the case where $D = 1$.
 \hat g^\textnormal{REPARAM}[f] = \frac{\partial f}{\partial x} \frac{\partial x}{\partial \theta}, \qquad \epsilon \sim p(\epsilon)
 \end{align}
 %
-In this case, we can use the reparameterization $x = \theta + \epsilon$, with $\epsilon \sim \distNorm(0, 1)$.
-
+In this case, we can use the reparameterization $x = \theta + \epsilon$, with $\epsilon \sim \distNorm(0, I)$.
+%
 Derive this gradient estimator, and give $\var \left[ \hat g^\textnormal{REPARAM}_1 \right]$ as a function of $D$.
 
 \item {\bf [2 points]} Finally, let's consider a more exotic gradient estimator, Evolution Strategies.
@@ -179,9 +177,9 @@ In this case, $\hat g^\textnormal{ES}$ estimates $\frac{\partial}{\partial \psi}
 %
 \begin{align}
 \hat g^\textnormal{ES}[f]
-& = \left[f(x) - c(\psi)\right] \PT \log p(\theta | \psi, \sigma), 
+& = \left[f(x) - c(\psi)\right] \frac{\partial}{\partial \psi} \log p(\theta | \psi, \sigma), 
 & \qquad x \sim p(x | \theta),\quad \theta \sim p(\theta | \psi, \sigma) \\
-& = \left[f(x) - c(\psi)\right] \PT \log \distNorm(\theta | \psi, \sigma^2 I)
+& = \left[f(x) - c(\psi)\right] \frac{\partial}{\partial \psi} \log \distNorm(\theta | \psi, \sigma^2 I)
 & \qquad x \sim \distNorm(x | \theta, I), \quad \theta \sim \distNorm(\theta | \psi, \sigma^2 I)
 \end{align}
 %
