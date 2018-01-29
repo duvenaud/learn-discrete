@@ -150,7 +150,7 @@ Recall the definition of the score-function, or REINFORCE estimator:
 \hat g^\textnormal{SF}[f] = \left[f(x) - c(\theta) \right] \PT \log p(x | \theta), \qquad x \sim p(x | \theta)
 \end{align}
 %
-Derive a closed form for this gradient estimator as a deterministic function of $\epsilon$, a $D$-dimensional vector of standard normals.
+Derive a closed form for this gradient estimator for the objective defined above as a deterministic function of $\epsilon$, a $D$-dimensional vector of standard normals.
 Set the baseline to $c(\theta) = \sum_{d=1}^D \theta_d$.
 
 \item {\bf [4 points]} Derive the variance of the above gradient estimator.
@@ -214,9 +214,9 @@ L(\theta) = \E_{p(b|\theta)} \left[ f(b) \right]
 where $b$ is a Bernoulli random variable,
 
 \begin{enumerate}[label=(\alph*)]
-\item {\bf [4 points]} Show that for any $f$, $L(\theta)$ has local optima only for deterministic policies, i.e.\ values of $\theta = 0$ or $\theta = 1$.
+\item {\bf [4 points]} Show that for any $f$ where $f(0) \neq f(1)$, that $L(\theta)$ has local optima only for deterministic policies, i.e.\ values of $\theta = 0$ or $\theta = 1$.  Proof by diagram is fine.
 
-\item {\bf [4 points]} Show that if $L(\theta) = \E_{p(b|\theta)} \left[ f(b, \theta) \right]$, give an example where a non-deterministic policy is optimal.
+\item {\bf [4 points]} Show that if $L(\theta) = \E_{p(b|\theta)} \left[ f(b, \theta) \right]$, give an example where a non-deterministic policy is optimal.  Again, proof by diagram is fine.
 \end{enumerate}
 
 The takeaway is that, for a fully-observed state in a non-adversarial setting, the only reason to use a stochastic policy is to make optimization easier.
@@ -245,7 +245,7 @@ There are several ways to parameterization Categorical distributions.
 p(c | \theta) = \theta_c
 \end{align}
 %
-what is the allowable range of the vector $\theta$?
+what is the allowable range of the vector $\theta$? Or, answer this question: does setting all $\theta_c = 0$ result in a valid probability distribution over $c$?
 
 \item {\bf [1 point]} One problem with this parameterization is that it is hard to represent very small probabilities.
 If we parameterize a $D$-dimensional categorial distribution as
@@ -254,7 +254,8 @@ If we parameterize a $D$-dimensional categorial distribution as
 \log p(c | \theta) = \theta_c
 \end{align}
 %
-what is the allowable range of the vector $\theta$?
+what is the allowable range of the vector $\theta$? Or, answer this question: does setting all $\theta_c = 0$ result in a valid probability distribution over $c$?
+
 What is the computational cost of evaluating $\log p(c | \theta)$, for a particular value of $c$, as a function of $D$?
 
 \item {\bf [2 points]} Another problem is that optimizing a point in the simplex requires using a constrained optimization routine.
@@ -265,7 +266,7 @@ If we parameterize a $D$-dimensional categorial distribution as
 \log p(c | \theta) = \theta_c - \log \sum_{c' = 1}^D \exp \theta_{c'}
 \end{align}
 %
-what is the allowable range of the vector $\theta$? 
+what is the allowable range of the vector $\theta$? Or: answer this question: does setting all $\theta_c = 0$ result in a valid probability distribution over $c$?
 What is the computational cost of evaluating $\log p(c | \theta)$, for a particular value of $c$, as a function of $D$?
 
 \item {\bf [2 points]} Using the parameterization
@@ -296,7 +297,9 @@ Give a monotonic, numerically stable paramaterization for $\log p(b | \theta)$ s
 
 
 
-\begin{problem}[Bonus: Optimal surrogates. 15 points]
+\begin{problem}[BONUS: Optimal surrogates. 15 points]
+
+Warning: These questions are probably hard and time-consuming.  I don't know the answers and I don't expect more than one or two people to get them. For details on $p(z|b, \theta)$, see the REBAR or RELAX papers.
 
 Consider the objective
 %
