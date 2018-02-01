@@ -156,13 +156,15 @@ Sampling Algorithms](http://proceedings.mlr.press/v54/naesseth17a/naesseth17a.pd
 ### Week 5 - Feb 9th - Discrete latent structure
 
 Variational autoencoders and GANs typically use continuous latent variables, but there is recent work on getting them to use discrete random variables.
+
+Recommended reading:
   - [The Helmholtz Machine](http://www.gatsby.ucl.ac.uk/~dayan/papers/hm95.pdf) - The forerunner of VAEs used binary latent variables.
   - [Attend, Infer, Repeat: Fast Scene Understanding with Generative Models](http://arxiv.org/abs/1603.08575) - The latent variables can be a list or set of vectors.
+  
+Other material:
   - [Composing graphical models with neural networks for structured representations and fast inference](http://arxiv.org/abs/1603.06277)  the prior on latent variables can be any tractable graphical model, and we can use this inference as part of the recognition step.
   - [Learning Hard Alignments with Variational Inference](https://arxiv.org/pdf/1705.05524.pdf) - in machine translation, the alignment between input and output words can be treated as a discrete latent variable.
   - [Neural Discrete Representation Learning](https://arxiv.org/abs/1711.00937) - trains an RNN with discrete hidden units, using the straigh-through estimator.
-
-Related work:
   - [Neural Variational Inference and Learning in Belief Networks](https://arxiv.org/abs/1402.0030)
   - [Variational inference for Monte Carlo objectives](https://arxiv.org/abs/1602.06725)
 
@@ -171,12 +173,16 @@ Related work:
 ### Week 6 - Feb 16th - Adversarial training and text models
 
 It's not obvious how to train GANs to produce discrete structures, because this cuts off the gradient to the discriminator.
+
+Recommended reading:
   - [Connecting Generative Adversarial Networks and Actor-Critic Methods](https://arxiv.org/abs/1610.01945)
+  - [Hierarchical Multiscale Recurrent Neural Networks](https://arxiv.org/abs/1609.01704)
+
+Other material:
   - [Adversarial Autoencoders](https://arxiv.org/abs/1511.05644) - One surprisingly effective hack for training discrete random variables is to let them be continuous, and have a discriminator check if they're discrete.
   - [Adversarially Regularized Autoencoders for Generating Discrete Structures](https://arxiv.org/abs/1706.04223)
   - [GANS for Sequences of Discrete Elements with the Gumbel-softmax Distribution](https://arxiv.org/abs/1611.04051)
   - [Program Synthesis for Character-Level Language Modeling](http://openreview.net/pdf?id=ry_sjFqgx)
-  - [Hierarchical Multiscale Recurrent Neural Networks](https://arxiv.org/abs/1609.01704)
   - [Generating and designing DNA with deep generative models](https://arxiv.org/abs/1712.06148)
   - [Emergence of Grounded Compositional Language in Multi-Agent Populations](https://arxiv.org/abs/1703.04908)
   
@@ -186,26 +192,38 @@ It's not obvious how to train GANs to produce discrete structures, because this 
 ### Week 7 - Feb 23rd - Bayesian nonparametrics
 
 Models of infinitely-large discrete objects.
+
+Recommended reading:
   - [Slides on Bayesian nonparametrics](http://stat.columbia.edu/~porbanz/talks/nipstutorial.pdf)
   - [Lecture notes on Bayesian nonparametrics](http://stat.columbia.edu/~porbanz/papers/porbanz_BNP_draft.pdf)
+  - [Breaking Sticks and Ambiguities with Adaptive Skip-gram](http://arxiv.org/abs/1502.07257) - word2vec with multiple meanings for each word. 
+
+Related material:
   - [Warped Mixtures for Nonparametric Cluster Shapes](https://arxiv.org/abs/1206.1846)
   - [Structure Discovery in Nonparametric Regression through Compositional Kernel Search](https://arxiv.org/abs/1302.4922)
   - [Learning the Structure of Deep Sparse Graphical Models](https://arxiv.org/abs/1001.0160)
   - [Probabilistic programming](https://probmods.org/) - Automatic inference in arbitary models specified by a program.
-  - [Breaking Sticks and Ambiguities with Adaptive Skip-gram](http://arxiv.org/abs/1502.07257) - word2vec with multiple meanings for each word. 
  
 ***
 ### Week 8 - March 2nd - Learning model structure
+
+Recommended reading:
   - [The discovery of structural form](http://www.pnas.org/content/105/31/10687.full) - put a grammar on model structures and built a different model for each dataset automatically.
   - [Exploiting compositionality to explore a large space of model structures](https://arxiv.org/abs/1210.4856) - another systematic search through model structure using a grammar.
+
+Related material:
   - [Bayesian Compression for Deep Learning](https://arxiv.org/abs/1705.08665) - putting a sparse prior on a neural network's weights is a principled way to learn its structure.
   - [SMASH: One-Shot Model Architecture Search through HyperNetworks](https://arxiv.org/pdf/1708.05344.pdf)
 
 ***
 ### Week 9 - March 9th - Graphs, permutations and parse trees
+
+Recommended reading:
   - [Learning Latent Permutations with Gumbel-Sinkhorn Networks](https://openreview.net/forum?id=Byt3oJ-0W)
-  - [Reparameterizing the Birkhoff Polytope for Variational Permutation Inference](https://arxiv.org/abs/1710.09508)
   - [Grammar Variational Autoencoder](https://arxiv.org/pdf/1703.01925.pdf)
+
+Related material:
+  - [Reparameterizing the Birkhoff Polytope for Variational Permutation Inference](https://arxiv.org/abs/1710.09508)
   - [Syntax-Directed Variational Autoencoder for Structured Data](https://openreview.net/forum?id=SyqShMZRb) - a followup to the Grammar VAE
   - [Automatic chemical design using a data-driven continuous representation of molecules](https://arxiv.org/abs/1610.02415)
   - [Learning to Compose Words into Sentences with Reinforcement Learning](https://arxiv.org/abs/1611.09100)
