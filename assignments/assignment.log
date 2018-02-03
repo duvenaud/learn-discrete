@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  29 JAN 2018 18:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  3 FEB 2018 10:53
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -598,36 +598,50 @@ Overfull \vbox (97.21024pt too high) has occurred while \output is active []
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 203.
+
+Overfull \hbox (12.15593pt too wide) in paragraph at lines 219--221
+[]\OT1/ppl/b/n/10 [4 points] \OT1/ppl/m/n/10 Show that if $\OML/zplm/m/it/10 L\
+OT1/zplm/m/n/10 (\OML/zplm/m/it/10 ^^R\OT1/zplm/m/n/10 ) = \U/fplmbb/m/n/10 E[]
+ []$\OT1/ppl/m/n/10 , give an ex-am-ple func-tion $\OML/zplm/m/it/10 f$ \OT1/pp
+l/m/n/10 where a non-deterministic
+ []
+
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 237.
- [3]
+(mdframed)              on input line 238.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 284.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 300.
- [4] [5] (./assignment.aux) ) 
+(mdframed)              on input line 302.
+ [4]
+[5] (./assignment.aux) ) 
 Here is how much of TeX's memory you used:
- 10674 strings out of 493117
- 189546 string characters out of 6135433
+ 10709 strings out of 493117
+ 190055 string characters out of 6135433
  260138 words of memory out of 5000000
- 13999 multiletter control sequences out of 15000+600000
- 24297 words of font info for 72 fonts, out of 8000000 for 9000
+ 14029 multiletter control sequences out of 15000+600000
+ 24812 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,12n,39p,10400b,518s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvip
-s/base/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/mathpazo/fplmb
-b.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb
-></usr/local/texlive/2014/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/loca
-l/texlive/2014/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on assignment.pdf (5 pages, 99485 bytes).
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/bas
+e/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cme
+x10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/201
+4/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on assignment.pdf (5 pages, 107249 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 40 compressed objects within 1 object stream
+ 61 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
