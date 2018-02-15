@@ -73,7 +73,7 @@ Towards the end of the course everyone will present their project in a short, ro
 
 At the end of the class you'll hand in a project report (around 4 to 8 pages), ideally in the format of a machine learning conference paper such as [NIPS](https://nips.cc/Conferences/2016/PaperInformation/StyleFiles).
 
-Projects will be graded according to an updated version of [Last year's project report grading rubric](project-report-guidelines.html)
+Projects will be graded according to an updated version of [Last year's project report grading rubric](http://www.cs.toronto.edu/~duvenaud/courses/csc2541/project-report-guidelines.html)
 
 
 
