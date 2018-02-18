@@ -219,7 +219,7 @@ Recommended reading:
 Related material:
   - [Bayesian Compression for Deep Learning](https://arxiv.org/abs/1705.08665) - putting a sparse prior on a neural network's weights is a principled way to learn its structure.
   - [SMASH: One-Shot Model Architecture Search through HyperNetworks](https://arxiv.org/pdf/1708.05344.pdf)
-
+  - [Learning a SAT Solver from Single-Bit Supervision](https://arxiv.org/pdf/1802.03685.pdf)
 ***
 ### Week 9 - March 9th - Graphs, permutations and parse trees
 
