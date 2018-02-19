@@ -73,7 +73,7 @@ Towards the end of the course everyone will present their project in a short, ro
 
 At the end of the class you'll hand in a project report (around 4 to 8 pages), ideally in the format of a machine learning conference paper such as [NIPS](https://nips.cc/Conferences/2016/PaperInformation/StyleFiles).
 
-Projects will be graded according to an updated version of [Last year's project report grading rubric](project-report-guidelines.html)
+Projects will be graded according to an updated version of [Last year's project report grading rubric](http://www.cs.toronto.edu/~duvenaud/courses/csc2541/project-report-guidelines.html)
 
 
 
@@ -151,6 +151,7 @@ Other material:
  - [Reparameterization Gradients through Acceptance-Rejection
 Sampling Algorithms](http://proceedings.mlr.press/v54/naesseth17a/naesseth17a.pdf)
  - [Divide and Conquer Networks](https://arxiv.org/abs/1611.02401)
+ - [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](https://arxiv.org/abs/1701.06538)
 
 ***
 ### Week 5 - Feb 9th - Discrete latent structure
@@ -158,10 +159,12 @@ Sampling Algorithms](http://proceedings.mlr.press/v54/naesseth17a/naesseth17a.pd
 Variational autoencoders and GANs typically use continuous latent variables, but there is recent work on getting them to use discrete random variables.
 
 Recommended reading:
-  - [The Helmholtz Machine](http://www.gatsby.ucl.ac.uk/~dayan/papers/hm95.pdf) - The forerunner of VAEs used binary latent variables.
-  - [Attend, Infer, Repeat: Fast Scene Understanding with Generative Models](http://arxiv.org/abs/1603.08575) - The latent variables can be a list or set of vectors.
+ - [Attend, Infer, Repeat: Fast Scene Understanding with Generative Models](http://arxiv.org/abs/1603.08575) - The latent variables can be a list or set of vectors.
+ - [Thinking Fast and Slow with Deep Learning and Tree Search](https://arxiv.org/abs/1705.08439)
+ - [Efficient Nonmyopic Active Search](http://proceedings.mlr.press/v70/jiang17d/jiang17d.pdf)
   
 Other material:
+  - [The Helmholtz Machine](http://www.gatsby.ucl.ac.uk/~dayan/papers/hm95.pdf) - The forerunner of VAEs used binary latent variables.
   - [Composing graphical models with neural networks for structured representations and fast inference](http://arxiv.org/abs/1603.06277)  the prior on latent variables can be any tractable graphical model, and we can use this inference as part of the recognition step.
   - [Learning Hard Alignments with Variational Inference](https://arxiv.org/pdf/1705.05524.pdf) - in machine translation, the alignment between input and output words can be treated as a discrete latent variable.
   - [Neural Discrete Representation Learning](https://arxiv.org/abs/1711.00937) - trains an RNN with discrete hidden units, using the straigh-through estimator.
@@ -203,24 +206,27 @@ Related material:
   - [Structure Discovery in Nonparametric Regression through Compositional Kernel Search](https://arxiv.org/abs/1302.4922)
   - [Learning the Structure of Deep Sparse Graphical Models](https://arxiv.org/abs/1001.0160)
   - [Probabilistic programming](https://probmods.org/) - Automatic inference in arbitary models specified by a program.
+  - [Latent LSTM Allocation: Joint Clustering and Non-Linear Dynamic Modeling of Sequential Data](http://proceedings.mlr.press/v70/zaheer17a/zaheer17a.pdf)
  
 ***
 ### Week 8 - March 2nd - Learning model structure
 
 Recommended reading:
+  - [SparseMAP: Differentiable Sparse Structured Inference](https://arxiv.org/pdf/1802.04223.pdf)
   - [The discovery of structural form](http://www.pnas.org/content/105/31/10687.full) - put a grammar on model structures and built a different model for each dataset automatically.
   - [Exploiting compositionality to explore a large space of model structures](https://arxiv.org/abs/1210.4856) - another systematic search through model structure using a grammar.
 
 Related material:
   - [Bayesian Compression for Deep Learning](https://arxiv.org/abs/1705.08665) - putting a sparse prior on a neural network's weights is a principled way to learn its structure.
   - [SMASH: One-Shot Model Architecture Search through HyperNetworks](https://arxiv.org/pdf/1708.05344.pdf)
-
+  - [Learning a SAT Solver from Single-Bit Supervision](https://arxiv.org/pdf/1802.03685.pdf)
 ***
 ### Week 9 - March 9th - Graphs, permutations and parse trees
 
 Recommended reading:
   - [Learning Latent Permutations with Gumbel-Sinkhorn Networks](https://openreview.net/forum?id=Byt3oJ-0W)
   - [Grammar Variational Autoencoder](https://arxiv.org/pdf/1703.01925.pdf)
+  - [Junction Tree Variational Autoencoder for Molecular Graph Generation](https://arxiv.org/pdf/1802.04364.pdf)
 
 Related material:
   - [Reparameterizing the Birkhoff Polytope for Variational Permutation Inference](https://arxiv.org/abs/1710.09508)
