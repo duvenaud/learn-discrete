@@ -136,6 +136,9 @@ Strategy and Stochastic Gradient Descent](https://arxiv.org/pdf/1712.06564.pdf) 
 
 Attempts learn programs using gradient-based methods, and program induction in general.
 
+Slides:
+ - [Rejection Sampling Variational Inference](slides/rsvi.pdf)
+
 Recommended reading:
  - [Neural Turing Machines](https://arxiv.org/abs/1410.5401)
  - [The Case for Learned Index Structures](https://arxiv.org/abs/1712.01208)
@@ -158,6 +161,10 @@ Sampling Algorithms](http://proceedings.mlr.press/v54/naesseth17a/naesseth17a.pd
 
 Variational autoencoders and GANs typically use continuous latent variables, but there is recent work on getting them to use discrete random variables.
 
+Slides:
+ - [Attend, Infer, Repeat](slides/AIR_presentation.pdf)
+ - [Efficient Nonmyopic Active Search.pdf](slides/Efficient_Nonmyopic_Active_Search.pdf)
+ 
 Recommended reading:
  - [Attend, Infer, Repeat: Fast Scene Understanding with Generative Models](http://arxiv.org/abs/1603.08575) - The latent variables can be a list or set of vectors.
  - [Thinking Fast and Slow with Deep Learning and Tree Search](https://arxiv.org/abs/1705.08439)
@@ -176,6 +183,9 @@ Other material:
 ### Week 6 - Feb 16th - Adversarial training and text models
 
 It's not obvious how to train GANs to produce discrete structures, because this cuts off the gradient to the discriminator.
+
+Slides:
+  - [MaskGAN](slides/maskgan.pdf)
 
 Recommended reading:
   - [Connecting Generative Adversarial Networks and Actor-Critic Methods](https://arxiv.org/abs/1610.01945)
