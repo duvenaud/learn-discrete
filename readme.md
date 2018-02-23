@@ -186,6 +186,7 @@ It's not obvious how to train GANs to produce discrete structures, because this 
 
 Slides:
   - [MaskGAN](slides/maskgan.pdf)
+  - [Adversarial autoencoders](slides/AdversarialAutoencoders.pdf)
 
 Recommended reading:
   - [Connecting Generative Adversarial Networks and Actor-Critic Methods](https://arxiv.org/abs/1610.01945)
@@ -222,14 +223,18 @@ Related material:
 ### Week 8 - March 2nd - Learning model structure
 
 Recommended reading:
+  - [Learning Sparse Neural Networks through L0 Regularization](https://arxiv.org/abs/1712.01312)
+  - [Efficient Neural Architecture Search via Parameter Sharing](https://arxiv.org/abs/1802.03268)
   - [SparseMAP: Differentiable Sparse Structured Inference](https://arxiv.org/pdf/1802.04223.pdf)
   - [The discovery of structural form](http://www.pnas.org/content/105/31/10687.full) - put a grammar on model structures and built a different model for each dataset automatically.
   - [Exploiting compositionality to explore a large space of model structures](https://arxiv.org/abs/1210.4856) - another systematic search through model structure using a grammar.
 
 Related material:
+  - [The Emergence of Organizing Structure in Conceptual Representation](http://onlinelibrary.wiley.com/wol1/doi/10.1111/cogs.12580/full) - an updated version of "the discovery of structural form".
   - [Bayesian Compression for Deep Learning](https://arxiv.org/abs/1705.08665) - putting a sparse prior on a neural network's weights is a principled way to learn its structure.
   - [SMASH: One-Shot Model Architecture Search through HyperNetworks](https://arxiv.org/pdf/1708.05344.pdf)
   - [Learning a SAT Solver from Single-Bit Supervision](https://arxiv.org/pdf/1802.03685.pdf)
+
 ***
 ### Week 9 - March 9th - Graphs, permutations and parse trees
 
