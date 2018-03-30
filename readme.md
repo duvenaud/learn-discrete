@@ -234,10 +234,10 @@ Related material:
 ### Week 8 - March 2nd - Learning model structure
 
 Slides:
-  - [Additive Structure for Bayesian Optimization](slides/additive-bayesopt.pdf)
-  - [Program Synthesis for Character Level Language Modelling](slides/program_synthesis.pdf)
-  - [Learning a SAT Solver from Single-Bit Supervision](slides/learn-sat.pdf)
-  - [Efficient Neural Architecture Search via Parameter Sharing](slides/ENAS.pdf)
+  - [Additive Structure for Bayesian Optimization](slides/additive-bayesopt.pdf)
+  - [Program Synthesis for Character Level Language Modelling](slides/program_synthesis.pdf)
+  - [Learning a SAT Solver from Single-Bit Supervision](slides/learn-sat.pdf)
+  - [Efficient Neural Architecture Search via Parameter Sharing](slides/ENAS.pdf)
 
 Recommended reading:
   - [Learning Sparse Neural Networks through L0 Regularization](https://arxiv.org/abs/1712.01312)
@@ -255,12 +255,12 @@ Related material:
 ***
 ### Week 9 - March 9th - Graphs, permutations and parse trees
 
-Slides:<br/>
-  - [Thinking Fast and Slow with Deep Learning and Tree Search](slides/Thinking-Fast-and-Slow-with-Deep-Learning-and-Tree-Search.pdf)<br/>
-  - [GraphRNN: A Deep Generative Model for Graphs](slides/graphrnn.pdf)<br/>
-  - [Grammar VAE and Syntax-Directed VAE](slides/GVAE.pdf)<br/>
-  - [Learning Latent Permutations with Gumbel-Sinkhorn Networks](slides/Gumbel-Sinkhorn-Slides.pdf) [Demo notebook!](slides/Gumbel-Sinkhorn-Demo.zip)
-  
+Slides:
+  - [Thinking Fast and Slow with Deep Learning and Tree Search](slides/Thinking-Fast-and-Slow-with-Deep-Learning-and-Tree-Search.pdf)
+  - [GraphRNN: A Deep Generative Model for Graphs](slides/graphrnn.pdf)
+  - [Grammar VAE and Syntax-Directed VAE](slides/GVAE.pdf)
+  - [Learning Latent Permutations with Gumbel-Sinkhorn Networks](slides/Gumbel-Sinkhorn-Slides.pdf) [Demo notebook!](slides/Gumbel-Sinkhorn-Demo.zip)
+  
 Recommended reading:
   - [Learning Latent Permutations with Gumbel-Sinkhorn Networks](https://openreview.net/forum?id=Byt3oJ-0W)
   - [Grammar Variational Autoencoder](https://arxiv.org/pdf/1703.01925.pdf)
@@ -272,7 +272,6 @@ Related material:
   - [Automatic chemical design using a data-driven continuous representation of molecules](https://arxiv.org/abs/1610.02415)
   - [Learning to Compose Words into Sentences with Reinforcement Learning](https://arxiv.org/abs/1611.09100)
   - [Learning to Represent Programs with Graphs](https://arxiv.org/abs/1711.00740)
-
 
 ***
 ### Weeks 10 and 11 - March 16th and 23rd - Project presentations
