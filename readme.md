@@ -189,9 +189,9 @@ It's not obvious how to train GANs to produce discrete structures, because this 
 Slides:
   - [MaskGAN](slides/maskgan.pdf)
   - [Adversarial autoencoders](slides/AdversarialAutoencoders.pdf)
-  - [Adversarially Regularized Autoencoders](slides/Adversarially-Regularized-Autoencoders.pdf)
+  - [Adversarially Regularized Autoencoders](slides/Adversarially-Regularized-Autoencoders.pdf)
   - [Generating and designing DNA with deep generative models](slides/generating-DNA.pdf)
-  - [Hierarchical Multiscale Recurrent Neural Networks](slides/hierarchical-rnns.pdf)
+  - [Hierarchical Multiscale Recurrent Neural Networks](slides/hierarchical-rnns.pdf)
 
 Recommended reading:
   - [Connecting Generative Adversarial Networks and Actor-Critic Methods](https://arxiv.org/abs/1610.01945)
@@ -266,7 +266,7 @@ Recommended reading:
   - [Learning Latent Permutations with Gumbel-Sinkhorn Networks](https://openreview.net/forum?id=Byt3oJ-0W)
   - [Grammar Variational Autoencoder](https://arxiv.org/pdf/1703.01925.pdf)
   - [Junction Tree Variational Autoencoder for Molecular Graph Generation](https://arxiv.org/pdf/1802.04364.pdf)
-
+  
 Related material:
   - [Reparameterizing the Birkhoff Polytope for Variational Permutation Inference](https://arxiv.org/abs/1710.09508)
   - [Syntax-Directed Variational Autoencoder for Structured Data](https://openreview.net/forum?id=SyqShMZRb) - a followup to the Grammar VAE
