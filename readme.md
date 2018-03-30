@@ -256,10 +256,10 @@ Related material:
 ***
 ### Week 9 - March 9th - Graphs, permutations and parse trees
 
-Slides:
-  - [Thinking Fast and Slow with Deep Learning and Tree Search](slides/Thinking-Fast-and-Slow-with-Deep-Learning-and-Tree-Search.pdf)
-  - [GraphRNN: A Deep Generative Model for Graphs](slides/graphrnn.pdf)
-  - [Grammar VAE and Syntax-Directed VAE](slides/GVAE.pdf)
+Slides:<br/>
+  - [Thinking Fast and Slow with Deep Learning and Tree Search](slides/Thinking-Fast-and-Slow-with-Deep-Learning-and-Tree-Search.pdf)<br/>
+  - [GraphRNN: A Deep Generative Model for Graphs](slides/graphrnn.pdf)<br/>
+  - [Grammar VAE and Syntax-Directed VAE](slides/GVAE.pdf)<br/>
   - [Learning Latent Permutations with Gumbel-Sinkhorn Networks](slides/Gumbel-Sinkhorn-Slides.pdf) [Demo notebook!](slides/Gumbel-Sinkhorn-Demo.zip)
   
 Recommended reading:
@@ -279,9 +279,9 @@ Related material:
 ### Weeks 10 and 11 - March 16th and 23rd - Project presentations
 
 The last two weeks were project presentations, 38 in total.
-A few students were brave enough to have their slides online:
-  - [Character-level Language Models With Word-level Learning](slides/project-arvie.pdf)
-  - [Discretizing Neural Turing Machines](slides/project-dntm.pdf)
+A few students were brave enough to have their slides online:<br/>
+  - [Character-level Language Models With Word-level Learning](slides/project-arvie.pdf)<br/>
+  - [Discretizing Neural Turing Machines](slides/project-dntm.pdf)<br/>
 
   
   
