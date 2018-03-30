@@ -164,7 +164,7 @@ Variational autoencoders and GANs typically use continuous latent variables, but
 
 Slides:
  - [Attend, Infer, Repeat](slides/AIR_presentation.pdf)
- - [Efficient Nonmyopic Active Search.pdf](slides/Efficient_Nonmyopic_Active_Search.pdf)
+ - [Efficient Nonmyopic Active Search](slides/Efficient_Nonmyopic_Active_Search.pdf)
  - [Neural Discrete Representation Learning](slides/Neural-Discrete-Representation-Learning.pdf)
  
 Recommended reading:
@@ -278,10 +278,11 @@ Related material:
 ***
 ### Weeks 10 and 11 - March 16th and 23rd - Project presentations
 
-The last two weeks were project presentations, 38 in total.  A few students were brave enough to have their slides online:
+The last two weeks were project presentations, 38 in total.
+A few students were brave enough to have their slides online:
   - [Character-level Language Models With Word-level Learning](slides/project-arvie.pdf)
   - [Discretizing Neural Turing Machines](slides/project-dntm.pdf)
-  
+
   
   
   
