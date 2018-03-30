@@ -191,6 +191,7 @@ Slides:
   - [Adversarial autoencoders](slides/AdversarialAutoencoders.pdf)
   - [Adversarially Regularized Autoencoders](slides/Adversarially-Regularized-Autoencoders.pdf)
   - [Generating and designing DNA with deep generative models](slides/generating-DNA.pdf)
+  - [Hierarchical Multiscale Recurrent Neural Networks](slides/hierarchical-rnns.pdf)
 
 Recommended reading:
   - [Connecting Generative Adversarial Networks and Actor-Critic Methods](https://arxiv.org/abs/1610.01945)
@@ -236,7 +237,8 @@ Related material:
 Slides:
   - [Additive Structure for Bayesian Optimization](slides/additive-bayesopt.pdf)
   - [Program Synthesis for Character Level Language Modelling](slides/program_synthesis.pdf)
-
+  - [Learning a SAT Solver from Single-Bit Supervision](slides/learn-sat.pdf)
+  - [Efficient Neural Architecture Search via Parameter Sharing](slides/ENAS.pdf)
 
 Recommended reading:
   - [Learning Sparse Neural Networks through L0 Regularization](https://arxiv.org/abs/1712.01312)
@@ -254,6 +256,12 @@ Related material:
 ***
 ### Week 9 - March 9th - Graphs, permutations and parse trees
 
+Slides:
+  - [Thinking Fast and Slow with Deep Learning and Tree Search](slides/Thinking-Fast-and-Slow-with-Deep-Learning-and-Tree-Search.pdf)
+  - [GraphRNN: A Deep Generative Model for Graphs](slides/graphrnn.pdf)
+  - [Grammar VAE and Syntax-Directed VAE](slides/GVAE.pdf)
+  - [Learning Latent Permutations with Gumbel-Sinkhorn Networks](slides/Gumbel-Sinkhorn-Slides.pdf) [Demo notebook!](slides/Gumbel-Sinkhorn-Demo.zip)
+  
 Recommended reading:
   - [Learning Latent Permutations with Gumbel-Sinkhorn Networks](https://openreview.net/forum?id=Byt3oJ-0W)
   - [Grammar Variational Autoencoder](https://arxiv.org/pdf/1703.01925.pdf)
@@ -268,11 +276,12 @@ Related material:
 
 
 ***
-### Week 10 - March 16th - Project presentations I
+### Weeks 10 and 11 - March 16th and 23rd - Project presentations
 
-***
-### Week 11 - March 23rd - Project presentations II
-
-***
-### Week 12 - March 30th - Good Friday (Holiday)
-
+The last two weeks were project presentations, 38 in total.  A few students were brave enough to have their slides online:
+  - [Character-level Language Models With Word-level Learning](slides/project-arvie.pdf)
+  - [Discretizing Neural Turing Machines](slides/project-dntm.pdf)
+  
+  
+  
+  
