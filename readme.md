@@ -278,11 +278,7 @@ Related material:
 ***
 ### Weeks 10 and 11 - March 16th and 23rd - Project presentations
 
-The last two weeks were project presentations, 38 in total.
-A few students were brave enough to have their slides online:<br/>
-  - [Character-level Language Models With Word-level Learning](slides/project-arvie.pdf)<br/>
-  - [Discretizing Neural Turing Machines](slides/project-dntm.pdf)<br/>
-
-  
-  
+The last two weeks were project presentations, 38 in total.  A few students were brave enough to have their slides online:
+  - [Character-level Language Models With Word-level Learning](slides/project-arvie.pdf)
+  - [Discretizing Neural Turing Machines](slides/project-dntm.pdf)
   
