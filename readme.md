@@ -213,11 +213,10 @@ Other material:
 Models of infinitely-large discrete objects.
 
 Slides:
-  - [Introduction to Bayesian Nonparametrics](slides/will_eleni_chen_slides.pdf)
-  - [Introduction to Probabilistic Programming](slides/IntroProbProg.pdf)
-  - [Latent LSTM Allocation](slides/latent-lstm.pdf)
-  - [Nonparametric Variational Auto-encoders for Hierarchical Representation Learning](slides/NonparametricVAE_Hierarchical_RepresentationL.pdf)
-
+  - [Introduction to Bayesian Nonparametrics](slides/will_eleni_chen_slides.pdf)
+  - [Introduction to Probabilistic Programming](slides/IntroProbProg.pdf)
+  - [Latent LSTM Allocation](slides/latent-lstm.pdf)
+  - [Nonparametric Variational Auto-encoders for Hierarchical Representation Learning](slides/NonparametricVAE_Hierarchical_RepresentationL.pdf)
 
 Recommended reading:
   - [Slides on Bayesian nonparametrics](http://stat.columbia.edu/~porbanz/talks/nipstutorial.pdf)
