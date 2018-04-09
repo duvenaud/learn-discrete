@@ -235,7 +235,7 @@ Slides:
   - [Program Synthesis for Character Level Language Modelling](slides/program_synthesis.pdf)
   - [Learning a SAT Solver from Single-Bit Supervision](slides/learn-sat.pdf)
   - [Efficient Neural Architecture Search via Parameter Sharing](slides/ENAS.pdf)
-  - [Learning Sparse Neural Networks through L0 Regularization](slides/L0_norm.pdf)
+  - [Learning Sparse Neural Networks through L0 Regularization](slides/L0_norm.pdf)
   
 Recommended reading:
   - [Learning Sparse Neural Networks through L0 Regularization](https://arxiv.org/abs/1712.01312)
@@ -277,5 +277,5 @@ Related material:
 The last two weeks were project presentations, 38 in total.  A few students were brave enough to have their slides online:
   - [Character-level Language Models With Word-level Learning](slides/project-arvie.pdf)
   - [Discretizing Neural Turing Machines](slides/project-dntm.pdf)
-  - [GANs for Word Embeddings](slides/GANS-for-word-embeddings.pdf)
-  
+  - [GANs for Word Embeddings](slides/GANs-for-word-embeddings.pdf)
+
