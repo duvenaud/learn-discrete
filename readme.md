@@ -277,5 +277,5 @@ Related material:
 The last two weeks were project presentations, 38 in total.  A few students were brave enough to have their slides online:
   - [Character-level Language Models With Word-level Learning](slides/project-arvie.pdf)
   - [Discretizing Neural Turing Machines](slides/project-dntm.pdf)
-  - [GANs for Word Embeddings](slides/GANs-for-word-embeddings.pdf)
+  - [GANs for Word Embeddings](slides/GANs-for-word-embeddings.pdf)
 
