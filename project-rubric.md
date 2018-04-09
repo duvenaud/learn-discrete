@@ -48,9 +48,9 @@ Include at least one of:
 	- State the results achieved in relation to the problem described in the introduction.
 	- Repeat the main takeaways from your paper.
 	
-9. **Novelty (20 points)** In order to encourage novel directions over lit reviews.  Novelty is graded on a sliding scale and is subjective, but here are a few guidelines:
+9. **Novelty (20 points)** Novelty is graded on a sliding scale and is of course somewhat subjective, but here are a few guidelines:
 	- 0 points: A literature review with no new content.  This is completely OK as a project, but it won't earn an A+.
-	- 5 to 15 points: A novel combination of method and type of data, or motivate and formally pose a new problem.  You get novelty points for making tweaks to a method to take advantage of the structure of a new dataset or domain.  Think of a reason why the experiment turned out the way it did, and check if this was actually the reason.
+	- 5 to 15 points: A novel combination of method and type of data.  You get novelty points for making tweaks to a method to take advantage of the structure of a new dataset or domain.  Think of a reason why the experiment turned out the way it did, and check if this was actually the reason.  Alternatively: Motivate and formally pose a new problem, such as characterizing the difficulty of some task, or the 'learnability' of some domain.
 	- 20 points: Novel method with motivation (not just making a random tweak for no reason), or analysis with a new result.  Is the reason you say it is going to work actually the reason why it works?
 
 
