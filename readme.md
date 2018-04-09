@@ -213,11 +213,10 @@ Other material:
 Models of infinitely-large discrete objects.
 
 Slides:
-  - [Introduction to Bayesian Nonparametrics](slides/will_eleni_chen_slides.pdf)
-  - [Introduction to Probabilistic Programming](slides/IntroProbProg.pdf)
-  - [Latent LSTM Allocation](slides/latent-lstm.pdf)
-  - [Nonparametric Variational Auto-encoders for Hierarchical Representation Learning](slides/NonparametricVAE_Hierarchical_RepresentationL.pdf)
-
+  - [Introduction to Bayesian Nonparametrics](slides/will_eleni_chen_slides.pdf)
+  - [Introduction to Probabilistic Programming](slides/IntroProbProg.pdf)
+  - [Latent LSTM Allocation](slides/latent-lstm.pdf)
+  - [Nonparametric Variational Auto-encoders for Hierarchical Representation Learning](slides/NonparametricVAE_Hierarchical_RepresentationL.pdf)
 
 Recommended reading:
   - [Slides on Bayesian nonparametrics](http://stat.columbia.edu/~porbanz/talks/nipstutorial.pdf)
@@ -235,10 +234,10 @@ Related material:
 ### Week 8 - March 2nd - Learning model structure
 
 Slides:
-  - [Additive Structure for Bayesian Optimization](slides/additive-bayesopt.pdf)
-  - [Program Synthesis for Character Level Language Modelling](slides/program_synthesis.pdf)
-  - [Learning a SAT Solver from Single-Bit Supervision](slides/learn-sat.pdf)
-  - [Efficient Neural Architecture Search via Parameter Sharing](slides/ENAS.pdf)
+  - [Additive Structure for Bayesian Optimization](slides/additive-bayesopt.pdf)
+  - [Program Synthesis for Character Level Language Modelling](slides/program_synthesis.pdf)
+  - [Learning a SAT Solver from Single-Bit Supervision](slides/learn-sat.pdf)
+  - [Efficient Neural Architecture Search via Parameter Sharing](slides/ENAS.pdf)
 
 Recommended reading:
   - [Learning Sparse Neural Networks through L0 Regularization](https://arxiv.org/abs/1712.01312)
@@ -257,11 +256,11 @@ Related material:
 ### Week 9 - March 9th - Graphs, permutations and parse trees
 
 Slides:
-  - [Thinking Fast and Slow with Deep Learning and Tree Search](slides/Thinking-Fast-and-Slow-with-Deep-Learning-and-Tree-Search.pdf)
-  - [GraphRNN: A Deep Generative Model for Graphs](slides/graphrnn.pdf)
+  - [Thinking Fast and Slow with Deep Learning and Tree Search](slides/Thinking-Fast-and-Slow-with-Deep-Learning-and-Tree-Search.pdf)
+  - [GraphRNN: A Deep Generative Model for Graphs](slides/graphrnn.pdf)
   - [Grammar VAE and Syntax-Directed VAE](slides/GVAE.pdf)
-  - [Learning Latent Permutations with Gumbel-Sinkhorn Networks](slides/Gumbel-Sinkhorn-Slides.pdf) [Demo notebook!](slides/Gumbel-Sinkhorn-Demo.zip)
-  
+  - [Learning Latent Permutations with Gumbel-Sinkhorn Networks](slides/Gumbel-Sinkhorn-Slides.pdf) [Demo notebook!](slides/Gumbel-Sinkhorn-Demo.zip)
+  
 Recommended reading:
   - [Learning Latent Permutations with Gumbel-Sinkhorn Networks](https://openreview.net/forum?id=Byt3oJ-0W)
   - [Grammar Variational Autoencoder](https://arxiv.org/pdf/1703.01925.pdf)
@@ -274,15 +273,10 @@ Related material:
   - [Learning to Compose Words into Sentences with Reinforcement Learning](https://arxiv.org/abs/1611.09100)
   - [Learning to Represent Programs with Graphs](https://arxiv.org/abs/1711.00740)
 
-
 ***
 ### Weeks 10 and 11 - March 16th and 23rd - Project presentations
 
-The last two weeks were project presentations, 38 in total.
-A few students were brave enough to have their slides online:
-  - [Character-level Language Models With Word-level Learning](slides/project-arvie.pdf)
-  - [Discretizing Neural Turing Machines](slides/project-dntm.pdf)
-
-  
-  
+The last two weeks were project presentations, 38 in total.  A few students were brave enough to have their slides online:
+  - [Character-level Language Models With Word-level Learning](slides/project-arvie.pdf)
+  - [Discretizing Neural Turing Machines](slides/project-dntm.pdf)
   
