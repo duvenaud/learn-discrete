@@ -57,7 +57,7 @@ Grades will be based on:
   * [15%] Class presentations
   * [15%] Project proposal, due Feb 13th.
   * [15%] Project presentations, March 16th and 23rd.
-  * [40%] Project report and code, due April 10th.
+  * [40%] Project report and code, due April 10th. [Rubric](project-rubric.md)
 
 Submit assignments through [Markus](https://markus.teach.cs.toronto.edu/csc2547-2018-01/).
 
@@ -71,10 +71,7 @@ You don't have to do what your project proposal says - the point of the proposal
 
 Towards the end of the course everyone will present their project in a short, roughly 5 minute, presentation.
 
-At the end of the class you'll hand in a project report (around 4 to 8 pages), ideally in the format of a machine learning conference paper such as [NIPS](https://nips.cc/Conferences/2016/PaperInformation/StyleFiles).
-
-Projects will be graded according to an updated version of [Last year's project report grading rubric](http://www.cs.toronto.edu/~duvenaud/courses/csc2541/project-report-guidelines.html)
-
+At the end of the class you'll hand in a project report (around 4 to 8 pages), ideally in the format of a machine learning conference paper such as [NIPS](https://nips.cc/Conferences/2016/PaperInformation/StyleFiles).  [Rubric](project-rubric.md)
 
 
 ## Tentative Schedule
