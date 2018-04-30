@@ -236,6 +236,7 @@ Slides:
   - [Learning a SAT Solver from Single-Bit Supervision](slides/learn-sat.pdf)
   - [Efficient Neural Architecture Search via Parameter Sharing](slides/ENAS.pdf)
   - [Learning Sparse Neural Networks through L0 Regularization](slides/L0_norm.pdf)
+  - [SMASH: One-Shot Model Architecture Search through HyperNetworks](slides/smash.pdf)
   
 Recommended reading:
   - [Learning Sparse Neural Networks through L0 Regularization](https://arxiv.org/abs/1712.01312)
