@@ -286,5 +286,5 @@ The last two weeks were project presentations, 38 in total.  A few students were
 Some of the course projects have turned into papers:
   - [Adversarial Contrastive Estimation]( https://arxiv.org/abs/1805.03642), published in Association for Computational Linguistics, 2018
   - [Discretely Relaxing Continuous Variables for tractable Variational Inference](https://arxiv.org/abs/1809.04279), in NIPS 2018
-  
+  - [Towards Understanding Linear Word Analogies](https://arxiv.org/abs/1810.04882), under review.
 
